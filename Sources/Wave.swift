@@ -8,6 +8,8 @@
 
 import UIKit
 
+public typealias Block = () -> Void
+
 public func run(actions: [Action]) {
   if let action = actions.first {
     action.run(Array(actions.dropFirst()))

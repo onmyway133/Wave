@@ -7,23 +7,22 @@
 //
 
 import UIKit
+import Construction
 
 public extension View {
 
-  public struct KeyframeAnimation: Action {
+  public struct KeyframeAnimation: Action, Initable {
 
-    let duration: NSTimeInterval
-    let animation: () -> Void
+    var duration: NSTimeInterval = 0
+    var animation: Block?
 
-    public init(duration: NSTimeInterval = 0, animation: () -> Void) {
-      self.duration = duration
-      self.animation = animation
-    }
+    public init() {}
 
     public func run(nextActions: [Action]) {
-      UIView.animateKeyframesWithDuration(duration, delay: 0, options: [], animations: animation,
-                                          completion: { finished in
-                                            Wave.run(nextActions)
+      UIView.animateKeyframesWithDuration(duration, delay: 0, options: [], animations: {
+        self.animation?()
+      }, completion: { finished in
+        Wave.run(nextActions)
       })
     }
   }

@@ -7,23 +7,22 @@
 //
 
 import UIKit
+import Construction
 
 public extension View {
 
-  public struct BasicAnimation: Action {
+  public struct BasicAnimation: Action, Initable {
 
-    let duration: NSTimeInterval
-    let animation: () -> Void
+    var duration: NSTimeInterval = 0
+    var animation: Block?
 
-    init(duration: NSTimeInterval = 0, animation: () -> Void) {
-      self.duration = duration
-      self.animation = animation
-    }
+    public init() {}
 
     public func run(nextActions: [Action]) {
-      UIView.animateWithDuration(duration, delay: 0, options: [], animations: animation,
-                                 completion: { finished in
-                                  Wave.run(nextActions)
+      UIView.animateWithDuration(duration, delay: 0, options: [], animations: {
+        self.animation?()
+      }, completion: { finished in
+        Wave.run(nextActions)
       })
     }
   }

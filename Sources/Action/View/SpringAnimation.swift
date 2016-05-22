@@ -7,28 +7,25 @@
 //
 
 import UIKit
+import Construction
 
 public extension View {
 
-  public struct SpringAnimation: Action {
+  public struct SpringAnimation: Action, Initable {
 
-    let duration: NSTimeInterval
-    let animation: () -> Void
-    let damping: CGFloat
-    let velocity: CGFloat
+    var duration: NSTimeInterval = 0
+    var damping: CGFloat = 0
+    var velocity: CGFloat = 0
+    var animation: Block?
 
-    public init(duration: NSTimeInterval = 0, damping: CGFloat, velocity: CGFloat, animation: () -> Void) {
-      self.duration = duration
-      self.damping = damping
-      self.velocity = velocity
-      self.animation = animation
-    }
+    public init() {}
 
     public func run(nextActions: [Action]) {
       UIView.animateWithDuration(duration, delay: 0, usingSpringWithDamping: damping,
-                                 initialSpringVelocity: velocity, options: [], animations: animation,
-                                 completion: { finished in
-                                  Wave.run(nextActions)
+                                 initialSpringVelocity: velocity, options: [], animations: {
+        self.animation?()
+      }, completion: { finished in
+        Wave.run(nextActions)
       })
     }
   }
