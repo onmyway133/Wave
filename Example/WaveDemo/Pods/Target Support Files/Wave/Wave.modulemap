@@ -1,0 +1,6 @@
+framework module Wave {
+  umbrella header "Wave-umbrella.h"
+
+  export *
+  module * { export * }
+}

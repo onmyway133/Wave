@@ -1,0 +1,16 @@
+PODS:
+  - Wave (0.1.0)
+
+DEPENDENCIES:
+  - Wave (from `../../`)
+
+EXTERNAL SOURCES:
+  Wave:
+    :path: "../../"
+
+SPEC CHECKSUMS:
+  Wave: 1be4b77874696f0adf849590e2bdbee9a826a1fd
+
+PODFILE CHECKSUM: 32553e4a7866eb70ecdaa55d6738fd454162c1f4
+
+COCOAPODS: 1.0.0

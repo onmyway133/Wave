@@ -10,10 +10,14 @@
 		D21793881CF23D6700BB2467 /* Wave.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21793871CF23D6700BB2467 /* Wave.swift */; };
 		D217938A1CF23D9400BB2467 /* Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21793891CF23D9400BB2467 /* Spec.swift */; };
 		D217938D1CF24E5600BB2467 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = D217938C1CF24E5600BB2467 /* Action.swift */; };
-		D217938F1CF24F1B00BB2467 /* Delay.swift in Sources */ = {isa = PBXBuildFile; fileRef = D217938E1CF24F1B00BB2467 /* Delay.swift */; };
-		D21793911CF2501000BB2467 /* BasicAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21793901CF2501000BB2467 /* BasicAnimation.swift */; };
-		D21793931CF250AF00BB2467 /* SpringAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21793921CF250AF00BB2467 /* SpringAnimation.swift */; };
-		D21793951CF2519300BB2467 /* KeyframeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21793941CF2519300BB2467 /* KeyframeAnimation.swift */; };
+		D217939D1CF2531A00BB2467 /* BasicAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21793991CF2531A00BB2467 /* BasicAnimation.swift */; };
+		D217939E1CF2531A00BB2467 /* Delay.swift in Sources */ = {isa = PBXBuildFile; fileRef = D217939A1CF2531A00BB2467 /* Delay.swift */; };
+		D217939F1CF2531A00BB2467 /* KeyframeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D217939B1CF2531A00BB2467 /* KeyframeAnimation.swift */; };
+		D21793A01CF2531A00BB2467 /* SpringAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D217939C1CF2531A00BB2467 /* SpringAnimation.swift */; };
+		D21793A21CF2534800BB2467 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21793A11CF2534800BB2467 /* View.swift */; };
+		D21793A41CF253D700BB2467 /* Preset.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21793A31CF253D700BB2467 /* Preset.swift */; };
+		D21793A61CF253FA00BB2467 /* Hide.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21793A51CF253FA00BB2467 /* Hide.swift */; };
+		D21793A81CF254DE00BB2467 /* Construction.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D21793A71CF254DE00BB2467 /* Construction.framework */; };
 		D5B2E8AA1C3A780C00C0327D /* Wave.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B2E89F1C3A780C00C0327D /* Wave.framework */; };
 		D5C6294A1C3A7FAA007F7B7C /* Wave.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C629401C3A7FAA007F7B7C /* Wave.framework */; };
 		D5C629771C3A878E007F7B7C /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C629751C3A878E007F7B7C /* Quick.framework */; };
@@ -43,10 +47,14 @@
 		D21793871CF23D6700BB2467 /* Wave.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wave.swift; sourceTree = "<group>"; };
 		D21793891CF23D9400BB2467 /* Spec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spec.swift; sourceTree = "<group>"; };
 		D217938C1CF24E5600BB2467 /* Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
-		D217938E1CF24F1B00BB2467 /* Delay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Delay.swift; sourceTree = "<group>"; };
-		D21793901CF2501000BB2467 /* BasicAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicAnimation.swift; sourceTree = "<group>"; };
-		D21793921CF250AF00BB2467 /* SpringAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringAnimation.swift; sourceTree = "<group>"; };
-		D21793941CF2519300BB2467 /* KeyframeAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyframeAnimation.swift; sourceTree = "<group>"; };
+		D21793991CF2531A00BB2467 /* BasicAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicAnimation.swift; sourceTree = "<group>"; };
+		D217939A1CF2531A00BB2467 /* Delay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Delay.swift; sourceTree = "<group>"; };
+		D217939B1CF2531A00BB2467 /* KeyframeAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyframeAnimation.swift; sourceTree = "<group>"; };
+		D217939C1CF2531A00BB2467 /* SpringAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringAnimation.swift; sourceTree = "<group>"; };
+		D21793A11CF2534800BB2467 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		D21793A31CF253D700BB2467 /* Preset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preset.swift; sourceTree = "<group>"; };
+		D21793A51CF253FA00BB2467 /* Hide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hide.swift; sourceTree = "<group>"; };
+		D21793A71CF254DE00BB2467 /* Construction.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Construction.framework; path = Carthage/Build/iOS/Construction.framework; sourceTree = "<group>"; };
 		D500FD111C3AABED00782D78 /* Playground-iOS.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Playground-iOS.playground"; sourceTree = "<group>"; };
 		D500FD121C3AAC8E00782D78 /* Playground-Mac.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Playground-Mac.playground"; sourceTree = "<group>"; };
 		D5B2E89F1C3A780C00C0327D /* Wave.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Wave.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D21793A81CF254DE00BB2467 /* Construction.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +113,7 @@
 		D21793861CF23D5A00BB2467 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D21793A71CF254DE00BB2467 /* Construction.framework */,
 				D5C629791C3A879F007F7B7C /* Quick.framework */,
 				D5C6297A1C3A879F007F7B7C /* Nimble.framework */,
 				D5C629751C3A878E007F7B7C /* Quick.framework */,
@@ -115,13 +125,40 @@
 		D217938B1CF24E4D00BB2467 /* Action */ = {
 			isa = PBXGroup;
 			children = (
+				D21793961CF2531A00BB2467 /* Layer */,
+				D21793971CF2531A00BB2467 /* Preset */,
+				D21793981CF2531A00BB2467 /* View */,
 				D217938C1CF24E5600BB2467 /* Action.swift */,
-				D217938E1CF24F1B00BB2467 /* Delay.swift */,
-				D21793901CF2501000BB2467 /* BasicAnimation.swift */,
-				D21793921CF250AF00BB2467 /* SpringAnimation.swift */,
-				D21793941CF2519300BB2467 /* KeyframeAnimation.swift */,
 			);
 			path = Action;
+			sourceTree = "<group>";
+		};
+		D21793961CF2531A00BB2467 /* Layer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Layer;
+			sourceTree = "<group>";
+		};
+		D21793971CF2531A00BB2467 /* Preset */ = {
+			isa = PBXGroup;
+			children = (
+				D21793A31CF253D700BB2467 /* Preset.swift */,
+				D21793A51CF253FA00BB2467 /* Hide.swift */,
+			);
+			path = Preset;
+			sourceTree = "<group>";
+		};
+		D21793981CF2531A00BB2467 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D21793991CF2531A00BB2467 /* BasicAnimation.swift */,
+				D217939A1CF2531A00BB2467 /* Delay.swift */,
+				D217939B1CF2531A00BB2467 /* KeyframeAnimation.swift */,
+				D217939C1CF2531A00BB2467 /* SpringAnimation.swift */,
+				D21793A11CF2534800BB2467 /* View.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		D5B2E8951C3A780C00C0327D = {
@@ -385,12 +422,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D217938F1CF24F1B00BB2467 /* Delay.swift in Sources */,
-				D21793911CF2501000BB2467 /* BasicAnimation.swift in Sources */,
-				D21793951CF2519300BB2467 /* KeyframeAnimation.swift in Sources */,
-				D21793931CF250AF00BB2467 /* SpringAnimation.swift in Sources */,
 				D21793881CF23D6700BB2467 /* Wave.swift in Sources */,
+				D217939E1CF2531A00BB2467 /* Delay.swift in Sources */,
+				D21793A41CF253D700BB2467 /* Preset.swift in Sources */,
+				D217939F1CF2531A00BB2467 /* KeyframeAnimation.swift in Sources */,
+				D21793A01CF2531A00BB2467 /* SpringAnimation.swift in Sources */,
 				D217938D1CF24E5600BB2467 /* Action.swift in Sources */,
+				D21793A61CF253FA00BB2467 /* Hide.swift in Sources */,
+				D21793A21CF2534800BB2467 /* View.swift in Sources */,
+				D217939D1CF2531A00BB2467 /* BasicAnimation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -529,6 +569,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Wave/Info-iOS.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -548,6 +592,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Wave/Info-iOS.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
