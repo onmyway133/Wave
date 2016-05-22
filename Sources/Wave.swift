@@ -6,4 +6,10 @@
 //  Copyright © 2016 Fantageek. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+public func run(actions: [Action]) {
+  if let action = actions.first {
+    action.run(Array(actions.dropFirst()))
+  }
+}
