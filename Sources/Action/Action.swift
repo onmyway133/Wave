@@ -11,3 +11,9 @@ import Foundation
 public protocol Action {
   func run(nextActions: [Action])
 }
+
+public extension Action {
+  func next(nextActions: [Action]) {
+    Chain.run(nextActions)
+  }
+}

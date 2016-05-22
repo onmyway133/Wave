@@ -7,11 +7,14 @@
 //
 
 import UIKit
+import Construction
 
 public typealias Block = () -> Void
+public let defaultDuration: NSTimeInterval = 0.25
 
-public func run(actions: [Action]) {
-  if let action = actions.first {
-    action.run(Array(actions.dropFirst()))
+public extension UIView {
+
+  public var wave: Chain {
+    return Chain(view: self)
   }
 }

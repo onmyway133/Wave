@@ -7,16 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D204000A1CF3A4010073B328 /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20400051CF3A4010073B328 /* Animation.swift */; };
+		D204000B1CF3A4010073B328 /* Delay.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20400061CF3A4010073B328 /* Delay.swift */; };
+		D204000C1CF3A4010073B328 /* KeyframeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20400071CF3A4010073B328 /* KeyframeAnimation.swift */; };
+		D204000D1CF3A4010073B328 /* SpringAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20400081CF3A4010073B328 /* SpringAnimation.swift */; };
+		D20400161CF3AD2B0073B328 /* Chain+Preset.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20400141CF3AD2B0073B328 /* Chain+Preset.swift */; };
+		D20400171CF3AD2B0073B328 /* Chain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20400151CF3AD2B0073B328 /* Chain.swift */; };
 		D21793881CF23D6700BB2467 /* Wave.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21793871CF23D6700BB2467 /* Wave.swift */; };
 		D217938A1CF23D9400BB2467 /* Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21793891CF23D9400BB2467 /* Spec.swift */; };
 		D217938D1CF24E5600BB2467 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = D217938C1CF24E5600BB2467 /* Action.swift */; };
-		D217939D1CF2531A00BB2467 /* BasicAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21793991CF2531A00BB2467 /* BasicAnimation.swift */; };
-		D217939E1CF2531A00BB2467 /* Delay.swift in Sources */ = {isa = PBXBuildFile; fileRef = D217939A1CF2531A00BB2467 /* Delay.swift */; };
-		D217939F1CF2531A00BB2467 /* KeyframeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D217939B1CF2531A00BB2467 /* KeyframeAnimation.swift */; };
-		D21793A01CF2531A00BB2467 /* SpringAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D217939C1CF2531A00BB2467 /* SpringAnimation.swift */; };
-		D21793A21CF2534800BB2467 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21793A11CF2534800BB2467 /* View.swift */; };
-		D21793A41CF253D700BB2467 /* Preset.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21793A31CF253D700BB2467 /* Preset.swift */; };
-		D21793A61CF253FA00BB2467 /* Hide.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21793A51CF253FA00BB2467 /* Hide.swift */; };
 		D21793A81CF254DE00BB2467 /* Construction.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D21793A71CF254DE00BB2467 /* Construction.framework */; };
 		D5B2E8AA1C3A780C00C0327D /* Wave.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B2E89F1C3A780C00C0327D /* Wave.framework */; };
 		D5C6294A1C3A7FAA007F7B7C /* Wave.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C629401C3A7FAA007F7B7C /* Wave.framework */; };
@@ -44,16 +43,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D20400051CF3A4010073B328 /* Animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
+		D20400061CF3A4010073B328 /* Delay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Delay.swift; sourceTree = "<group>"; };
+		D20400071CF3A4010073B328 /* KeyframeAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyframeAnimation.swift; sourceTree = "<group>"; };
+		D20400081CF3A4010073B328 /* SpringAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringAnimation.swift; sourceTree = "<group>"; };
+		D20400141CF3AD2B0073B328 /* Chain+Preset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Chain+Preset.swift"; sourceTree = "<group>"; };
+		D20400151CF3AD2B0073B328 /* Chain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chain.swift; sourceTree = "<group>"; };
 		D21793871CF23D6700BB2467 /* Wave.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wave.swift; sourceTree = "<group>"; };
 		D21793891CF23D9400BB2467 /* Spec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spec.swift; sourceTree = "<group>"; };
 		D217938C1CF24E5600BB2467 /* Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
-		D21793991CF2531A00BB2467 /* BasicAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicAnimation.swift; sourceTree = "<group>"; };
-		D217939A1CF2531A00BB2467 /* Delay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Delay.swift; sourceTree = "<group>"; };
-		D217939B1CF2531A00BB2467 /* KeyframeAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyframeAnimation.swift; sourceTree = "<group>"; };
-		D217939C1CF2531A00BB2467 /* SpringAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringAnimation.swift; sourceTree = "<group>"; };
-		D21793A11CF2534800BB2467 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
-		D21793A31CF253D700BB2467 /* Preset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preset.swift; sourceTree = "<group>"; };
-		D21793A51CF253FA00BB2467 /* Hide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hide.swift; sourceTree = "<group>"; };
 		D21793A71CF254DE00BB2467 /* Construction.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Construction.framework; path = Carthage/Build/iOS/Construction.framework; sourceTree = "<group>"; };
 		D500FD111C3AABED00782D78 /* Playground-iOS.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Playground-iOS.playground"; sourceTree = "<group>"; };
 		D500FD121C3AAC8E00782D78 /* Playground-Mac.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Playground-Mac.playground"; sourceTree = "<group>"; };
@@ -110,6 +108,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D20400131CF3AD2B0073B328 /* Chain */ = {
+			isa = PBXGroup;
+			children = (
+				D20400151CF3AD2B0073B328 /* Chain.swift */,
+				D20400141CF3AD2B0073B328 /* Chain+Preset.swift */,
+			);
+			path = Chain;
+			sourceTree = "<group>";
+		};
 		D21793861CF23D5A00BB2467 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -125,40 +132,13 @@
 		D217938B1CF24E4D00BB2467 /* Action */ = {
 			isa = PBXGroup;
 			children = (
-				D21793961CF2531A00BB2467 /* Layer */,
-				D21793971CF2531A00BB2467 /* Preset */,
-				D21793981CF2531A00BB2467 /* View */,
+				D20400051CF3A4010073B328 /* Animation.swift */,
+				D20400061CF3A4010073B328 /* Delay.swift */,
+				D20400071CF3A4010073B328 /* KeyframeAnimation.swift */,
+				D20400081CF3A4010073B328 /* SpringAnimation.swift */,
 				D217938C1CF24E5600BB2467 /* Action.swift */,
 			);
 			path = Action;
-			sourceTree = "<group>";
-		};
-		D21793961CF2531A00BB2467 /* Layer */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Layer;
-			sourceTree = "<group>";
-		};
-		D21793971CF2531A00BB2467 /* Preset */ = {
-			isa = PBXGroup;
-			children = (
-				D21793A31CF253D700BB2467 /* Preset.swift */,
-				D21793A51CF253FA00BB2467 /* Hide.swift */,
-			);
-			path = Preset;
-			sourceTree = "<group>";
-		};
-		D21793981CF2531A00BB2467 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				D21793991CF2531A00BB2467 /* BasicAnimation.swift */,
-				D217939A1CF2531A00BB2467 /* Delay.swift */,
-				D217939B1CF2531A00BB2467 /* KeyframeAnimation.swift */,
-				D217939C1CF2531A00BB2467 /* SpringAnimation.swift */,
-				D21793A11CF2534800BB2467 /* View.swift */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		D5B2E8951C3A780C00C0327D = {
@@ -198,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				D217938B1CF24E4D00BB2467 /* Action */,
+				D20400131CF3AD2B0073B328 /* Chain */,
 				D21793871CF23D6700BB2467 /* Wave.swift */,
 			);
 			path = Sources;
@@ -423,14 +404,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D21793881CF23D6700BB2467 /* Wave.swift in Sources */,
-				D217939E1CF2531A00BB2467 /* Delay.swift in Sources */,
-				D21793A41CF253D700BB2467 /* Preset.swift in Sources */,
-				D217939F1CF2531A00BB2467 /* KeyframeAnimation.swift in Sources */,
-				D21793A01CF2531A00BB2467 /* SpringAnimation.swift in Sources */,
+				D20400171CF3AD2B0073B328 /* Chain.swift in Sources */,
+				D204000B1CF3A4010073B328 /* Delay.swift in Sources */,
+				D204000C1CF3A4010073B328 /* KeyframeAnimation.swift in Sources */,
+				D20400161CF3AD2B0073B328 /* Chain+Preset.swift in Sources */,
+				D204000D1CF3A4010073B328 /* SpringAnimation.swift in Sources */,
 				D217938D1CF24E5600BB2467 /* Action.swift in Sources */,
-				D21793A61CF253FA00BB2467 /* Hide.swift in Sources */,
-				D21793A21CF2534800BB2467 /* View.swift in Sources */,
-				D217939D1CF2531A00BB2467 /* BasicAnimation.swift in Sources */,
+				D204000A1CF3A4010073B328 /* Animation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
