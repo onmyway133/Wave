@@ -1,5 +1,5 @@
 //
-//  Delay.swift
+//  Wait.swift
 //  Wave
 //
 //  Created by Khoa Pham on 22/05/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-public struct Delay: Action {
+public struct Wait: Action {
 
   let interval: NSTimeInterval
 
@@ -20,7 +20,7 @@ public struct Delay: Action {
     UIView.animateWithDuration(0, delay: interval, options: [], animations: {
 
     }, completion: { _ in
-      self.next(nextActions)
+      Wave.run(nextActions)
     })
   }
 }

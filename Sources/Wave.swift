@@ -10,11 +10,12 @@ import UIKit
 import Construction
 
 public typealias Block = () -> Void
+
 public let defaultDuration: NSTimeInterval = 0.25
+public let defaultDelay: NSTimeInterval = 0
 
-public extension UIView {
-
-  public var wave: Chain {
-    return Chain(view: self)
+public func run(actions: [Action]) {
+  if let action = actions.first {
+    action.run(Array(actions.dropFirst()))
   }
 }
