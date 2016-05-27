@@ -25,6 +25,7 @@
 		D209D0D91CF8EBB6000A45E3 /* LayerKeyframeChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D209D0D71CF8EBB6000A45E3 /* LayerKeyframeChain.swift */; };
 		D209D0DB1CF8EBC0000A45E3 /* LayerBasicAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D209D0DA1CF8EBC0000A45E3 /* LayerBasicAnimation.swift */; };
 		D209D0DD1CF8EBC8000A45E3 /* LayerKeyframeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D209D0DC1CF8EBC8000A45E3 /* LayerKeyframeAnimation.swift */; };
+		D209D0E31CF8F24D000A45E3 /* ViewAnimatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D209D0E21CF8F24D000A45E3 /* ViewAnimatable.swift */; };
 		D2136DF01CF63F5800BE9C4F /* Then.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2136DEF1CF63F5800BE9C4F /* Then.swift */; };
 		D21793881CF23D6700BB2467 /* Wave.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21793871CF23D6700BB2467 /* Wave.swift */; };
 		D217938A1CF23D9400BB2467 /* Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21793891CF23D9400BB2467 /* Spec.swift */; };
@@ -74,6 +75,7 @@
 		D209D0D71CF8EBB6000A45E3 /* LayerKeyframeChain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerKeyframeChain.swift; sourceTree = "<group>"; };
 		D209D0DA1CF8EBC0000A45E3 /* LayerBasicAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerBasicAnimation.swift; sourceTree = "<group>"; };
 		D209D0DC1CF8EBC8000A45E3 /* LayerKeyframeAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerKeyframeAnimation.swift; sourceTree = "<group>"; };
+		D209D0E21CF8F24D000A45E3 /* ViewAnimatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewAnimatable.swift; sourceTree = "<group>"; };
 		D2136DEF1CF63F5800BE9C4F /* Then.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Then.swift; sourceTree = "<group>"; };
 		D21793871CF23D6700BB2467 /* Wave.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wave.swift; sourceTree = "<group>"; };
 		D21793891CF23D9400BB2467 /* Spec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spec.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				D209D0BE1CF8EBAD000A45E3 /* Animation */,
 				D209D0C41CF8EBAD000A45E3 /* Chain */,
 				D209D0A41CF8C278000A45E3 /* View.swift */,
+				D209D0E21CF8F24D000A45E3 /* ViewAnimatable.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -500,6 +503,7 @@
 				D217938D1CF24E5600BB2467 /* Action.swift in Sources */,
 				D209D0CF1CF8EBAD000A45E3 /* ViewBasicChain.swift in Sources */,
 				D209D0CB1CF8EBAD000A45E3 /* ViewKeyframeAnimation.swift in Sources */,
+				D209D0E31CF8F24D000A45E3 /* ViewAnimatable.swift in Sources */,
 				D209D0CC1CF8EBAD000A45E3 /* ViewSpringAnimation.swift in Sources */,
 				D209D0CD1CF8EBAD000A45E3 /* ViewSystemAnimation.swift in Sources */,
 				D209D0DD1CF8EBC8000A45E3 /* LayerKeyframeAnimation.swift in Sources */,

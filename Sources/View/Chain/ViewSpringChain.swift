@@ -54,3 +54,13 @@ public extension View.SpringChain {
     }
   }
 }
+
+extension View.SpringChain: ViewAnimatable {
+
+  public func animate(block: Block) -> View.SpringChain {
+    var action = View.SpringAnimation()
+    action.block = block
+
+    return link(action)
+  }
+}

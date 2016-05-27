@@ -20,30 +20,3 @@ public extension View {
     }
   }
 }
-
-public extension View.KeyframeChain {
-
-  public func duration(interval: NSTimeInterval) -> View.KeyframeChain {
-    return configure { (inout action: View.KeyframeAnimation) in
-      action.duration = interval
-    }
-  }
-
-  public func delay(interval: NSTimeInterval) -> View.KeyframeChain {
-    return configure { (inout action: View.KeyframeAnimation) in
-      action.delay = interval
-    }
-  }
-
-  public func option(options: UIViewKeyframeAnimationOptions) -> View.KeyframeChain {
-    return configure { (inout action: View.KeyframeAnimation) in
-      action.options = options
-    }
-  }
-
-  public func replay(number: UInt) -> View.KeyframeChain {
-    return configure { (inout action: View.KeyframeAnimation) in
-      action.replay = number
-    }
-  }
-}
