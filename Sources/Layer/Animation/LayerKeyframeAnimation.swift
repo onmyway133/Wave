@@ -10,12 +10,15 @@ import UIKit
 
 public extension Layer {
 
-  public struct KeyframeAnimation: Action {
+  public struct KeyframeAnimation {
 
     var animation = CAKeyframeAnimation()
+  }
+}
 
-    public func run(nextActions: [Action]) {
-      Wave.run(nextActions)
-    }
+extension Layer.KeyframeAnimation: Action {
+
+  public func run(nextActions: [Action]) {
+    Wave.run(nextActions)
   }
 }

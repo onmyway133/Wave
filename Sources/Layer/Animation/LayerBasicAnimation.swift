@@ -10,12 +10,15 @@ import UIKit
 
 public extension Layer {
 
-  public struct BasicAnimation: Action {
+  public struct BasicAnimation {
 
     var animation = CABasicAnimation()
+  }
+}
 
-    public func run(nextActions: [Action]) {
-      Wave.run(nextActions)
-    }
+extension Layer.BasicAnimation: Action {
+
+  public func run(nextActions: [Action]) {
+    Wave.run(nextActions)
   }
 }

@@ -11,12 +11,15 @@ import UIKit
 public extension Layer {
 
   @available(iOS 9, *)
-  public struct SpringAnimation: Action {
+  public struct SpringAnimation {
 
     var animation = CASpringAnimation()
+  }
+}
 
-    public func run(nextActions: [Action]) {
-      Wave.run(nextActions)
-    }
+extension Layer.SpringAnimation: Action {
+
+  public func run(nextActions: [Action]) {
+    Wave.run(nextActions)
   }
 }
