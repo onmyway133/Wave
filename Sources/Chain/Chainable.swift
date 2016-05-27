@@ -47,6 +47,12 @@ public extension Chainable {
     let action = Then(block: block)
     return link(action)
   }
+
+  public func log(string: String) -> Self {
+    return then {
+      print(string)
+    }
+  }
 }
 
 public extension Chainable {

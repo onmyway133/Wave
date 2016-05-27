@@ -18,11 +18,11 @@ public extension ViewAnimatable {
 
   // MARK: - Move
 
-  public func moveX(value: CGFloat) -> Self {
+  public func moveX(value: Double) -> Self {
     return move(CGPoint(x: value, y: 0))
   }
 
-  public func moveY(value: CGFloat) -> Self {
+  public func moveY(value: Double) -> Self {
     return move(CGPoint(x: 0, y: value))
   }
 
@@ -34,11 +34,11 @@ public extension ViewAnimatable {
 
   // MARK: - Scale
 
-  public func scaleX(value: CGFloat) -> Self {
+  public func scaleX(value: Double) -> Self {
     return move(CGPoint(x: value, y: 0))
   }
 
-  public func scaleY(value: CGFloat) -> Self {
+  public func scaleY(value: Double) -> Self {
     return move(CGPoint(x: 0, y: value))
   }
 
@@ -50,15 +50,15 @@ public extension ViewAnimatable {
 
   // MARK: - Zoom
 
-  public func zoom(value: CGFloat) -> Self {
+  public func zoom(value: Double) -> Self {
     return scale(CGPoint(x: value, y: value))
   }
 
   // MARK: - Rotate
 
-  public func rotate(angle: CGFloat) -> Self {
+  public func rotate(angle: Double) -> Self {
     return animate { [weak self] in
-      self?.view.transform = CGAffineTransformMakeRotation(angle)
+      self?.view.transform = CGAffineTransformMakeRotation(CGFloat(angle))
     }
   }
 
