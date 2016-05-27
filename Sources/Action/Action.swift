@@ -9,5 +9,6 @@
 import Foundation
 
 public protocol Action {
+  
   func run(nextActions: [Action])
 }

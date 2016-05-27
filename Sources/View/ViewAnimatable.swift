@@ -9,6 +9,7 @@
 import UIKit
 
 public protocol ViewAnimatable: class {
+  
   func animate(block: Block) -> Self
   var view: UIView { get }
 }
