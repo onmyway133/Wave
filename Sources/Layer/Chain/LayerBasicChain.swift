@@ -20,3 +20,12 @@ public extension Layer {
     }
   }
 }
+
+public extension Layer.BasicChain {
+
+  public func keyPath(keyPath: String) -> Layer.BasicChain {
+    return configure { (inout action: Layer.BasicAnimation) in
+      action.animation.keyPath = keyPath
+    }
+  }
+}

@@ -10,6 +10,7 @@ import UIKit
 
 public extension Layer {
 
+  @available(iOS 9, *)
   public final class SpringChain: Chainable {
 
     public var actions: [Action] = []

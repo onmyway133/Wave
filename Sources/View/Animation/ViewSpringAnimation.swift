@@ -10,7 +10,7 @@ import UIKit
 
 public extension View {
 
-  public struct SpringAnimation: Action {
+  public struct SpringAnimation {
 
     var duration: NSTimeInterval = Wave.defaultDuration
     var delay: NSTimeInterval = Wave.defaultDelay
@@ -19,20 +19,23 @@ public extension View {
     var damping: CGFloat = 1
     var velocity: CGFloat = 1
     var block: Block?
+  }
+}
 
-    public func run(nextActions: [Action]) {
-      UIView.animateWithDuration(duration, delay: delay,
-                                 usingSpringWithDamping: damping, initialSpringVelocity: velocity,
-                                 options: options, animations:
-        {
-          if let replay = self.replay {
-            UIView.setAnimationRepeatCount(Float(replay))
-          }
+extension View.SpringAnimation: Action {
 
-          self.block?()
-        }, completion: { _ in
-          Wave.run(nextActions)
-      })
-    }
+  public func run(nextActions: [Action]) {
+    UIView.animateWithDuration(duration, delay: delay,
+                               usingSpringWithDamping: damping, initialSpringVelocity: velocity,
+                               options: options, animations:
+      {
+        if let replay = self.replay {
+          UIView.setAnimationRepeatCount(Float(replay))
+        }
+
+        self.block?()
+      }, completion: { _ in
+        Wave.run(nextActions)
+    })
   }
 }

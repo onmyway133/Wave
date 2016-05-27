@@ -6,11 +6,16 @@
 //  Copyright © 2016 Fantageek. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 public extension Layer {
 
-  public struct BasicAnimation {
-    
+  public struct BasicAnimation: Action {
+
+    var animation = CABasicAnimation()
+
+    public func run(nextActions: [Action]) {
+      Wave.run(nextActions)
+    }
   }
 }

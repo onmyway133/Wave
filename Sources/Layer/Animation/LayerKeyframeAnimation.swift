@@ -6,11 +6,16 @@
 //  Copyright © 2016 Fantageek. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 public extension Layer {
 
-  public struct KeyframeAnimation {
-    
+  public struct KeyframeAnimation: Action {
+
+    var animation = CAKeyframeAnimation()
+
+    public func run(nextActions: [Action]) {
+      Wave.run(nextActions)
+    }
   }
 }

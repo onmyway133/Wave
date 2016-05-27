@@ -10,22 +10,25 @@ import UIKit
 
 public extension View {
 
-  public struct KeyframeAnimation: Action {
+  public struct KeyframeAnimation {
 
     var duration: NSTimeInterval = Wave.defaultDuration
     var delay: NSTimeInterval = Wave.defaultDelay
     var replay: UInt?
     var options: UIViewKeyframeAnimationOptions = []
     var block: Block?
+  }
+}
 
-    public func run(nextActions: [Action]) {
-      UIView.animateKeyframesWithDuration(duration, delay: delay, options: options,
-                                          animations:
-        {
+extension View.KeyframeAnimation: Action {
 
-        }, completion: { _ in
-          Wave.run(nextActions)
-      })
-    }
+  public func run(nextActions: [Action]) {
+    UIView.animateKeyframesWithDuration(duration, delay: delay, options: options,
+                                        animations:
+      {
+
+      }, completion: { _ in
+        Wave.run(nextActions)
+    })
   }
 }

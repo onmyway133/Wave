@@ -6,11 +6,17 @@
 //  Copyright © 2016 Fantageek. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 public extension Layer {
 
-  public struct SpringAnimation {
+  @available(iOS 9, *)
+  public struct SpringAnimation: Action {
 
+    var animation = CASpringAnimation()
+
+    public func run(nextActions: [Action]) {
+      Wave.run(nextActions)
+    }
   }
 }
