@@ -1,5 +1,5 @@
 //
-//  LayerKeyframeChain.swift
+//  LayerSpringChain.swift
 //  Wave
 //
 //  Created by Khoa Pham on 27/05/16.
@@ -10,7 +10,7 @@ import UIKit
 
 public extension Layer {
 
-  public final class KeyframeChain: Chainable {
+  public final class SpringChain: Chainable {
 
     public var actions: [Action] = []
     public let layer: CALayer

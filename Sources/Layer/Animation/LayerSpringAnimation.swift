@@ -1,5 +1,5 @@
 //
-//  LayerKeyframeAnimation.swift
+//  LayerSpringAnimation.swift
 //  Wave
 //
 //  Created by Khoa Pham on 27/05/16.
@@ -10,7 +10,7 @@ import Foundation
 
 public extension Layer {
 
-  public struct KeyframeAnimation {
-    
+  public struct SpringAnimation {
+
   }
 }

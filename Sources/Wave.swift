@@ -19,3 +19,10 @@ public func run(actions: [Action]) {
     action.run(Array(actions.dropFirst()))
   }
 }
+
+public extension UIView {
+
+  public var chain: View.BasicChain {
+    return View.BasicChain(view: self)
+  }
+}

@@ -7,3 +7,10 @@
 //
 
 import Foundation
+
+public extension Layer {
+
+  public struct BasicAnimation {
+    
+  }
+}
