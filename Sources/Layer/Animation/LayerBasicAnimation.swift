@@ -12,6 +12,7 @@ public extension Layer {
 
   public struct BasicAnimation {
 
+    var layer: CALayer?
     var animation = CABasicAnimation()
   }
 }
@@ -19,6 +20,15 @@ public extension Layer {
 extension Layer.BasicAnimation: Action {
 
   public func run(nextActions: [Action]) {
+    CATransaction.begin()
+
+    CATransaction.setCompletionBlock {
+      Wave.run(nextActions)
+    }
+    
+    layer?.addAnimation(animation, forKey: "")
+    
+    CATransaction.commit()
     Wave.run(nextActions)
   }
 }

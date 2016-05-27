@@ -20,3 +20,11 @@ public extension Layer {
     }
   }
 }
+
+public extension Layer.KeyframeChain {
+
+  public func shake() -> Layer.KeyframeChain {
+
+    return self
+  }
+}

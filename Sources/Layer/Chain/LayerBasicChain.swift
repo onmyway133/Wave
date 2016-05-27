@@ -29,3 +29,14 @@ public extension Layer.BasicChain {
     }
   }
 }
+
+extension Layer.BasicChain: LayerAnimatable {
+
+  public func animate(block: inout CABasicAnimation -> Void) -> Layer.BasicChain {
+    var action = Layer.BasicAnimation()
+    action.layer = layer
+    block(&action.animation)
+
+    return link(action)
+  }
+}
