@@ -25,15 +25,22 @@ public extension View {
 
 public extension View.SystemChain {
 
+  public func configureAnimation(block: View.SystemAnimation -> Void) -> View.SystemChain {
+    return configure { (action: View.SystemAction) -> View.SystemAction in
+      block(action.animation)
+      return action
+    }
+  }
+
   public func option(options: UIViewAnimationOptions) -> View.SystemChain {
-    return configure { (inout action: View.SystemAction) in
-      action.options = options
+    return configureAnimation { (animation: View.SystemAnimation) in
+      animation.options = options
     }
   }
 
   public func parallelBlock(block: Block) -> View.SystemChain {
-    return configure { (inout action: View.SystemAction) in
-      action.parallelBlock = block
+    return configureAnimation { (animation: View.SystemAnimation) in
+      animation.parallelBlock = block
     }
   }
 }
@@ -43,8 +50,8 @@ public extension View.SystemChain {
 public extension View.SystemChain {
 
   public func animate() -> View.SystemChain {
-    var action = View.SystemAction()
-    action.views = views
+    let action = View.SystemAction()
+    action.animation.views = views
 
     return link(action)
   }

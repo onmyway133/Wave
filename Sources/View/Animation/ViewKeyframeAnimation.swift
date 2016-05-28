@@ -15,7 +15,7 @@ public extension View {
     var options: UIViewKeyframeAnimationOptions = []
     var block: Block?
 
-    public override init() {
+    public required init() {
 
     }
   }

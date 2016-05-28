@@ -12,27 +12,23 @@ public extension View {
 
   public struct TransitionAction {
 
-    var duration: NSTimeInterval = Wave.defaultDuration
-    var options: UIViewAnimationOptions = []
-    var from: UIView?
-    var to: UIView?
-    var with: UIView?
-    var block: (UIView -> Void)?
+    let animation = View.TransitionAnimation()
   }
 }
 
 extension View.TransitionAction: Action {
 
   public func run(nextActions: [Action]) {
-    if let with = with {
-      UIView.transitionWithView(with, duration: duration, options: options,
+    if let with = animation.with {
+      UIView.transitionWithView(with, duration: animation.duration, options: animation.options,
                                 animations: {
-                                  self.block?(with)
+                                  self.animation.block?(with)
         }, completion: { _ in
           Wave.run(nextActions)
       })
-    } else if let from = from, to = to {
-      UIView.transitionFromView(from, toView: to, duration: duration, options: options, completion: { _ in
+    } else if let from = animation.from, to = animation.to {
+      UIView.transitionFromView(from, toView: to, duration: animation.duration, options: animation.options,
+                                completion: { _ in
         Wave.run(nextActions)
       })
     }

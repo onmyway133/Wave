@@ -65,11 +65,10 @@ public extension Chainable {
 
 public extension Chainable {
 
-  public func configure<T: Action>(block: inout T -> Void) -> Self {
+  public func configure<T: Action>(block: T -> T) -> Self {
     if let action = actions.last as? T {
-      var action = action
-      block(&action)
-      replaceLast(action)
+      let configuredAction = block(action)
+      replaceLast(configuredAction)
     }
 
     return self

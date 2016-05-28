@@ -1,5 +1,5 @@
 //
-//  ViewAnimation.swift
+//  ViewTransitionAnimation.swift
 //  Wave
 //
 //  Created by Khoa Pham on 28/05/16.
@@ -10,15 +10,17 @@ import UIKit
 
 public extension View {
 
-  public class Animation {
+  public class TransitionAnimation {
 
     var duration: NSTimeInterval = Wave.defaultDuration
-    var delay: NSTimeInterval = Wave.defaultDelay
-    var replay: UInt?
+    var options: UIViewAnimationOptions = []
+    var from: UIView?
+    var to: UIView?
+    var with: UIView?
+    var block: (UIView -> Void)?
 
     public required init() {
-      
+
     }
   }
 }
-

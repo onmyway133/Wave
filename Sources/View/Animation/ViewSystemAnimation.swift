@@ -1,5 +1,5 @@
 //
-//  ViewBasicAnimation.swift
+//  ViewSystemAnimation.swift
 //  Wave
 //
 //  Created by Khoa Pham on 28/05/16.
@@ -10,10 +10,12 @@ import UIKit
 
 public extension View {
 
-  public class BasicAnimation: View.Animation {
+  public class SystemAnimation {
 
     var options: UIViewAnimationOptions = []
-    var block: Block?
+    var views: [UIView] = []
+    var animation: UISystemAnimation = .Delete
+    var parallelBlock: Block?
 
     public required init() {
 

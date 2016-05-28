@@ -26,50 +26,46 @@ public extension View {
 
 public extension View.SpringChain {
 
-  public func duration(interval: NSTimeInterval) -> View.SpringChain {
-    return configure { (inout action: View.SpringAction) in
-      action.duration = interval
-    }
-  }
-
-  public func delay(interval: NSTimeInterval) -> View.SpringChain {
-    return configure { (inout action: View.SpringAction) in
-      action.delay = interval
+  public func configureAnimation(block: View.SpringAnimation -> Void) -> View.SpringChain {
+    return configure { (action: View.SpringAction) -> View.SpringAction in
+      block(action.animation)
+      return action
     }
   }
 
   public func option(options: UIViewAnimationOptions) -> View.SpringChain {
-    return configure { (inout action: View.SpringAction) in
-      action.options = options
+    return configureAnimation { (animation: View.SpringAnimation) in
+      animation.options = options
     }
   }
 
   public func damping(value: CGFloat) -> View.SpringChain {
-    return configure { (inout action: View.SpringAction) in
-      action.damping = value
+    return configureAnimation { (animation: View.SpringAnimation) in
+      animation.damping = value
     }
   }
 
   public func velocity(value: CGFloat) -> View.SpringChain {
-    return configure { (inout action: View.SpringAction) in
-      action.velocity = value
+    return configureAnimation { (animation: View.SpringAnimation) in
+      animation.velocity = value
     }
   }
 
   public func replay(number: UInt) -> View.SpringChain {
-    return configure { (inout action: View.SpringAction) in
-      action.replay = number
+    return configureAnimation { (animation: View.SpringAnimation) in
+      animation.replay = number
     }
   }
 }
+
 
 // MARK: - Animate
 
 extension View.SpringChain: ViewAnimatable {
 
   public func animate(block: Block) -> View.SpringChain {
-    var action = View.SpringAction()
-    action.block = block
+    let action = View.SpringAction()
+    action.animation.block = block
 
     return link(action)
   }

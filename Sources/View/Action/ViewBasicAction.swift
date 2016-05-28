@@ -12,25 +12,21 @@ public extension View {
 
   public struct BasicAction {
 
-    var duration: NSTimeInterval = Wave.defaultDuration
-    var delay: NSTimeInterval = Wave.defaultDelay
-    var options: UIViewAnimationOptions = []
-    var replay: UInt?
-    var block: Block?
+    let animation = View.BasicAnimation()
   }
 }
 
 extension View.BasicAction: Action {
 
   public func run(nextActions: [Action]) {
-    UIView.animateWithDuration(duration, delay: delay, options: options,
+    UIView.animateWithDuration(animation.duration, delay: animation.delay, options: animation.options,
                                animations:
       {
-        if let replay = self.replay {
+        if let replay = self.animation.replay {
           UIView.setAnimationRepeatCount(Float(replay))
         }
 
-        self.block?()
+        self.animation.block?()
       }, completion: { _ in
         Wave.run(nextActions)
     })

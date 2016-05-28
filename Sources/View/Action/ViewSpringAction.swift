@@ -12,28 +12,22 @@ public extension View {
 
   public struct SpringAction {
 
-    var duration: NSTimeInterval = Wave.defaultDuration
-    var delay: NSTimeInterval = Wave.defaultDelay
-    var options: UIViewAnimationOptions = []
-    var replay: UInt?
-    var damping: CGFloat = 1
-    var velocity: CGFloat = 1
-    var block: Block?
+    let animation = View.SpringAnimation()
   }
 }
 
 extension View.SpringAction: Action {
 
   public func run(nextActions: [Action]) {
-    UIView.animateWithDuration(duration, delay: delay,
-                               usingSpringWithDamping: damping, initialSpringVelocity: velocity,
-                               options: options, animations:
+    UIView.animateWithDuration(animation.duration, delay: animation.delay,
+                               usingSpringWithDamping: animation.damping, initialSpringVelocity: animation.velocity,
+                               options: animation.options, animations:
       {
-        if let replay = self.replay {
+        if let replay = self.animation.replay {
           UIView.setAnimationRepeatCount(Float(replay))
         }
 
-        self.block?()
+        self.animation.block?()
       }, completion: { _ in
         Wave.run(nextActions)
     })

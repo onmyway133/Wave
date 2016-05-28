@@ -12,20 +12,17 @@ public extension View {
 
   public struct SystemAction {
 
-    var options: UIViewAnimationOptions = []
-    var views: [UIView] = []
-    var animation: UISystemAnimation = .Delete
-    var parallelBlock: Block?
+    let animation = View.SystemAnimation()
   }
 }
 
 extension View.SystemAction: Action {
 
   public func run(nextActions: [Action]) {
-    UIView.performSystemAnimation(animation, onViews: views, options: options,
+    UIView.performSystemAnimation(animation.animation, onViews: animation.views, options: animation.options,
                                   animations:
       {
-        self.parallelBlock?()
+        self.animation.parallelBlock?()
       }, completion: { _ in
         Wave.run(nextActions)
     })

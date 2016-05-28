@@ -1,5 +1,5 @@
 //
-//  ViewConfigurable.swift
+//  LayerConfigurable.swift
 //  Wave
 //
 //  Created by Khoa Pham on 28/05/16.
@@ -8,6 +8,6 @@
 
 import UIKit
 
-public protocol ViewConfigurable: class {
-
+public protocol LayerConfigurable: class {
+  
 }

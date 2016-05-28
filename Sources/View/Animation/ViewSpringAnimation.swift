@@ -15,7 +15,7 @@ public extension View {
     var damping: CGFloat = 1
     var velocity: CGFloat = 1
 
-    public override init() {
+    public required init() {
 
     }
   }

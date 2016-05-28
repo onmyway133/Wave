@@ -12,18 +12,14 @@ public extension View {
 
   public struct KeyframeAction {
 
-    var duration: NSTimeInterval = Wave.defaultDuration
-    var delay: NSTimeInterval = Wave.defaultDelay
-    var replay: UInt?
-    var options: UIViewKeyframeAnimationOptions = []
-    var block: Block?
+    let animation = View.KeyframeAnimation()
   }
 }
 
 extension View.KeyframeAction: Action {
 
   public func run(nextActions: [Action]) {
-    UIView.animateKeyframesWithDuration(duration, delay: delay, options: options,
+    UIView.animateKeyframesWithDuration(animation.duration, delay: animation.delay, options: animation.options,
                                         animations:
       {
 

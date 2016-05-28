@@ -25,27 +25,34 @@ public extension View {
 
 public extension View.BasicChain {
 
+  public func configureAnimation(block: View.BasicAnimation -> Void) -> View.BasicChain {
+    return configure { (action: View.BasicAction) -> View.BasicAction in
+      block(action.animation)
+      return action
+    }
+  }
+
   public func duration(interval: NSTimeInterval) -> View.BasicChain {
-    return configure { (inout action: View.BasicAction) in
-      action.duration = interval
+    return configureAnimation { (animation: View.BasicAnimation) in
+      animation.duration = interval
     }
   }
 
   public func delay(interval: NSTimeInterval) -> View.BasicChain {
-    return configure { (inout action: View.BasicAction) in
-      action.delay = interval
-    }
-  }
-
-  public func option(options: UIViewAnimationOptions) -> View.BasicChain {
-    return configure { (inout action: View.BasicAction) in
-      action.options = options
+    return configureAnimation { (animation: View.BasicAnimation) in
+      animation.delay = interval
     }
   }
 
   public func replay(number: UInt) -> View.BasicChain {
-    return configure { (inout action: View.BasicAction) in
-      action.replay = number
+    return configureAnimation { (animation: View.BasicAnimation) in
+      animation.replay = number
+    }
+  }
+
+  public func option(options: UIViewAnimationOptions) -> View.BasicChain {
+    return configureAnimation { (animation: View.BasicAnimation) in
+      animation.options = options
     }
   }
 }
@@ -55,8 +62,8 @@ public extension View.BasicChain {
 extension View.BasicChain: ViewAnimatable {
 
   public func animate(block: Block) -> View.BasicChain {
-    var action = View.BasicAction()
-    action.block = block
+    let action = View.BasicAction()
+    action.animation.block = block
 
     return link(action)
   }

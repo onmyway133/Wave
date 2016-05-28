@@ -25,39 +25,46 @@ public extension View {
 
 public extension View.TransitionChain {
 
+  public func configureAnimation(block: View.TransitionAnimation -> Void) -> View.TransitionChain {
+    return configure { (action: View.TransitionAction) -> View.TransitionAction in
+      block(action.animation)
+      return action
+    }
+  }
+
   public func duration(interval: NSTimeInterval) -> View.TransitionChain {
-    return configure { (inout action: View.TransitionAction) in
-      action.duration = interval
+    return configureAnimation { (animation: View.TransitionAnimation) in
+      animation.duration = interval
     }
   }
 
   public func option(options: UIViewAnimationOptions) -> View.TransitionChain {
-    return configure { (inout action: View.TransitionAction) in
-      action.options = options
+    return configureAnimation { (animation: View.TransitionAnimation) in
+      animation.options = options
     }
   }
 
   public func from(view: UIView) -> View.TransitionChain {
-    return configure { (inout action: View.TransitionAction) in
-      action.from = view
+    return configureAnimation { (animation: View.TransitionAnimation) in
+      animation.from = view
     }
   }
 
   public func to(view: UIView) -> View.TransitionChain {
-    return configure { (inout action: View.TransitionAction) in
-      action.to = view
+    return configureAnimation { (animation: View.TransitionAnimation) in
+      animation.to = view
     }
   }
 
   public func with(view: UIView) -> View.TransitionChain {
-    return configure { (inout action: View.TransitionAction) in
-      action.with = view
+    return configureAnimation { (animation: View.TransitionAnimation) in
+      animation.with = view
     }
   }
 
   public func block(block: UIView -> Void) -> View.TransitionChain {
-    return configure { (inout action: View.TransitionAction) in
-      action.block = block
+    return configureAnimation { (animation: View.TransitionAnimation) in
+      animation.block = block
     }
   }
 }

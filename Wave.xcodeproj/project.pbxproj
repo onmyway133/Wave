@@ -18,11 +18,7 @@
 		D209D0D31CF8EBAD000A45E3 /* ViewTransitionChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D209D0C91CF8EBAD000A45E3 /* ViewTransitionChain.swift */; };
 		D209D0D81CF8EBB6000A45E3 /* LayerBasicChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D209D0D61CF8EBB6000A45E3 /* LayerBasicChain.swift */; };
 		D209D0D91CF8EBB6000A45E3 /* LayerKeyframeChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D209D0D71CF8EBB6000A45E3 /* LayerKeyframeChain.swift */; };
-		D209D0E31CF8F24D000A45E3 /* ViewAnimatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D209D0E21CF8F24D000A45E3 /* ViewAnimatable.swift */; };
 		D209D0E71CF8F86E000A45E3 /* LayerSpringChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D209D0E61CF8F86E000A45E3 /* LayerSpringChain.swift */; };
-		D209D0E91CF8F8ED000A45E3 /* LayerAnimatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D209D0E81CF8F8ED000A45E3 /* LayerAnimatable.swift */; };
-		D209D0EF1CFA2FBF000A45E3 /* ViewConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D209D0EE1CFA2FBF000A45E3 /* ViewConfigurable.swift */; };
-		D209D0F11CFA2FDB000A45E3 /* LayerConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D209D0F01CFA2FDB000A45E3 /* LayerConfigurable.swift */; };
 		D209D0F91CFA3341000A45E3 /* ViewBasicAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D209D0F31CFA3341000A45E3 /* ViewBasicAction.swift */; };
 		D209D0FA1CFA3341000A45E3 /* ViewKeyframeAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D209D0F41CFA3341000A45E3 /* ViewKeyframeAction.swift */; };
 		D209D0FB1CFA3341000A45E3 /* ViewSpringAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D209D0F51CFA3341000A45E3 /* ViewSpringAction.swift */; };
@@ -35,6 +31,12 @@
 		D209D1081CFA345A000A45E3 /* ViewBasicAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D209D1071CFA345A000A45E3 /* ViewBasicAnimation.swift */; };
 		D209D10A1CFA3582000A45E3 /* ViewKeyframeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D209D1091CFA3582000A45E3 /* ViewKeyframeAnimation.swift */; };
 		D209D10C1CFA358B000A45E3 /* ViewSpringAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D209D10B1CFA358B000A45E3 /* ViewSpringAnimation.swift */; };
+		D209D10E1CFA362A000A45E3 /* ViewSystemAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D209D10D1CFA362A000A45E3 /* ViewSystemAnimation.swift */; };
+		D209D1101CFA3642000A45E3 /* ViewTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D209D10F1CFA3642000A45E3 /* ViewTransitionAnimation.swift */; };
+		D209D11B1CFA398B000A45E3 /* LayerAnimatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D209D1181CFA398B000A45E3 /* LayerAnimatable.swift */; };
+		D209D11C1CFA398B000A45E3 /* LayerConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D209D11A1CFA398B000A45E3 /* LayerConfigurable.swift */; };
+		D209D11E1CFA399F000A45E3 /* ViewConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D209D11D1CFA399F000A45E3 /* ViewConfigurable.swift */; };
+		D209D1201CFA4197000A45E3 /* ViewAnimatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D209D11F1CFA4197000A45E3 /* ViewAnimatable.swift */; };
 		D2136DF01CF63F5800BE9C4F /* Then.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2136DEF1CF63F5800BE9C4F /* Then.swift */; };
 		D21793881CF23D6700BB2467 /* Wave.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21793871CF23D6700BB2467 /* Wave.swift */; };
 		D217938A1CF23D9400BB2467 /* Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21793891CF23D9400BB2467 /* Spec.swift */; };
@@ -77,11 +79,7 @@
 		D209D0C91CF8EBAD000A45E3 /* ViewTransitionChain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewTransitionChain.swift; sourceTree = "<group>"; };
 		D209D0D61CF8EBB6000A45E3 /* LayerBasicChain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerBasicChain.swift; sourceTree = "<group>"; };
 		D209D0D71CF8EBB6000A45E3 /* LayerKeyframeChain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerKeyframeChain.swift; sourceTree = "<group>"; };
-		D209D0E21CF8F24D000A45E3 /* ViewAnimatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewAnimatable.swift; sourceTree = "<group>"; };
 		D209D0E61CF8F86E000A45E3 /* LayerSpringChain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerSpringChain.swift; sourceTree = "<group>"; };
-		D209D0E81CF8F8ED000A45E3 /* LayerAnimatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerAnimatable.swift; sourceTree = "<group>"; };
-		D209D0EE1CFA2FBF000A45E3 /* ViewConfigurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewConfigurable.swift; sourceTree = "<group>"; };
-		D209D0F01CFA2FDB000A45E3 /* LayerConfigurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerConfigurable.swift; sourceTree = "<group>"; };
 		D209D0F31CFA3341000A45E3 /* ViewBasicAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewBasicAction.swift; sourceTree = "<group>"; };
 		D209D0F41CFA3341000A45E3 /* ViewKeyframeAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewKeyframeAction.swift; sourceTree = "<group>"; };
 		D209D0F51CFA3341000A45E3 /* ViewSpringAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewSpringAction.swift; sourceTree = "<group>"; };
@@ -94,6 +92,12 @@
 		D209D1071CFA345A000A45E3 /* ViewBasicAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewBasicAnimation.swift; sourceTree = "<group>"; };
 		D209D1091CFA3582000A45E3 /* ViewKeyframeAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewKeyframeAnimation.swift; sourceTree = "<group>"; };
 		D209D10B1CFA358B000A45E3 /* ViewSpringAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewSpringAnimation.swift; sourceTree = "<group>"; };
+		D209D10D1CFA362A000A45E3 /* ViewSystemAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewSystemAnimation.swift; sourceTree = "<group>"; };
+		D209D10F1CFA3642000A45E3 /* ViewTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewTransitionAnimation.swift; sourceTree = "<group>"; };
+		D209D1181CFA398B000A45E3 /* LayerAnimatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerAnimatable.swift; sourceTree = "<group>"; };
+		D209D11A1CFA398B000A45E3 /* LayerConfigurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerConfigurable.swift; sourceTree = "<group>"; };
+		D209D11D1CFA399F000A45E3 /* ViewConfigurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewConfigurable.swift; sourceTree = "<group>"; };
+		D209D11F1CFA4197000A45E3 /* ViewAnimatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewAnimatable.swift; sourceTree = "<group>"; };
 		D2136DEF1CF63F5800BE9C4F /* Then.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Then.swift; sourceTree = "<group>"; };
 		D21793871CF23D6700BB2467 /* Wave.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wave.swift; sourceTree = "<group>"; };
 		D21793891CF23D9400BB2467 /* Spec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spec.swift; sourceTree = "<group>"; };
@@ -165,11 +169,11 @@
 		D209D09C1CF8C260000A45E3 /* Layer */ = {
 			isa = PBXGroup;
 			children = (
+				D209D1171CFA398B000A45E3 /* Animatable */,
+				D209D1191CFA398B000A45E3 /* Configurable */,
 				D209D0FE1CFA3347000A45E3 /* Action */,
 				D209D0D51CF8EBB6000A45E3 /* Chain */,
 				D209D0A21CF8C271000A45E3 /* Layer.swift */,
-				D209D0E81CF8F8ED000A45E3 /* LayerAnimatable.swift */,
-				D209D0F01CFA2FDB000A45E3 /* LayerConfigurable.swift */,
 			);
 			path = Layer;
 			sourceTree = "<group>";
@@ -177,12 +181,12 @@
 		D209D09D1CF8C260000A45E3 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D209D0F21CFA3341000A45E3 /* Action */,
+				D209D1111CFA3982000A45E3 /* Animatable */,
+				D209D1131CFA3982000A45E3 /* Configurable */,
 				D209D0F81CFA3341000A45E3 /* Animation */,
+				D209D0F21CFA3341000A45E3 /* Action */,
 				D209D0C41CF8EBAD000A45E3 /* Chain */,
 				D209D0A41CF8C278000A45E3 /* View.swift */,
-				D209D0E21CF8F24D000A45E3 /* ViewAnimatable.swift */,
-				D209D0EE1CFA2FBF000A45E3 /* ViewConfigurable.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -228,6 +232,8 @@
 				D209D1071CFA345A000A45E3 /* ViewBasicAnimation.swift */,
 				D209D1091CFA3582000A45E3 /* ViewKeyframeAnimation.swift */,
 				D209D10B1CFA358B000A45E3 /* ViewSpringAnimation.swift */,
+				D209D10D1CFA362A000A45E3 /* ViewSystemAnimation.swift */,
+				D209D10F1CFA3642000A45E3 /* ViewTransitionAnimation.swift */,
 			);
 			path = Animation;
 			sourceTree = "<group>";
@@ -240,6 +246,38 @@
 				D209D1011CFA3347000A45E3 /* LayerSpringAction.swift */,
 			);
 			path = Action;
+			sourceTree = "<group>";
+		};
+		D209D1111CFA3982000A45E3 /* Animatable */ = {
+			isa = PBXGroup;
+			children = (
+				D209D11F1CFA4197000A45E3 /* ViewAnimatable.swift */,
+			);
+			path = Animatable;
+			sourceTree = "<group>";
+		};
+		D209D1131CFA3982000A45E3 /* Configurable */ = {
+			isa = PBXGroup;
+			children = (
+				D209D11D1CFA399F000A45E3 /* ViewConfigurable.swift */,
+			);
+			path = Configurable;
+			sourceTree = "<group>";
+		};
+		D209D1171CFA398B000A45E3 /* Animatable */ = {
+			isa = PBXGroup;
+			children = (
+				D209D1181CFA398B000A45E3 /* LayerAnimatable.swift */,
+			);
+			path = Animatable;
+			sourceTree = "<group>";
+		};
+		D209D1191CFA398B000A45E3 /* Configurable */ = {
+			isa = PBXGroup;
+			children = (
+				D209D11A1CFA398B000A45E3 /* LayerConfigurable.swift */,
+			);
+			path = Configurable;
 			sourceTree = "<group>";
 		};
 		D21793861CF23D5A00BB2467 /* Frameworks */ = {
@@ -530,9 +568,11 @@
 			files = (
 				D209D0D31CF8EBAD000A45E3 /* ViewTransitionChain.swift in Sources */,
 				D209D1061CFA3436000A45E3 /* ViewAnimation.swift in Sources */,
-				D209D0E91CF8F8ED000A45E3 /* LayerAnimatable.swift in Sources */,
+				D209D11B1CFA398B000A45E3 /* LayerAnimatable.swift in Sources */,
 				D209D0FA1CFA3341000A45E3 /* ViewKeyframeAction.swift in Sources */,
+				D209D1101CFA3642000A45E3 /* ViewTransitionAnimation.swift in Sources */,
 				D209D0D81CF8EBB6000A45E3 /* LayerBasicChain.swift in Sources */,
+				D209D10E1CFA362A000A45E3 /* ViewSystemAnimation.swift in Sources */,
 				D21793881CF23D6700BB2467 /* Wave.swift in Sources */,
 				D209D0F91CFA3341000A45E3 /* ViewBasicAction.swift in Sources */,
 				D209D0E71CF8F86E000A45E3 /* LayerSpringChain.swift in Sources */,
@@ -544,20 +584,20 @@
 				D209D0FB1CFA3341000A45E3 /* ViewSpringAction.swift in Sources */,
 				D217938D1CF24E5600BB2467 /* Action.swift in Sources */,
 				D209D0CF1CF8EBAD000A45E3 /* ViewBasicChain.swift in Sources */,
-				D209D0EF1CFA2FBF000A45E3 /* ViewConfigurable.swift in Sources */,
 				D209D10C1CFA358B000A45E3 /* ViewSpringAnimation.swift in Sources */,
-				D209D0E31CF8F24D000A45E3 /* ViewAnimatable.swift in Sources */,
 				D209D1081CFA345A000A45E3 /* ViewBasicAnimation.swift in Sources */,
 				D209D1031CFA3347000A45E3 /* LayerKeyframeAction.swift in Sources */,
+				D209D11E1CFA399F000A45E3 /* ViewConfigurable.swift in Sources */,
 				D209D0A51CF8C278000A45E3 /* View.swift in Sources */,
+				D209D1201CFA4197000A45E3 /* ViewAnimatable.swift in Sources */,
 				D204001B1CF3B8130073B328 /* Chainable.swift in Sources */,
-				D209D0F11CFA2FDB000A45E3 /* LayerConfigurable.swift in Sources */,
 				D209D0FC1CFA3341000A45E3 /* ViewSystemAction.swift in Sources */,
 				D209D0D91CF8EBB6000A45E3 /* LayerKeyframeChain.swift in Sources */,
 				D209D0D11CF8EBAD000A45E3 /* ViewSpringChain.swift in Sources */,
 				D209D0D01CF8EBAD000A45E3 /* ViewKeyframeChain.swift in Sources */,
 				D209D0FD1CFA3341000A45E3 /* ViewTransitionAction.swift in Sources */,
 				D2136DF01CF63F5800BE9C4F /* Then.swift in Sources */,
+				D209D11C1CFA398B000A45E3 /* LayerConfigurable.swift in Sources */,
 				D209D10A1CFA3582000A45E3 /* ViewKeyframeAnimation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
