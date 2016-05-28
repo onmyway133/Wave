@@ -10,7 +10,8 @@ import UIKit
 
 public protocol LayerAnimatable: class {
 
-  func animate(block: CABasicAnimation -> Void) -> Self
+  associatedtype Animation: CABasicAnimation
+  func animate(block: Animation -> Void) -> Self
 }
 
 // MARK: - Configure

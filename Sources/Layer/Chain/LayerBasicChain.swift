@@ -27,6 +27,8 @@ public extension Layer {
 
 extension Layer.BasicChain: LayerAnimatable {
 
+  public typealias Animation = CABasicAnimation
+  
   public func animate(block: CABasicAnimation -> Void) -> Layer.BasicChain {
     var action = Layer.BasicAction()
     action.layer = layer
