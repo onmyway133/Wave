@@ -23,6 +23,6 @@ public func run(actions: [Action]) {
 public extension UIView {
 
   public var chain: View.BasicChain {
-    return View.BasicChain(view: self)
+    return View.BasicChain().with(self)
   }
 }

@@ -10,4 +10,14 @@ import UIKit
 
 public protocol ViewConfigurable: class {
 
+  var view: UIView? { get set }
+}
+
+public extension ViewConfigurable {
+
+  public func with(view: UIView) -> Self {
+    self.view = view
+
+    return self
+  }
 }

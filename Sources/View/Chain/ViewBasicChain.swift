@@ -13,15 +13,19 @@ public extension View {
   public final class BasicChain: Chainable {
 
     public var actions: [Action] = []
-    public let view: UIView
+    public var view: UIView?
 
-    public init(view: UIView) {
-      self.view = view
+    public init() {
+
     }
   }
 }
 
 // MARK: - Configure
+
+extension View.BasicChain: ViewConfigurable {
+  
+}
 
 public extension View.BasicChain {
 

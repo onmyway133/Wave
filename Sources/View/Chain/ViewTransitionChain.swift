@@ -13,10 +13,9 @@ public extension View {
   public final class TransitionChain: Chainable {
 
     public var actions: [Action] = []
-    public let views: [UIView]
 
-    public init(views: [UIView]) {
-      self.views = views
+    public init() {
+
     }
   }
 }

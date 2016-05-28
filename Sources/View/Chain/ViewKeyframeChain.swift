@@ -13,10 +13,16 @@ public extension View {
   public final class KeyframeChain: Chainable {
 
     public var actions: [Action] = []
-    public let view: UIView
+    public var view: UIView?
 
-    public init(view: UIView) {
-      self.view = view
+    public init() {
+
     }
   }
+}
+
+// MARK: - Configure
+
+extension View.KeyframeChain: ViewConfigurable {
+
 }

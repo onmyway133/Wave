@@ -11,7 +11,7 @@ import UIKit
 public protocol ViewAnimatable: class {
 
   func animate(block: Block) -> Self
-  var view: UIView { get }
+  var view: UIView? { get }
 }
 
 public extension ViewAnimatable {
@@ -28,7 +28,7 @@ public extension ViewAnimatable {
 
   public func move(value: CGPoint) -> Self {
     return animate { [weak self] in
-      self?.view.transform = CGAffineTransformMakeTranslation(value.x, value.y)
+      self?.view?.transform = CGAffineTransformMakeTranslation(value.x, value.y)
     }
   }
 
@@ -44,7 +44,7 @@ public extension ViewAnimatable {
 
   public func scale(value: CGPoint) -> Self {
     return animate { [weak self] in
-      self?.view.transform = CGAffineTransformMakeScale(value.x, value.y)
+      self?.view?.transform = CGAffineTransformMakeScale(value.x, value.y)
     }
   }
 
@@ -58,7 +58,7 @@ public extension ViewAnimatable {
 
   public func rotate(angle: Double) -> Self {
     return animate { [weak self] in
-      self?.view.transform = CGAffineTransformMakeRotation(CGFloat(angle))
+      self?.view?.transform = CGAffineTransformMakeRotation(CGFloat(angle))
     }
   }
 
@@ -66,7 +66,7 @@ public extension ViewAnimatable {
 
   public func fade(visible: Bool) -> Self {
     return animate { [weak self] in
-      self?.view.alpha = visible ? 1 : 0
+      self?.view?.alpha = visible ? 1 : 0
     }
   }
 
