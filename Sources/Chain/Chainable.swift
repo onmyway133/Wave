@@ -13,12 +13,16 @@ public protocol Chainable: class {
   var actions: [Action] { get set }
 }
 
+// MARK: - Run
+
 public extension Chainable {
 
   public func run() {
     Wave.run(actions)
   }
 }
+
+// MARK: - Link
 
 public extension Chainable {
 
@@ -35,6 +39,8 @@ public extension Chainable {
     return self
   }
 }
+
+// MARK: - Action
 
 public extension Chainable {
 
@@ -54,6 +60,8 @@ public extension Chainable {
     }
   }
 }
+
+// MARK: - Configure
 
 public extension Chainable {
 

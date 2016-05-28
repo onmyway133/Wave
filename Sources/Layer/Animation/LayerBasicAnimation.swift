@@ -29,6 +29,5 @@ extension Layer.BasicAnimation: Action {
     layer?.addAnimation(animation, forKey: "")
     
     CATransaction.commit()
-    Wave.run(nextActions)
   }
 }

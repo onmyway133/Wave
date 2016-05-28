@@ -10,7 +10,7 @@ import UIKit
 
 public protocol LayerAnimatable: class {
 
-  func animate(block: inout CABasicAnimation -> Void) -> Self
+  func animate(block: CABasicAnimation -> Void) -> Self
 }
 
 public extension LayerAnimatable {

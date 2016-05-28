@@ -32,10 +32,10 @@ public extension Layer.BasicChain {
 
 extension Layer.BasicChain: LayerAnimatable {
 
-  public func animate(block: inout CABasicAnimation -> Void) -> Layer.BasicChain {
+  public func animate(block: CABasicAnimation -> Void) -> Layer.BasicChain {
     var action = Layer.BasicAnimation()
     action.layer = layer
-    block(&action.animation)
+    block(action.animation)
 
     return link(action)
   }
