@@ -29,7 +29,8 @@
 		D209D0E51CF8F866000A45E3 /* LayerSpringAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D209D0E41CF8F866000A45E3 /* LayerSpringAnimation.swift */; };
 		D209D0E71CF8F86E000A45E3 /* LayerSpringChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D209D0E61CF8F86E000A45E3 /* LayerSpringChain.swift */; };
 		D209D0E91CF8F8ED000A45E3 /* LayerAnimatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D209D0E81CF8F8ED000A45E3 /* LayerAnimatable.swift */; };
-		D209D0ED1CFA29E6000A45E3 /* LayerConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D209D0EC1CFA29E6000A45E3 /* LayerConfigurable.swift */; };
+		D209D0EF1CFA2FBF000A45E3 /* ViewConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D209D0EE1CFA2FBF000A45E3 /* ViewConfigurable.swift */; };
+		D209D0F11CFA2FDB000A45E3 /* LayerConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D209D0F01CFA2FDB000A45E3 /* LayerConfigurable.swift */; };
 		D2136DF01CF63F5800BE9C4F /* Then.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2136DEF1CF63F5800BE9C4F /* Then.swift */; };
 		D21793881CF23D6700BB2467 /* Wave.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21793871CF23D6700BB2467 /* Wave.swift */; };
 		D217938A1CF23D9400BB2467 /* Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21793891CF23D9400BB2467 /* Spec.swift */; };
@@ -83,7 +84,8 @@
 		D209D0E41CF8F866000A45E3 /* LayerSpringAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerSpringAnimation.swift; sourceTree = "<group>"; };
 		D209D0E61CF8F86E000A45E3 /* LayerSpringChain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerSpringChain.swift; sourceTree = "<group>"; };
 		D209D0E81CF8F8ED000A45E3 /* LayerAnimatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerAnimatable.swift; sourceTree = "<group>"; };
-		D209D0EC1CFA29E6000A45E3 /* LayerConfigurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerConfigurable.swift; sourceTree = "<group>"; };
+		D209D0EE1CFA2FBF000A45E3 /* ViewConfigurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewConfigurable.swift; sourceTree = "<group>"; };
+		D209D0F01CFA2FDB000A45E3 /* LayerConfigurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerConfigurable.swift; sourceTree = "<group>"; };
 		D2136DEF1CF63F5800BE9C4F /* Then.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Then.swift; sourceTree = "<group>"; };
 		D21793871CF23D6700BB2467 /* Wave.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wave.swift; sourceTree = "<group>"; };
 		D21793891CF23D9400BB2467 /* Spec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spec.swift; sourceTree = "<group>"; };
@@ -159,7 +161,7 @@
 				D209D0D51CF8EBB6000A45E3 /* Chain */,
 				D209D0A21CF8C271000A45E3 /* Layer.swift */,
 				D209D0E81CF8F8ED000A45E3 /* LayerAnimatable.swift */,
-				D209D0EC1CFA29E6000A45E3 /* LayerConfigurable.swift */,
+				D209D0F01CFA2FDB000A45E3 /* LayerConfigurable.swift */,
 			);
 			path = Layer;
 			sourceTree = "<group>";
@@ -171,6 +173,7 @@
 				D209D0C41CF8EBAD000A45E3 /* Chain */,
 				D209D0A41CF8C278000A45E3 /* View.swift */,
 				D209D0E21CF8F24D000A45E3 /* ViewAnimatable.swift */,
+				D209D0EE1CFA2FBF000A45E3 /* ViewConfigurable.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -516,8 +519,8 @@
 				D209D0A31CF8C271000A45E3 /* Layer.swift in Sources */,
 				D217938D1CF24E5600BB2467 /* Action.swift in Sources */,
 				D209D0CF1CF8EBAD000A45E3 /* ViewBasicChain.swift in Sources */,
+				D209D0EF1CFA2FBF000A45E3 /* ViewConfigurable.swift in Sources */,
 				D209D0CB1CF8EBAD000A45E3 /* ViewKeyframeAnimation.swift in Sources */,
-				D209D0ED1CFA29E6000A45E3 /* LayerConfigurable.swift in Sources */,
 				D209D0E31CF8F24D000A45E3 /* ViewAnimatable.swift in Sources */,
 				D209D0CC1CF8EBAD000A45E3 /* ViewSpringAnimation.swift in Sources */,
 				D209D0CD1CF8EBAD000A45E3 /* ViewSystemAnimation.swift in Sources */,
@@ -526,6 +529,7 @@
 				D204001B1CF3B8130073B328 /* Chainable.swift in Sources */,
 				D209D0CE1CF8EBAD000A45E3 /* ViewTransitionAnimation.swift in Sources */,
 				D209D0DB1CF8EBC0000A45E3 /* LayerBasicAnimation.swift in Sources */,
+				D209D0F11CFA2FDB000A45E3 /* LayerConfigurable.swift in Sources */,
 				D209D0E51CF8F866000A45E3 /* LayerSpringAnimation.swift in Sources */,
 				D209D0D91CF8EBB6000A45E3 /* LayerKeyframeChain.swift in Sources */,
 				D209D0D11CF8EBAD000A45E3 /* ViewSpringChain.swift in Sources */,

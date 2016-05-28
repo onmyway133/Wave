@@ -55,6 +55,12 @@ public extension View.SpringChain {
       action.velocity = value
     }
   }
+
+  public func replay(number: UInt) -> View.SpringChain {
+    return configure { (inout action: View.SpringAnimation) in
+      action.replay = number
+    }
+  }
 }
 
 // MARK: - Animate
