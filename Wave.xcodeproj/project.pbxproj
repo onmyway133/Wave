@@ -31,6 +31,10 @@
 		D209D1021CFA3347000A45E3 /* LayerBasicAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D209D0FF1CFA3347000A45E3 /* LayerBasicAction.swift */; };
 		D209D1031CFA3347000A45E3 /* LayerKeyframeAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D209D1001CFA3347000A45E3 /* LayerKeyframeAction.swift */; };
 		D209D1041CFA3347000A45E3 /* LayerSpringAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D209D1011CFA3347000A45E3 /* LayerSpringAction.swift */; };
+		D209D1061CFA3436000A45E3 /* ViewAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D209D1051CFA3436000A45E3 /* ViewAnimation.swift */; };
+		D209D1081CFA345A000A45E3 /* ViewBasicAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D209D1071CFA345A000A45E3 /* ViewBasicAnimation.swift */; };
+		D209D10A1CFA3582000A45E3 /* ViewKeyframeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D209D1091CFA3582000A45E3 /* ViewKeyframeAnimation.swift */; };
+		D209D10C1CFA358B000A45E3 /* ViewSpringAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D209D10B1CFA358B000A45E3 /* ViewSpringAnimation.swift */; };
 		D2136DF01CF63F5800BE9C4F /* Then.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2136DEF1CF63F5800BE9C4F /* Then.swift */; };
 		D21793881CF23D6700BB2467 /* Wave.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21793871CF23D6700BB2467 /* Wave.swift */; };
 		D217938A1CF23D9400BB2467 /* Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21793891CF23D9400BB2467 /* Spec.swift */; };
@@ -86,6 +90,10 @@
 		D209D0FF1CFA3347000A45E3 /* LayerBasicAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerBasicAction.swift; sourceTree = "<group>"; };
 		D209D1001CFA3347000A45E3 /* LayerKeyframeAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerKeyframeAction.swift; sourceTree = "<group>"; };
 		D209D1011CFA3347000A45E3 /* LayerSpringAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerSpringAction.swift; sourceTree = "<group>"; };
+		D209D1051CFA3436000A45E3 /* ViewAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewAnimation.swift; sourceTree = "<group>"; };
+		D209D1071CFA345A000A45E3 /* ViewBasicAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewBasicAnimation.swift; sourceTree = "<group>"; };
+		D209D1091CFA3582000A45E3 /* ViewKeyframeAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewKeyframeAnimation.swift; sourceTree = "<group>"; };
+		D209D10B1CFA358B000A45E3 /* ViewSpringAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewSpringAnimation.swift; sourceTree = "<group>"; };
 		D2136DEF1CF63F5800BE9C4F /* Then.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Then.swift; sourceTree = "<group>"; };
 		D21793871CF23D6700BB2467 /* Wave.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wave.swift; sourceTree = "<group>"; };
 		D21793891CF23D9400BB2467 /* Spec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spec.swift; sourceTree = "<group>"; };
@@ -216,6 +224,10 @@
 		D209D0F81CFA3341000A45E3 /* Animation */ = {
 			isa = PBXGroup;
 			children = (
+				D209D1051CFA3436000A45E3 /* ViewAnimation.swift */,
+				D209D1071CFA345A000A45E3 /* ViewBasicAnimation.swift */,
+				D209D1091CFA3582000A45E3 /* ViewKeyframeAnimation.swift */,
+				D209D10B1CFA358B000A45E3 /* ViewSpringAnimation.swift */,
 			);
 			path = Animation;
 			sourceTree = "<group>";
@@ -517,6 +529,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D209D0D31CF8EBAD000A45E3 /* ViewTransitionChain.swift in Sources */,
+				D209D1061CFA3436000A45E3 /* ViewAnimation.swift in Sources */,
 				D209D0E91CF8F8ED000A45E3 /* LayerAnimatable.swift in Sources */,
 				D209D0FA1CFA3341000A45E3 /* ViewKeyframeAction.swift in Sources */,
 				D209D0D81CF8EBB6000A45E3 /* LayerBasicChain.swift in Sources */,
@@ -532,7 +545,9 @@
 				D217938D1CF24E5600BB2467 /* Action.swift in Sources */,
 				D209D0CF1CF8EBAD000A45E3 /* ViewBasicChain.swift in Sources */,
 				D209D0EF1CFA2FBF000A45E3 /* ViewConfigurable.swift in Sources */,
+				D209D10C1CFA358B000A45E3 /* ViewSpringAnimation.swift in Sources */,
 				D209D0E31CF8F24D000A45E3 /* ViewAnimatable.swift in Sources */,
+				D209D1081CFA345A000A45E3 /* ViewBasicAnimation.swift in Sources */,
 				D209D1031CFA3347000A45E3 /* LayerKeyframeAction.swift in Sources */,
 				D209D0A51CF8C278000A45E3 /* View.swift in Sources */,
 				D204001B1CF3B8130073B328 /* Chainable.swift in Sources */,
@@ -543,6 +558,7 @@
 				D209D0D01CF8EBAD000A45E3 /* ViewKeyframeChain.swift in Sources */,
 				D209D0FD1CFA3341000A45E3 /* ViewTransitionAction.swift in Sources */,
 				D2136DF01CF63F5800BE9C4F /* Then.swift in Sources */,
+				D209D10A1CFA3582000A45E3 /* ViewKeyframeAnimation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
