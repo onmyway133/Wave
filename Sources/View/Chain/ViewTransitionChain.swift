@@ -59,3 +59,12 @@ public extension View.TransitionChain {
     }
   }
 }
+
+public extension View.TransitionChain {
+
+  public func animate() -> View.TransitionChain {
+    let action = View.TransitionAnimation()
+
+    return link(action)
+  }
+}

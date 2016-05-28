@@ -14,7 +14,7 @@ public extension View {
 
     var options: UIViewAnimationOptions = []
     var views: [UIView] = []
-    var animation: UISystemAnimation
+    var animation: UISystemAnimation = .Delete
     var parallelBlock: Block?
   }
 }

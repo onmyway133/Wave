@@ -35,3 +35,13 @@ public extension View.SystemChain {
     }
   }
 }
+
+public extension View.SystemChain {
+
+  public func animate() -> View.SystemChain {
+    var action = View.SystemAnimation()
+    action.views = views
+
+    return link(action)
+  }
+}
