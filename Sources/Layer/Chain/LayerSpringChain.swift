@@ -30,7 +30,7 @@ extension Layer.SpringChain: LayerAnimatable {
 
   @available(iOS 9, *)
   public func animate(block: CABasicAnimation -> Void) -> Layer.SpringChain {
-    var action = Layer.SpringAnimation()
+    var action = Layer.SpringAction()
     action.layer = layer
     block(action.animation)
 

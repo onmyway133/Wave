@@ -26,37 +26,37 @@ public extension View {
 public extension View.TransitionChain {
 
   public func duration(interval: NSTimeInterval) -> View.TransitionChain {
-    return configure { (inout action: View.TransitionAnimation) in
+    return configure { (inout action: View.TransitionAction) in
       action.duration = interval
     }
   }
 
   public func option(options: UIViewAnimationOptions) -> View.TransitionChain {
-    return configure { (inout action: View.TransitionAnimation) in
+    return configure { (inout action: View.TransitionAction) in
       action.options = options
     }
   }
 
   public func from(view: UIView) -> View.TransitionChain {
-    return configure { (inout action: View.TransitionAnimation) in
+    return configure { (inout action: View.TransitionAction) in
       action.from = view
     }
   }
 
   public func to(view: UIView) -> View.TransitionChain {
-    return configure { (inout action: View.TransitionAnimation) in
+    return configure { (inout action: View.TransitionAction) in
       action.to = view
     }
   }
 
   public func with(view: UIView) -> View.TransitionChain {
-    return configure { (inout action: View.TransitionAnimation) in
+    return configure { (inout action: View.TransitionAction) in
       action.with = view
     }
   }
 
   public func block(block: UIView -> Void) -> View.TransitionChain {
-    return configure { (inout action: View.TransitionAnimation) in
+    return configure { (inout action: View.TransitionAction) in
       action.block = block
     }
   }
@@ -67,7 +67,7 @@ public extension View.TransitionChain {
 public extension View.TransitionChain {
 
   public func animate() -> View.TransitionChain {
-    let action = View.TransitionAnimation()
+    let action = View.TransitionAction()
 
     return link(action)
   }

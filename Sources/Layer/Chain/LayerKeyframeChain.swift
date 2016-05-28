@@ -28,7 +28,7 @@ public extension Layer {
 extension Layer.KeyframeChain {
 
   public func animate(block: CABasicAnimation -> Void) -> Layer.KeyframeChain {
-    var action = Layer.BasicAnimation()
+    var action = Layer.BasicAction()
     action.layer = layer
     block(action.animation)
 

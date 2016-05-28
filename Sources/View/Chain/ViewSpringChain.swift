@@ -27,37 +27,37 @@ public extension View {
 public extension View.SpringChain {
 
   public func duration(interval: NSTimeInterval) -> View.SpringChain {
-    return configure { (inout action: View.SpringAnimation) in
+    return configure { (inout action: View.SpringAction) in
       action.duration = interval
     }
   }
 
   public func delay(interval: NSTimeInterval) -> View.SpringChain {
-    return configure { (inout action: View.SpringAnimation) in
+    return configure { (inout action: View.SpringAction) in
       action.delay = interval
     }
   }
 
   public func option(options: UIViewAnimationOptions) -> View.SpringChain {
-    return configure { (inout action: View.SpringAnimation) in
+    return configure { (inout action: View.SpringAction) in
       action.options = options
     }
   }
 
   public func damping(value: CGFloat) -> View.SpringChain {
-    return configure { (inout action: View.SpringAnimation) in
+    return configure { (inout action: View.SpringAction) in
       action.damping = value
     }
   }
 
   public func velocity(value: CGFloat) -> View.SpringChain {
-    return configure { (inout action: View.SpringAnimation) in
+    return configure { (inout action: View.SpringAction) in
       action.velocity = value
     }
   }
 
   public func replay(number: UInt) -> View.SpringChain {
-    return configure { (inout action: View.SpringAnimation) in
+    return configure { (inout action: View.SpringAction) in
       action.replay = number
     }
   }
@@ -68,7 +68,7 @@ public extension View.SpringChain {
 extension View.SpringChain: ViewAnimatable {
 
   public func animate(block: Block) -> View.SpringChain {
-    var action = View.SpringAnimation()
+    var action = View.SpringAction()
     action.block = block
 
     return link(action)
