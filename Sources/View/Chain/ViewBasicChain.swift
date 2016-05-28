@@ -21,6 +21,8 @@ public extension View {
   }
 }
 
+// MARK: - Configure
+
 public extension View.BasicChain {
 
   public func duration(interval: NSTimeInterval) -> View.BasicChain {
@@ -47,6 +49,8 @@ public extension View.BasicChain {
     }
   }
 }
+
+// MARK: - Animate
 
 extension View.BasicChain: ViewAnimatable {
 

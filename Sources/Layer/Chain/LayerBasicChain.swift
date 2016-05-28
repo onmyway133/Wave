@@ -21,6 +21,8 @@ public extension Layer {
   }
 }
 
+// MARK: - Configure
+
 public extension Layer.BasicChain {
 
   public func keyPath(keyPath: String) -> Layer.BasicChain {
@@ -29,6 +31,8 @@ public extension Layer.BasicChain {
     }
   }
 }
+
+// MARK: - Animate
 
 extension Layer.BasicChain: LayerAnimatable {
 

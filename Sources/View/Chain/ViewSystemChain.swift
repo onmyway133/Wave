@@ -21,6 +21,8 @@ public extension View {
   }
 }
 
+// MARK: - Configure
+
 public extension View.SystemChain {
 
   public func option(options: UIViewAnimationOptions) -> View.SystemChain {
@@ -35,6 +37,8 @@ public extension View.SystemChain {
     }
   }
 }
+
+// MARK: - Animate
 
 public extension View.SystemChain {
 

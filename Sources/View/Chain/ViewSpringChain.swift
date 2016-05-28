@@ -22,6 +22,8 @@ public extension View {
   }
 }
 
+// MARK: - Configure
+
 public extension View.SpringChain {
 
   public func duration(interval: NSTimeInterval) -> View.SpringChain {
@@ -54,6 +56,8 @@ public extension View.SpringChain {
     }
   }
 }
+
+// MARK: - Animate
 
 extension View.SpringChain: ViewAnimatable {
 

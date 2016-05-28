@@ -13,6 +13,8 @@ public protocol LayerAnimatable: class {
   func animate(block: CABasicAnimation -> Void) -> Self
 }
 
+// MARK: - Configure
+
 public extension LayerAnimatable {
 
   // MARK: - Move

@@ -21,6 +21,8 @@ public extension View {
   }
 }
 
+// MARK: - Configure
+
 public extension View.TransitionChain {
 
   public func duration(interval: NSTimeInterval) -> View.TransitionChain {
@@ -59,6 +61,8 @@ public extension View.TransitionChain {
     }
   }
 }
+
+// MARK: - Animate
 
 public extension View.TransitionChain {
 

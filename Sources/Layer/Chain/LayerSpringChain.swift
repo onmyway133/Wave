@@ -21,3 +21,19 @@ public extension Layer {
     }
   }
 }
+
+// MARK: - Configure
+
+// MARK: - Animate
+
+extension Layer.SpringChain: LayerAnimatable {
+
+  @available(iOS 9, *)
+  public func animate(block: CABasicAnimation -> Void) -> Layer.SpringChain {
+    var action = Layer.SpringAnimation()
+    action.layer = layer
+    block(action.animation)
+
+    return link(action)
+  }
+}

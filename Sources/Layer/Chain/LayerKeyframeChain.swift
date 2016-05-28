@@ -21,10 +21,17 @@ public extension Layer {
   }
 }
 
-public extension Layer.KeyframeChain {
+// MARK: - Configure
 
-  public func shake() -> Layer.KeyframeChain {
+// MARK: - Animate
 
-    return self
+extension Layer.KeyframeChain {
+
+  public func animate(block: CABasicAnimation -> Void) -> Layer.KeyframeChain {
+    var action = Layer.BasicAnimation()
+    action.layer = layer
+    block(action.animation)
+
+    return link(action)
   }
 }

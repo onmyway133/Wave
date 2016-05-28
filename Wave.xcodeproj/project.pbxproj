@@ -29,6 +29,7 @@
 		D209D0E51CF8F866000A45E3 /* LayerSpringAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D209D0E41CF8F866000A45E3 /* LayerSpringAnimation.swift */; };
 		D209D0E71CF8F86E000A45E3 /* LayerSpringChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D209D0E61CF8F86E000A45E3 /* LayerSpringChain.swift */; };
 		D209D0E91CF8F8ED000A45E3 /* LayerAnimatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D209D0E81CF8F8ED000A45E3 /* LayerAnimatable.swift */; };
+		D209D0ED1CFA29E6000A45E3 /* LayerConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D209D0EC1CFA29E6000A45E3 /* LayerConfigurable.swift */; };
 		D2136DF01CF63F5800BE9C4F /* Then.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2136DEF1CF63F5800BE9C4F /* Then.swift */; };
 		D21793881CF23D6700BB2467 /* Wave.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21793871CF23D6700BB2467 /* Wave.swift */; };
 		D217938A1CF23D9400BB2467 /* Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21793891CF23D9400BB2467 /* Spec.swift */; };
@@ -82,6 +83,7 @@
 		D209D0E41CF8F866000A45E3 /* LayerSpringAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerSpringAnimation.swift; sourceTree = "<group>"; };
 		D209D0E61CF8F86E000A45E3 /* LayerSpringChain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerSpringChain.swift; sourceTree = "<group>"; };
 		D209D0E81CF8F8ED000A45E3 /* LayerAnimatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerAnimatable.swift; sourceTree = "<group>"; };
+		D209D0EC1CFA29E6000A45E3 /* LayerConfigurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerConfigurable.swift; sourceTree = "<group>"; };
 		D2136DEF1CF63F5800BE9C4F /* Then.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Then.swift; sourceTree = "<group>"; };
 		D21793871CF23D6700BB2467 /* Wave.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wave.swift; sourceTree = "<group>"; };
 		D21793891CF23D9400BB2467 /* Spec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spec.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 				D209D0D51CF8EBB6000A45E3 /* Chain */,
 				D209D0A21CF8C271000A45E3 /* Layer.swift */,
 				D209D0E81CF8F8ED000A45E3 /* LayerAnimatable.swift */,
+				D209D0EC1CFA29E6000A45E3 /* LayerConfigurable.swift */,
 			);
 			path = Layer;
 			sourceTree = "<group>";
@@ -514,6 +517,7 @@
 				D217938D1CF24E5600BB2467 /* Action.swift in Sources */,
 				D209D0CF1CF8EBAD000A45E3 /* ViewBasicChain.swift in Sources */,
 				D209D0CB1CF8EBAD000A45E3 /* ViewKeyframeAnimation.swift in Sources */,
+				D209D0ED1CFA29E6000A45E3 /* LayerConfigurable.swift in Sources */,
 				D209D0E31CF8F24D000A45E3 /* ViewAnimatable.swift in Sources */,
 				D209D0CC1CF8EBAD000A45E3 /* ViewSpringAnimation.swift in Sources */,
 				D209D0CD1CF8EBAD000A45E3 /* ViewSystemAnimation.swift in Sources */,

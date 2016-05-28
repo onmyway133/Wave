@@ -13,6 +13,7 @@ public extension Layer {
   @available(iOS 9, *)
   public struct SpringAnimation {
 
+    var layer: CALayer?
     var animation = CASpringAnimation()
   }
 }
