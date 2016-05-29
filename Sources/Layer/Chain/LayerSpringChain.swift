@@ -66,13 +66,12 @@ public extension Layer.SpringChain {
 
 // MARK: - Animate
 
-extension Layer.SpringChain: LayerAnimatable {
+extension Layer.SpringChain: LayerBasicAnimatable {
 
   @available(iOS 9, *)
-  public func animate(block: CASpringAnimation -> Void) -> Layer.SpringChain {
+  public func animate() -> Layer.SpringChain {
     var action = Layer.SpringAction()
     action.layer = layer
-    block(action.animation)
 
     return link(action)
   }

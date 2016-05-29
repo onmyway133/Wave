@@ -94,12 +94,11 @@ public extension Layer.KeyframeChain {
 
 // MARK: - Animate
 
-extension Layer.KeyframeChain {
+extension Layer.KeyframeChain: LayerAnimatable {
 
-  public func animate(block: CABasicAnimation -> Void) -> Layer.KeyframeChain {
+  public func animate() -> Layer.KeyframeChain {
     var action = Layer.BasicAction()
     action.layer = layer
-    block(action.animation)
 
     return link(action)
   }

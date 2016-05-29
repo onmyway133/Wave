@@ -8,29 +8,6 @@
 
 import UIKit
 
-public protocol LayerAnimatable: class {
-
-  associatedtype Animation: CABasicAnimation
-  func animate(block: Animation -> Void) -> Self
-}
-
-// MARK: - Configure
-
-public extension LayerAnimatable {
-
-  // MARK: - Move
-
-  public func moveX(value: Double) -> Self {
-    return move(CGPoint(x: value, y: 0))
-  }
-
-  public func moveY(value: Double) -> Self {
-    return move(CGPoint(x: 0, y: value))
-  }
-
-  public func move(value: CGPoint) -> Self {
-    return animate { animation in
-      animation.keyPath = "position.x"
-    }
-  }
+public protocol LayerAnimatable: Animatable {
+  
 }

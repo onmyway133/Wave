@@ -12,7 +12,7 @@ public extension View {
 
   public class TransitionAnimation {
 
-    var duration: NSTimeInterval = Wave.defaultDuration
+    var duration: NSTimeInterval = Config.duration
     var options: UIViewAnimationOptions = []
     var from: UIView?
     var to: UIView?

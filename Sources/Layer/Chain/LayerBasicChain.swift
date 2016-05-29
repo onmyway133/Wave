@@ -37,12 +37,11 @@ extension Layer.BasicChain: LayerBasicConfigurable {
 
 // MARK: - Animate
 
-extension Layer.BasicChain: LayerAnimatable {
+extension Layer.BasicChain: LayerBasicAnimatable {
 
-  public func animate(block: CABasicAnimation -> Void) -> Layer.BasicChain {
+  public func animate() -> Layer.BasicChain {
     var action = Layer.BasicAction()
     action.layer = layer
-    block(action.animation)
 
     return link(action)
   }

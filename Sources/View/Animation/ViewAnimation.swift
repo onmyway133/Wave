@@ -12,8 +12,8 @@ public extension View {
 
   public class Animation {
 
-    var duration: NSTimeInterval = Wave.defaultDuration
-    var delay: NSTimeInterval = Wave.defaultDelay
+    var duration: NSTimeInterval = Config.duration
+    var delay: NSTimeInterval = Config.delay
     var replay: UInt?
 
     public init() {
