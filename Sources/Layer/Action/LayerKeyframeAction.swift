@@ -12,6 +12,7 @@ public extension Layer {
 
   public struct KeyframeAction {
 
+    var layer: CALayer?
     var animation = CAKeyframeAnimation()
   }
 }
@@ -19,6 +20,14 @@ public extension Layer {
 extension Layer.KeyframeAction: Action {
 
   public func run(nextActions: [Action]) {
-    Wave.run(nextActions)
+    CATransaction.begin()
+
+    CATransaction.setCompletionBlock {
+      Wave.run(nextActions)
+    }
+
+    layer?.addAnimation(animation, forKey: "")
+
+    CATransaction.commit()
   }
 }

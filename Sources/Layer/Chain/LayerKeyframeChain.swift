@@ -40,7 +40,7 @@ extension Layer.KeyframeChain: LayerKeyframeConfigurable {
 extension Layer.KeyframeChain: LayerKeyframeAnimatable {
 
   public func animate() -> Layer.KeyframeChain {
-    var action = Layer.BasicAction()
+    var action = Layer.KeyframeAction()
     action.layer = layer
 
     return link(action).applyDefaults()
