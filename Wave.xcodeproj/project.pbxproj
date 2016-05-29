@@ -44,6 +44,8 @@
 		D209D12A1CFAD375000A45E3 /* LayerPropertyConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D209D1291CFAD375000A45E3 /* LayerPropertyConfigurable.swift */; };
 		D209D12F1CFB0B3D000A45E3 /* Animatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D209D12E1CFB0B3D000A45E3 /* Animatable.swift */; };
 		D209D1321CFB1618000A45E3 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = D209D1311CFB1618000A45E3 /* Config.swift */; };
+		D209D1341CFB1F3D000A45E3 /* LayerKeyframeAnimatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D209D1331CFB1F3D000A45E3 /* LayerKeyframeAnimatable.swift */; };
+		D209D1361CFB1F76000A45E3 /* LayerKeyframeConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D209D1351CFB1F76000A45E3 /* LayerKeyframeConfigurable.swift */; };
 		D2136DF01CF63F5800BE9C4F /* Then.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2136DEF1CF63F5800BE9C4F /* Then.swift */; };
 		D21793881CF23D6700BB2467 /* Wave.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21793871CF23D6700BB2467 /* Wave.swift */; };
 		D217938A1CF23D9400BB2467 /* Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21793891CF23D9400BB2467 /* Spec.swift */; };
@@ -112,6 +114,8 @@
 		D209D1291CFAD375000A45E3 /* LayerPropertyConfigurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerPropertyConfigurable.swift; sourceTree = "<group>"; };
 		D209D12E1CFB0B3D000A45E3 /* Animatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animatable.swift; sourceTree = "<group>"; };
 		D209D1311CFB1618000A45E3 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		D209D1331CFB1F3D000A45E3 /* LayerKeyframeAnimatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerKeyframeAnimatable.swift; sourceTree = "<group>"; };
+		D209D1351CFB1F76000A45E3 /* LayerKeyframeConfigurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerKeyframeConfigurable.swift; sourceTree = "<group>"; };
 		D2136DEF1CF63F5800BE9C4F /* Then.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Then.swift; sourceTree = "<group>"; };
 		D21793871CF23D6700BB2467 /* Wave.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wave.swift; sourceTree = "<group>"; };
 		D21793891CF23D9400BB2467 /* Spec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spec.swift; sourceTree = "<group>"; };
@@ -285,6 +289,7 @@
 			children = (
 				D209D1181CFA398B000A45E3 /* LayerAnimatable.swift */,
 				D209D1271CFACFE3000A45E3 /* LayerBasicAnimatable.swift */,
+				D209D1331CFB1F3D000A45E3 /* LayerKeyframeAnimatable.swift */,
 			);
 			path = Animatable;
 			sourceTree = "<group>";
@@ -295,6 +300,7 @@
 				D209D11A1CFA398B000A45E3 /* LayerConfigurable.swift */,
 				D209D1291CFAD375000A45E3 /* LayerPropertyConfigurable.swift */,
 				D209D1251CFACEFB000A45E3 /* LayerBasicConfigurable.swift */,
+				D209D1351CFB1F76000A45E3 /* LayerKeyframeConfigurable.swift */,
 			);
 			path = Configurable;
 			sourceTree = "<group>";
@@ -605,6 +611,7 @@
 			files = (
 				D209D0D31CF8EBAD000A45E3 /* ViewTransitionChain.swift in Sources */,
 				D209D1061CFA3436000A45E3 /* ViewAnimation.swift in Sources */,
+				D209D1361CFB1F76000A45E3 /* LayerKeyframeConfigurable.swift in Sources */,
 				D209D11B1CFA398B000A45E3 /* LayerAnimatable.swift in Sources */,
 				D209D0FA1CFA3341000A45E3 /* ViewKeyframeAction.swift in Sources */,
 				D209D1101CFA3642000A45E3 /* ViewTransitionAnimation.swift in Sources */,
@@ -613,6 +620,7 @@
 				D209D12A1CFAD375000A45E3 /* LayerPropertyConfigurable.swift in Sources */,
 				D21793881CF23D6700BB2467 /* Wave.swift in Sources */,
 				D209D0F91CFA3341000A45E3 /* ViewBasicAction.swift in Sources */,
+				D209D1341CFB1F3D000A45E3 /* LayerKeyframeAnimatable.swift in Sources */,
 				D209D12F1CFB0B3D000A45E3 /* Animatable.swift in Sources */,
 				D209D0E71CF8F86E000A45E3 /* LayerSpringChain.swift in Sources */,
 				D209D1041CFA3347000A45E3 /* LayerSpringAction.swift in Sources */,
