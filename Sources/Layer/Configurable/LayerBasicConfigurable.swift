@@ -34,3 +34,11 @@ public extension LayerBasicConfigurable {
     }
   }
 }
+
+public extension LayerBasicConfigurable {
+
+  public func applyDefaults() -> Self {
+    return duration(Config.duration)
+      .timingFunction(Config.timingFunction)
+  }
+}

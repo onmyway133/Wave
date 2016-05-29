@@ -20,6 +20,7 @@ public extension LayerBasicAnimatable where Self: LayerBasicConfigurable {
     return animate()
       .keyPath("position.x")
       .toValue(value)
+      .applyDefaults()
       
   }
 
@@ -27,12 +28,14 @@ public extension LayerBasicAnimatable where Self: LayerBasicConfigurable {
     return animate()
       .keyPath("position.y")
       .toValue(value)
+      .applyDefaults()
   }
 
   public func move(value: CGPoint) -> Self {
     return animate()
       .keyPath("position")
       .toValue(NSValue(CGPoint: value))
+      .applyDefaults()
   }
 
   // MARK: - Move
@@ -41,18 +44,21 @@ public extension LayerBasicAnimatable where Self: LayerBasicConfigurable {
     return animate()
       .keyPath("transform.translation.x")
       .toValue(value)
+      .applyDefaults()
   }
 
   public func translateY(value: Double) -> Self {
     return animate()
       .keyPath("transform.translation.y")
       .toValue(value)
+      .applyDefaults()
   }
 
   public func translate(value: CGPoint) -> Self {
     return animate()
       .keyPath("transform.translation")
       .toValue(NSValue(CGPoint: value))
+      .applyDefaults()
   }
 
   // MARK: - Scale
@@ -61,18 +67,21 @@ public extension LayerBasicAnimatable where Self: LayerBasicConfigurable {
     return animate()
       .keyPath("transform.scale.x")
       .toValue(value)
+      .applyDefaults()
   }
 
   public func scaleY(value: Double) -> Self {
     return animate()
       .keyPath("transform.scale.y")
       .toValue(value)
+      .applyDefaults()
   }
 
   public func scale(value: CGPoint) -> Self {
     return animate()
       .keyPath("transform.scale")
       .toValue(NSValue(CGPoint: value))
+      .applyDefaults()
   }
 
   // MARK: - Zoom
@@ -87,18 +96,21 @@ public extension LayerBasicAnimatable where Self: LayerBasicConfigurable {
     return animate()
       .keyPath("transform.rotate.x")
       .toValue(angle)
+      .applyDefaults()
   }
 
   public func rotateY(angle: Double) -> Self {
     return animate()
       .keyPath("transform.rotate.y")
       .toValue(angle)
+      .applyDefaults()
   }
 
   public func rotateZ(angle: Double) -> Self {
     return animate()
       .keyPath("transform.rotate.z")
       .toValue(angle)
+      .applyDefaults()
   }
 
 
@@ -107,6 +119,9 @@ public extension LayerBasicAnimatable where Self: LayerBasicConfigurable {
   public func fade(visible: Bool) -> Self {
     return animate()
       .keyPath("opacity")
+      .fromValue(visible ? 0 : 1)
+      .toValue(visible ? 1 : 0)
+      .applyDefaults()
       
   }
 
