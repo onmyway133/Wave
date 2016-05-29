@@ -15,8 +15,6 @@ public protocol LayerBasicConfigurable: LayerPropertyConfigurable {
 
 public extension LayerBasicConfigurable {
 
-  // MARK: - CABasicAnimation
-
   public func fromValue(value: AnyObject) -> Self {
     return configureAnimation { (animation: Animation) in
       animation.fromValue = value
@@ -34,5 +32,4 @@ public extension LayerBasicConfigurable {
       animation.byValue = value
     }
   }
-
 }

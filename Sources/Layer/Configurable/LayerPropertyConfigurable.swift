@@ -11,33 +11,9 @@ import UIKit
 public protocol LayerPropertyConfigurable: LayerConfigurable {
 
   associatedtype Animation: CAPropertyAnimation
-
-  func configureAnimation(block: Animation -> Void) -> Self
 }
 
 public extension LayerPropertyConfigurable {
-
-  // MARK: - CAAnimation
-
-  public func timingFunction(function: CAMediaTimingFunction) -> Self {
-    return configureAnimation { (animation: Animation) in
-      animation.timingFunction = function
-    }
-  }
-
-  public func delegate(delegate: AnyObject) -> Self {
-    return configureAnimation { (animation: Animation) in
-      animation.delegate = delegate
-    }
-  }
-
-  public func removedOnCompletion(removed: Bool) -> Self {
-    return configureAnimation { (animation: Animation) in
-      animation.removedOnCompletion = removed
-    }
-  }
-
-  // MARK: - CAPropertyAnimation
 
   public func keyPath(keyPath: String) -> Self {
     return configureAnimation { (animation: Animation) in
