@@ -28,6 +28,9 @@ extension View.KeyframeAction: Action {
             item.duration,
             animations: item.block)
         }
+
+        self.animation.block?()
+
       }, completion: { _ in
         Wave.run(nextActions)
     })
