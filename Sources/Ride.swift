@@ -66,4 +66,10 @@ public extension Ride {
       .flipY()
       .run()
   }
+
+  public func flash() {
+    Layer.BasicChain(layer: view.layer)
+      .flash()
+      .run()
+  }
 }

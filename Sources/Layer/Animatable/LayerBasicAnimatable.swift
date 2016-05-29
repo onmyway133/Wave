@@ -110,15 +110,14 @@ public extension LayerBasicAnimatable where Self: LayerBasicConfigurable {
       .keyPath("opacity")
       .fromValue(visible ? 0 : 1)
       .toValue(visible ? 1 : 0)
-      .applyDefaults()
       
   }
 
-  public func fadeIn(visible: Bool) -> Self {
+  public func fadeIn() -> Self {
     return fade(true)
   }
 
-  public func fadeOut(visible: Bool) -> Self {
+  public func fadeOut() -> Self {
     return fade(false)
   }
 }
@@ -143,5 +142,11 @@ public extension LayerBasicAnimatable where Self: LayerBasicConfigurable {
       .keyPath("transform")
       .fromValue(NSValue(CATransform3D: CATransform3DMakeRotation(0, 0, 0, 0)))
       .toValue(NSValue(CATransform3D: CATransform3DConcat(perspective, CATransform3DMakeRotation(CGFloat(M_PI), 1, 0, 0))))
+  }
+
+  public func flash() -> Self {
+    return animate()
+      .fadeOut()
+      .repeatCount(2)
   }
 }
