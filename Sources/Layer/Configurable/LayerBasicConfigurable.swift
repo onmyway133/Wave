@@ -18,6 +18,7 @@ public extension LayerBasicConfigurable {
   public func fromValue(value: AnyObject) -> Self {
     return configureAnimation { (animation: Animation) in
       animation.fromValue = value
+      animation.duration = 1
     }
   }
 

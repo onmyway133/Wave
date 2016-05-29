@@ -20,6 +20,7 @@ public extension LayerBasicAnimatable where Self: LayerBasicConfigurable {
     return animate()
       .keyPath("position.x")
       .toValue(value)
+      
   }
 
   public func moveY(value: Double) -> Self {

@@ -40,4 +40,18 @@ public extension Layer {
     public static let Auto = RotationMode(value: kCAAnimationRotateAuto)
     public static let AutoReverse = RotationMode(value: kCAAnimationRotateAutoReverse)
   }
+
+  public struct FillMode {
+
+    public let value: String
+
+    public init(value: String) {
+      self.value = value
+    }
+
+    public static let Removed = FillMode(value: kCAFillModeRemoved)
+    public static let Forwards = FillMode(value: kCAFillModeForwards)
+    public static let Backwards = FillMode(value: kCAFillModeBackwards)
+    public static let Both = FillMode(value: kCAFillModeBoth)
+  }
 }
