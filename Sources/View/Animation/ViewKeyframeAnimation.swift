@@ -14,9 +14,21 @@ public extension View {
 
     var options: UIViewKeyframeAnimationOptions = []
     var block: Block?
+    var items: [View.KeyframeAnimationItem] = []
 
-    public required init() {
+    public override init() {
 
+    }
+  }
+
+  public class KeyframeAnimationItem {
+
+    var startTime: NSTimeInterval = 0
+    var duration: NSTimeInterval = 0
+    let block: Block
+
+    public init(block: Block) {
+      self.block = block
     }
   }
 }

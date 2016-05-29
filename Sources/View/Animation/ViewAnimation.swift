@@ -16,7 +16,7 @@ public extension View {
     var delay: NSTimeInterval = Wave.defaultDelay
     var replay: UInt?
 
-    public required init() {
+    public init() {
       
     }
   }

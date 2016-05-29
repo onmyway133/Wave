@@ -15,7 +15,7 @@ public extension View {
     var options: UIViewAnimationOptions = []
     var block: Block?
 
-    public required init() {
+    public override init() {
 
     }
   }

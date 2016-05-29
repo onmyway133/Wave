@@ -26,3 +26,23 @@ public extension View {
 extension View.KeyframeChain: ViewConfigurable {
 
 }
+
+public extension View.KeyframeChain {
+
+  public func configureAnimation(block: View.KeyframeAnimation -> Void) -> View.KeyframeChain {
+    return configure { (action: View.KeyframeAction) -> View.KeyframeAction in
+      block(action.animation)
+      return action
+    }
+  }
+
+  public func add(startTime: NSTimeInterval = 0, duration: NSTimeInterval = 0, block: Block) -> View.KeyframeChain {
+    return configureAnimation { (animation: View.KeyframeAnimation) in
+      let item = View.KeyframeAnimationItem(block: block)
+      item.startTime = startTime
+      item.duration = duration
+
+      animation.items.append(item)
+    }
+  }
+}

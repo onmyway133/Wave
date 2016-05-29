@@ -22,7 +22,12 @@ extension View.KeyframeAction: Action {
     UIView.animateKeyframesWithDuration(animation.duration, delay: animation.delay, options: animation.options,
                                         animations:
       {
-
+        self.animation.items.forEach { item in
+          UIView.addKeyframeWithRelativeStartTime(item.startTime,
+            relativeDuration:
+            item.duration,
+            animations: item.block)
+        }
       }, completion: { _ in
         Wave.run(nextActions)
     })
