@@ -39,3 +39,12 @@ public extension LayerPropertyConfigurable {
     }
   }
 }
+
+public extension LayerPropertyConfigurable {
+
+  public func applyDefaults() -> Self {
+    return duration(Config.duration)
+      .timingFunction(Config.timingFunction)
+      .additive(true)
+  }
+}

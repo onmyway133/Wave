@@ -40,6 +40,9 @@ public extension LayerKeyframeAnimatable where Self: LayerKeyframeConfigurable {
   }
 
   public func swing() -> Self {
-    return self
+    return animate()
+      .keyPath("transform.rotation")
+      .values([0, 0.3, -0.3, 0.3, 0])
+      .keyTimes([0, 0.2, 0.4, 0.6, 0.8, 1])
   }
 }
