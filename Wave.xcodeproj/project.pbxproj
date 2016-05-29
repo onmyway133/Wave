@@ -47,6 +47,8 @@
 		D209D1341CFB1F3D000A45E3 /* LayerKeyframeAnimatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D209D1331CFB1F3D000A45E3 /* LayerKeyframeAnimatable.swift */; };
 		D209D1361CFB1F76000A45E3 /* LayerKeyframeConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D209D1351CFB1F76000A45E3 /* LayerKeyframeConfigurable.swift */; };
 		D209D1381CFB26CD000A45E3 /* Ride.swift in Sources */ = {isa = PBXBuildFile; fileRef = D209D1371CFB26CD000A45E3 /* Ride.swift */; };
+		D209D13A1CFB61C7000A45E3 /* LayerCompoundAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D209D1391CFB61C7000A45E3 /* LayerCompoundAction.swift */; };
+		D209D13C1CFB61CF000A45E3 /* LayerCompoundChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D209D13B1CFB61CF000A45E3 /* LayerCompoundChain.swift */; };
 		D2136DF01CF63F5800BE9C4F /* Then.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2136DEF1CF63F5800BE9C4F /* Then.swift */; };
 		D21793881CF23D6700BB2467 /* Wave.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21793871CF23D6700BB2467 /* Wave.swift */; };
 		D217938A1CF23D9400BB2467 /* Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21793891CF23D9400BB2467 /* Spec.swift */; };
@@ -118,6 +120,8 @@
 		D209D1331CFB1F3D000A45E3 /* LayerKeyframeAnimatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerKeyframeAnimatable.swift; sourceTree = "<group>"; };
 		D209D1351CFB1F76000A45E3 /* LayerKeyframeConfigurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerKeyframeConfigurable.swift; sourceTree = "<group>"; };
 		D209D1371CFB26CD000A45E3 /* Ride.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ride.swift; sourceTree = "<group>"; };
+		D209D1391CFB61C7000A45E3 /* LayerCompoundAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerCompoundAction.swift; sourceTree = "<group>"; };
+		D209D13B1CFB61CF000A45E3 /* LayerCompoundChain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerCompoundChain.swift; sourceTree = "<group>"; };
 		D2136DEF1CF63F5800BE9C4F /* Then.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Then.swift; sourceTree = "<group>"; };
 		D21793871CF23D6700BB2467 /* Wave.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wave.swift; sourceTree = "<group>"; };
 		D21793891CF23D9400BB2467 /* Spec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spec.swift; sourceTree = "<group>"; };
@@ -229,6 +233,7 @@
 				D209D0D61CF8EBB6000A45E3 /* LayerBasicChain.swift */,
 				D209D0D71CF8EBB6000A45E3 /* LayerKeyframeChain.swift */,
 				D209D0E61CF8F86E000A45E3 /* LayerSpringChain.swift */,
+				D209D13B1CFB61CF000A45E3 /* LayerCompoundChain.swift */,
 			);
 			path = Chain;
 			sourceTree = "<group>";
@@ -264,6 +269,7 @@
 				D209D0FF1CFA3347000A45E3 /* LayerBasicAction.swift */,
 				D209D1001CFA3347000A45E3 /* LayerKeyframeAction.swift */,
 				D209D1011CFA3347000A45E3 /* LayerSpringAction.swift */,
+				D209D1391CFB61C7000A45E3 /* LayerCompoundAction.swift */,
 			);
 			path = Action;
 			sourceTree = "<group>";
@@ -636,6 +642,7 @@
 				D217938D1CF24E5600BB2467 /* Action.swift in Sources */,
 				D209D0CF1CF8EBAD000A45E3 /* ViewBasicChain.swift in Sources */,
 				D209D10C1CFA358B000A45E3 /* ViewSpringAnimation.swift in Sources */,
+				D209D13A1CFB61C7000A45E3 /* LayerCompoundAction.swift in Sources */,
 				D209D1081CFA345A000A45E3 /* ViewBasicAnimation.swift in Sources */,
 				D209D1031CFA3347000A45E3 /* LayerKeyframeAction.swift in Sources */,
 				D209D11E1CFA399F000A45E3 /* ViewConfigurable.swift in Sources */,
@@ -649,6 +656,7 @@
 				D209D0D11CF8EBAD000A45E3 /* ViewSpringChain.swift in Sources */,
 				D209D0D01CF8EBAD000A45E3 /* ViewKeyframeChain.swift in Sources */,
 				D209D0FD1CFA3341000A45E3 /* ViewTransitionAction.swift in Sources */,
+				D209D13C1CFB61CF000A45E3 /* LayerCompoundChain.swift in Sources */,
 				D209D1261CFACEFB000A45E3 /* LayerBasicConfigurable.swift in Sources */,
 				D209D1221CFACBC5000A45E3 /* ViewBasicConfigurable.swift in Sources */,
 				D2136DF01CF63F5800BE9C4F /* Then.swift in Sources */,
