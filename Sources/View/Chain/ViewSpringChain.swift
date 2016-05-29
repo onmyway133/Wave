@@ -24,22 +24,14 @@ public extension View {
 
 // MARK: - Configure
 
-extension View.SpringChain: ViewConfigurable {
+extension View.SpringChain: ViewBasicConfigurable {
 
-}
-
-public extension View.SpringChain {
+  public typealias Animation = View.SpringAnimation
 
   public func configureAnimation(block: View.SpringAnimation -> Void) -> View.SpringChain {
     return configure { (action: View.SpringAction) -> View.SpringAction in
       block(action.animation)
       return action
-    }
-  }
-
-  public func option(options: UIViewAnimationOptions) -> View.SpringChain {
-    return configureAnimation { (animation: View.SpringAnimation) in
-      animation.options = options
     }
   }
 
@@ -54,18 +46,11 @@ public extension View.SpringChain {
       animation.velocity = value
     }
   }
-
-  public func replay(number: UInt) -> View.SpringChain {
-    return configureAnimation { (animation: View.SpringAnimation) in
-      animation.replay = number
-    }
-  }
 }
-
 
 // MARK: - Animate
 
-extension View.SpringChain: ViewAnimatable {
+extension View.SpringChain: ViewBasicAnimatable {
 
   public func animate(block: Block) -> View.SpringChain {
     let action = View.SpringAction()

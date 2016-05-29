@@ -23,11 +23,9 @@ public extension View {
 
 // MARK: - Configure
 
-extension View.BasicChain: ViewConfigurable {
-  
-}
+extension View.BasicChain: ViewBasicConfigurable {
 
-public extension View.BasicChain {
+  public typealias Animation = View.BasicAnimation
 
   public func configureAnimation(block: View.BasicAnimation -> Void) -> View.BasicChain {
     return configure { (action: View.BasicAction) -> View.BasicAction in
@@ -35,35 +33,11 @@ public extension View.BasicChain {
       return action
     }
   }
-
-  public func duration(interval: NSTimeInterval) -> View.BasicChain {
-    return configureAnimation { (animation: View.BasicAnimation) in
-      animation.duration = interval
-    }
-  }
-
-  public func delay(interval: NSTimeInterval) -> View.BasicChain {
-    return configureAnimation { (animation: View.BasicAnimation) in
-      animation.delay = interval
-    }
-  }
-
-  public func replay(number: UInt) -> View.BasicChain {
-    return configureAnimation { (animation: View.BasicAnimation) in
-      animation.replay = number
-    }
-  }
-
-  public func option(options: UIViewAnimationOptions) -> View.BasicChain {
-    return configureAnimation { (animation: View.BasicAnimation) in
-      animation.options = options
-    }
-  }
 }
 
 // MARK: - Animate
 
-extension View.BasicChain: ViewAnimatable {
+extension View.BasicChain: ViewBasicAnimatable {
 
   public func animate(block: Block) -> View.BasicChain {
     let action = View.BasicAction()
