@@ -21,6 +21,14 @@ public extension Layer {
 extension Layer.SpringAction: Action {
 
   public func run(nextActions: [Action]) {
-    Wave.run(nextActions)
+    CATransaction.begin()
+
+    CATransaction.setCompletionBlock {
+      Wave.run(nextActions)
+    }
+
+    layer?.addAnimation(animation, forKey: "")
+
+    CATransaction.commit()
   }
 }
