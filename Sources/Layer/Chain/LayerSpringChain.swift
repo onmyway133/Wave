@@ -37,6 +37,33 @@ extension Layer.SpringChain: LayerBasicConfigurable {
   }
 }
 
+public extension Layer.SpringChain {
+
+  public func mass(value: Double) -> Layer.SpringChain {
+    return configureAnimation { (animation: CASpringAnimation) in
+      animation.mass = CGFloat(value)
+    }
+  }
+
+  public func stiffness(value: Double) -> Layer.SpringChain {
+    return configureAnimation { (animation: CASpringAnimation) in
+      animation.stiffness = CGFloat(value)
+    }
+  }
+
+  public func damping(value: Double) -> Layer.SpringChain {
+    return configureAnimation { (animation: CASpringAnimation) in
+      animation.damping = CGFloat(value)
+    }
+  }
+
+  public func initialVelocity(value: Double) -> Layer.SpringChain {
+    return configureAnimation { (animation: CASpringAnimation) in
+      animation.initialVelocity = CGFloat(value)
+    }
+  }
+}
+
 // MARK: - Animate
 
 extension Layer.SpringChain: LayerAnimatable {

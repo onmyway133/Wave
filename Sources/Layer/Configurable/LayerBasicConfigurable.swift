@@ -17,7 +17,7 @@ public protocol LayerBasicConfigurable: LayerConfigurable {
 
 public extension LayerBasicConfigurable {
 
-  // MARK: - CABasicAnimation
+  // MARK: - CAAnimation
 
   public func timingFunction(function: CAMediaTimingFunction) -> Self {
     return configureAnimation { (animation: Animation) in
@@ -62,4 +62,25 @@ public extension LayerBasicConfigurable {
       animation.valueFunction = function
     }
   }
+
+  // MARK: - CABasicAnimation
+
+  public func fromValue(value: AnyObject) -> Self {
+    return configureAnimation { (animation: Animation) in
+      animation.fromValue = value
+    }
+  }
+
+  public func toValue(value: AnyObject) -> Self {
+    return configureAnimation { (animation: Animation) in
+      animation.toValue = value
+    }
+  }
+
+  public func byValue(value: AnyObject) -> Self {
+    return configureAnimation { (animation: Animation) in
+      animation.byValue = value
+    }
+  }
+
 }
