@@ -24,13 +24,23 @@ public extension Layer {
 
 // MARK: - Configure
 
+extension Layer.SpringChain: LayerBasicConfigurable {
+
+  @available(iOS 9, *)
+  public typealias Animation = CASpringAnimation
+
+  public func configureAnimation(block: CASpringAnimation -> Void) -> Layer.SpringChain {
+    return configure { (action: Layer.SpringAction) -> Layer.SpringAction in
+      block(action.animation)
+      return action
+    }
+  }
+}
+
 // MARK: - Animate
 
 extension Layer.SpringChain: LayerAnimatable {
 
-  @available(iOS 9, *)
-  public typealias Animation = CASpringAnimation
-  
   @available(iOS 9, *)
   public func animate(block: CASpringAnimation -> Void) -> Layer.SpringChain {
     var action = Layer.SpringAction()

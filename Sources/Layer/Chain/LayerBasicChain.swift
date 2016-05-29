@@ -23,12 +23,22 @@ public extension Layer {
 
 // MARK: - Configure
 
+extension Layer.BasicChain: LayerBasicConfigurable {
+
+  public typealias Animation = CABasicAnimation
+
+  public func configureAnimation(block: CABasicAnimation -> Void) -> Layer.BasicChain {
+    return configure { (action: Layer.BasicAction) -> Layer.BasicAction in
+      block(action.animation)
+      return action
+    }
+  }
+}
+
 // MARK: - Animate
 
 extension Layer.BasicChain: LayerAnimatable {
 
-  public typealias Animation = CABasicAnimation
-  
   public func animate(block: CABasicAnimation -> Void) -> Layer.BasicChain {
     var action = Layer.BasicAction()
     action.layer = layer
