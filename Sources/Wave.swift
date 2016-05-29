@@ -9,7 +9,11 @@
 import UIKit
 import Construction
 
+// MARK: - Typealias
+
 public typealias Block = () -> Void
+
+// MARK: - Run
 
 public func run(actions: [Action]) {
   if let action = actions.first {
@@ -17,9 +21,13 @@ public func run(actions: [Action]) {
   }
 }
 
+// MARK: - Chain
+
 public extension UIView {
 
   public var chain: View.BasicChain {
     return View.BasicChain().with(self)
   }
 }
+
+// MARK: - Ride
