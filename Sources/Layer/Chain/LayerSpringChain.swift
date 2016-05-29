@@ -73,6 +73,6 @@ extension Layer.SpringChain: LayerBasicAnimatable {
     var action = Layer.SpringAction()
     action.layer = layer
 
-    return link(action)
+    return link(action).applyDefaults()
   }
 }

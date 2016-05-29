@@ -15,6 +15,8 @@ public protocol LayerKeyframeAnimatable: LayerAnimatable {
 public extension LayerKeyframeAnimatable where Self: LayerKeyframeConfigurable {
 
   public func shake() -> Self {
-    return self
+    return animate()
+      .keyPath("position.x")
+      .values([0, 15, -15, 15, 0])      
   }
 }

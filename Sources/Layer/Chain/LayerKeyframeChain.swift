@@ -43,6 +43,6 @@ extension Layer.KeyframeChain: LayerKeyframeAnimatable {
     var action = Layer.BasicAction()
     action.layer = layer
 
-    return link(action)
+    return link(action).applyDefaults()
   }
 }

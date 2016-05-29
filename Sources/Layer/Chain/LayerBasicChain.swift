@@ -43,6 +43,6 @@ extension Layer.BasicChain: LayerBasicAnimatable {
     var action = Layer.BasicAction()
     action.layer = layer
 
-    return link(action)
+    return link(action).applyDefaults()
   }
 }

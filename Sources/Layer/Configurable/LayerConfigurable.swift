@@ -87,3 +87,11 @@ public extension LayerConfigurable {
     }
   }
 }
+
+public extension LayerConfigurable {
+
+  public func applyDefaults() -> Self {
+    return duration(Config.duration)
+      .timingFunction(Config.timingFunction)
+  }
+}
