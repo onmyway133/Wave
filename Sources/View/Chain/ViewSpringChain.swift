@@ -34,6 +34,9 @@ extension View.SpringChain: ViewBasicConfigurable {
       return action
     }
   }
+}
+
+public extension View.SpringChain {
 
   public func damping(value: CGFloat) -> View.SpringChain {
     return configureAnimation { (animation: View.SpringAnimation) in
