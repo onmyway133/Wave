@@ -13,7 +13,7 @@ public protocol ViewBasicAnimatable: ViewAnimatable {
   var view: UIView? { get }
 }
 
-public extension ViewBasicAnimatable {
+public extension ViewBasicAnimatable where Self: ViewBasicConfigurable {
 
   // MARK: - Move
 
@@ -26,7 +26,7 @@ public extension ViewBasicAnimatable {
   }
 
   public func move(value: CGPoint) -> Self {
-    return animate { [weak self] in
+    return animate().block { [weak self] _ in
       self?.view?.transform = CGAffineTransformMakeTranslation(value.x, value.y)
     }
   }
@@ -42,7 +42,7 @@ public extension ViewBasicAnimatable {
   }
 
   public func scale(value: CGPoint) -> Self {
-    return animate { [weak self] in
+    return animate().block { [weak self] in
       self?.view?.transform = CGAffineTransformMakeScale(value.x, value.y)
     }
   }
@@ -56,7 +56,7 @@ public extension ViewBasicAnimatable {
   // MARK: - Rotate
 
   public func rotate(angle: Double) -> Self {
-    return animate { [weak self] in
+    return animate().block { [weak self] in
       self?.view?.transform = CGAffineTransformMakeRotation(CGFloat(angle))
     }
   }
@@ -64,7 +64,7 @@ public extension ViewBasicAnimatable {
   // MARK: - Fade
 
   public func fade(visible: Bool) -> Self {
-    return animate { [weak self] in
+    return animate().block { [weak self] in
       self?.view?.alpha = visible ? 1 : 0
     }
   }

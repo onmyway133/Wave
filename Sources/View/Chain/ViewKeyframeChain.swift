@@ -46,3 +46,13 @@ public extension View.KeyframeChain {
     }
   }
 }
+
+// MARK: - Animate
+
+extension View.KeyframeChain: ViewBasicAnimatable {
+
+  public func animate() -> View.KeyframeChain {
+    let action = View.KeyframeAction()
+    return link(action)
+  }
+}

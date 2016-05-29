@@ -42,6 +42,7 @@
 		D209D1261CFACEFB000A45E3 /* LayerBasicConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D209D1251CFACEFB000A45E3 /* LayerBasicConfigurable.swift */; };
 		D209D1281CFACFE3000A45E3 /* LayerBasicAnimatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D209D1271CFACFE3000A45E3 /* LayerBasicAnimatable.swift */; };
 		D209D12A1CFAD375000A45E3 /* LayerPropertyConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D209D1291CFAD375000A45E3 /* LayerPropertyConfigurable.swift */; };
+		D209D12F1CFB0B3D000A45E3 /* Animatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D209D12E1CFB0B3D000A45E3 /* Animatable.swift */; };
 		D2136DF01CF63F5800BE9C4F /* Then.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2136DEF1CF63F5800BE9C4F /* Then.swift */; };
 		D21793881CF23D6700BB2467 /* Wave.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21793871CF23D6700BB2467 /* Wave.swift */; };
 		D217938A1CF23D9400BB2467 /* Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21793891CF23D9400BB2467 /* Spec.swift */; };
@@ -108,6 +109,7 @@
 		D209D1251CFACEFB000A45E3 /* LayerBasicConfigurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerBasicConfigurable.swift; sourceTree = "<group>"; };
 		D209D1271CFACFE3000A45E3 /* LayerBasicAnimatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerBasicAnimatable.swift; sourceTree = "<group>"; };
 		D209D1291CFAD375000A45E3 /* LayerPropertyConfigurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerPropertyConfigurable.swift; sourceTree = "<group>"; };
+		D209D12E1CFB0B3D000A45E3 /* Animatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animatable.swift; sourceTree = "<group>"; };
 		D2136DEF1CF63F5800BE9C4F /* Then.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Then.swift; sourceTree = "<group>"; };
 		D21793871CF23D6700BB2467 /* Wave.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wave.swift; sourceTree = "<group>"; };
 		D21793891CF23D9400BB2467 /* Spec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spec.swift; sourceTree = "<group>"; };
@@ -295,6 +297,14 @@
 			path = Configurable;
 			sourceTree = "<group>";
 		};
+		D209D12D1CFB0B3D000A45E3 /* Animatable */ = {
+			isa = PBXGroup;
+			children = (
+				D209D12E1CFB0B3D000A45E3 /* Animatable.swift */,
+			);
+			path = Animatable;
+			sourceTree = "<group>";
+		};
 		D21793861CF23D5A00BB2467 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -353,6 +363,7 @@
 		D5C629691C3A809D007F7B7C /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				D209D12D1CFB0B3D000A45E3 /* Animatable */,
 				D217938B1CF24E4D00BB2467 /* Action */,
 				D20400131CF3AD2B0073B328 /* Chain */,
 				D209D09D1CF8C260000A45E3 /* View */,
@@ -591,6 +602,7 @@
 				D209D12A1CFAD375000A45E3 /* LayerPropertyConfigurable.swift in Sources */,
 				D21793881CF23D6700BB2467 /* Wave.swift in Sources */,
 				D209D0F91CFA3341000A45E3 /* ViewBasicAction.swift in Sources */,
+				D209D12F1CFB0B3D000A45E3 /* Animatable.swift in Sources */,
 				D209D0E71CF8F86E000A45E3 /* LayerSpringChain.swift in Sources */,
 				D209D1041CFA3347000A45E3 /* LayerSpringAction.swift in Sources */,
 				D204000B1CF3A4010073B328 /* Wait.swift in Sources */,

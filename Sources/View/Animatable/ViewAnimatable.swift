@@ -8,7 +8,6 @@
 
 import UIKit
 
-public protocol ViewAnimatable: class {
+public protocol ViewAnimatable: Animatable {
 
-  func animate(block: Block) -> Self
 }

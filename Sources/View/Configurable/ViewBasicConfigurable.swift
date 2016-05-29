@@ -40,4 +40,10 @@ public extension ViewBasicConfigurable {
       animation.options = options
     }
   }
+
+  public func block(block: Block) -> Self {
+    return configureAnimation { (animation: Animation) in
+      animation.block = block
+    }
+  }
 }

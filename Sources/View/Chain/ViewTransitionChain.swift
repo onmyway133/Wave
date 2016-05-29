@@ -70,11 +70,10 @@ public extension View.TransitionChain {
 
 // MARK: - Animate
 
-public extension View.TransitionChain {
+extension View.TransitionChain: ViewAnimatable {
 
   public func animate() -> View.TransitionChain {
     let action = View.TransitionAction()
-
     return link(action)
   }
 }

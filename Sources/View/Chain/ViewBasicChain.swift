@@ -39,10 +39,8 @@ extension View.BasicChain: ViewBasicConfigurable {
 
 extension View.BasicChain: ViewBasicAnimatable {
 
-  public func animate(block: Block) -> View.BasicChain {
+  public func animate() -> View.BasicChain {
     let action = View.BasicAction()
-    action.animation.block = block
-
     return link(action)
   }
 }

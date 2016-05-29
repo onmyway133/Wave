@@ -47,12 +47,11 @@ public extension View.SystemChain {
 
 // MARK: - Animate
 
-public extension View.SystemChain {
+extension View.SystemChain: ViewAnimatable {
 
   public func animate() -> View.SystemChain {
     let action = View.SystemAction()
     action.animation.views = views
-
     return link(action)
   }
 }

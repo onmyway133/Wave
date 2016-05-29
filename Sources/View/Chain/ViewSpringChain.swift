@@ -55,10 +55,8 @@ public extension View.SpringChain {
 
 extension View.SpringChain: ViewBasicAnimatable {
 
-  public func animate(block: Block) -> View.SpringChain {
+  public func animate() -> View.SpringChain {
     let action = View.SpringAction()
-    action.animation.block = block
-
     return link(action)
   }
 }
