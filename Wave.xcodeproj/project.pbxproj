@@ -46,6 +46,7 @@
 		D209D1321CFB1618000A45E3 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = D209D1311CFB1618000A45E3 /* Config.swift */; };
 		D209D1341CFB1F3D000A45E3 /* LayerKeyframeAnimatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D209D1331CFB1F3D000A45E3 /* LayerKeyframeAnimatable.swift */; };
 		D209D1361CFB1F76000A45E3 /* LayerKeyframeConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D209D1351CFB1F76000A45E3 /* LayerKeyframeConfigurable.swift */; };
+		D209D1381CFB26CD000A45E3 /* Ride.swift in Sources */ = {isa = PBXBuildFile; fileRef = D209D1371CFB26CD000A45E3 /* Ride.swift */; };
 		D2136DF01CF63F5800BE9C4F /* Then.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2136DEF1CF63F5800BE9C4F /* Then.swift */; };
 		D21793881CF23D6700BB2467 /* Wave.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21793871CF23D6700BB2467 /* Wave.swift */; };
 		D217938A1CF23D9400BB2467 /* Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21793891CF23D9400BB2467 /* Spec.swift */; };
@@ -116,6 +117,7 @@
 		D209D1311CFB1618000A45E3 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		D209D1331CFB1F3D000A45E3 /* LayerKeyframeAnimatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerKeyframeAnimatable.swift; sourceTree = "<group>"; };
 		D209D1351CFB1F76000A45E3 /* LayerKeyframeConfigurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerKeyframeConfigurable.swift; sourceTree = "<group>"; };
+		D209D1371CFB26CD000A45E3 /* Ride.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ride.swift; sourceTree = "<group>"; };
 		D2136DEF1CF63F5800BE9C4F /* Then.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Then.swift; sourceTree = "<group>"; };
 		D21793871CF23D6700BB2467 /* Wave.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wave.swift; sourceTree = "<group>"; };
 		D21793891CF23D9400BB2467 /* Spec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spec.swift; sourceTree = "<group>"; };
@@ -386,6 +388,7 @@
 				D209D09D1CF8C260000A45E3 /* View */,
 				D209D09C1CF8C260000A45E3 /* Layer */,
 				D21793871CF23D6700BB2467 /* Wave.swift */,
+				D209D1371CFB26CD000A45E3 /* Ride.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -616,6 +619,7 @@
 				D209D0FA1CFA3341000A45E3 /* ViewKeyframeAction.swift in Sources */,
 				D209D1101CFA3642000A45E3 /* ViewTransitionAnimation.swift in Sources */,
 				D209D0D81CF8EBB6000A45E3 /* LayerBasicChain.swift in Sources */,
+				D209D1381CFB26CD000A45E3 /* Ride.swift in Sources */,
 				D209D10E1CFA362A000A45E3 /* ViewSystemAnimation.swift in Sources */,
 				D209D12A1CFAD375000A45E3 /* LayerPropertyConfigurable.swift in Sources */,
 				D21793881CF23D6700BB2467 /* Wave.swift in Sources */,

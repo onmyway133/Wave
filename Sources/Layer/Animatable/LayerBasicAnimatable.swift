@@ -122,3 +122,14 @@ public extension LayerBasicAnimatable where Self: LayerBasicConfigurable {
     return fade(false)
   }
 }
+
+public extension LayerBasicAnimatable where Self: LayerBasicConfigurable {
+
+  public func flipX() -> Self {
+    return self
+  }
+
+  public func flipY() -> Self {
+    return self
+  }
+}

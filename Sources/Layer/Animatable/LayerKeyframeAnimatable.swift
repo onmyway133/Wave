@@ -26,4 +26,20 @@ public extension LayerKeyframeAnimatable where Self: LayerKeyframeConfigurable {
       .values([0, 1.5, -1.5, 1.5, 0])
       .keyTimes([0, 0.2, 0.4, 0.6, 0.8, 1])
   }
+
+  public func morph() -> Self {
+    return self
+  }
+
+  public func squeeze() -> Self {
+    return self
+  }
+
+  public func wobble() -> Self {
+    return self
+  }
+
+  public func swing() -> Self {
+    return self
+  }
 }

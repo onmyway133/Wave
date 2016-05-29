@@ -31,3 +31,10 @@ public extension UIView {
 }
 
 // MARK: - Ride
+
+public extension UIView {
+
+  public var ride: Ride {
+    return Ride(view: self)
+  }
+}
