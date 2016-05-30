@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		D204000B1CF3A4010073B328 /* Wait.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20400061CF3A4010073B328 /* Wait.swift */; };
-		D204001B1CF3B8130073B328 /* Chainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D204001A1CF3B8120073B328 /* Chainable.swift */; };
 		D209D0A31CF8C271000A45E3 /* Layer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D209D0A21CF8C271000A45E3 /* Layer.swift */; };
 		D209D0A51CF8C278000A45E3 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = D209D0A41CF8C278000A45E3 /* View.swift */; };
 		D209D0F91CFA3341000A45E3 /* ViewBasicAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D209D0F31CFA3341000A45E3 /* ViewBasicAction.swift */; };
@@ -71,7 +70,6 @@
 
 /* Begin PBXFileReference section */
 		D20400061CF3A4010073B328 /* Wait.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wait.swift; sourceTree = "<group>"; };
-		D204001A1CF3B8120073B328 /* Chainable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chainable.swift; sourceTree = "<group>"; };
 		D209D0A21CF8C271000A45E3 /* Layer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Layer.swift; sourceTree = "<group>"; };
 		D209D0A41CF8C278000A45E3 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		D209D0F31CFA3341000A45E3 /* ViewBasicAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewBasicAction.swift; sourceTree = "<group>"; };
@@ -165,7 +163,6 @@
 		D20400131CF3AD2B0073B328 /* Chain */ = {
 			isa = PBXGroup;
 			children = (
-				D204001A1CF3B8120073B328 /* Chainable.swift */,
 				D23DC2E01CFCC1A9005C6F5E /* Chain.swift */,
 			);
 			path = Chain;
@@ -570,7 +567,6 @@
 				D209D1031CFA3347000A45E3 /* LayerKeyframeAction.swift in Sources */,
 				D209D11E1CFA399F000A45E3 /* ViewConfigurable.swift in Sources */,
 				D209D0A51CF8C278000A45E3 /* View.swift in Sources */,
-				D204001B1CF3B8130073B328 /* Chainable.swift in Sources */,
 				D209D0FC1CFA3341000A45E3 /* ViewSystemAction.swift in Sources */,
 				D23DC2E91CFCE601005C6F5E /* LayerSpringConfigurable.swift in Sources */,
 				D23DC2E11CFCC1A9005C6F5E /* Chain.swift in Sources */,

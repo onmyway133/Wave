@@ -49,12 +49,16 @@ public extension Chain {
 public extension Chain {
 
   public func wait(interval: NSTimeInterval) -> Chain {
-    let action = Wait(interval: interval)
+    var action = Wait()
+    action.interval = interval
+
     return link(action)
   }
 
   public func then(block: Block) -> Chain {
-    let action = Then(block: block)
+    var action = Then()
+    action.block = block
+    
     return link(action)
   }
 

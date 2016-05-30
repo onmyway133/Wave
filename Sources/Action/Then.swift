@@ -10,14 +10,14 @@ import Foundation
 
 public struct Then: Action {
 
-  let block: Block
+  public var block: Block?
 
-  public init(block: Block) {
-    self.block = block
+  public init() {
+
   }
 
   public func run(nextActions: [Action]) {
-    block()
+    block?()
     Wave.run(nextActions)
   }
 }

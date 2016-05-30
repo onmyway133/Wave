@@ -10,10 +10,10 @@ import UIKit
 
 public struct Wait: Action {
 
-  let interval: NSTimeInterval
+  public var interval: NSTimeInterval = 0
 
-  public init(interval: NSTimeInterval) {
-    self.interval = interval
+  public init() {
+
   }
 
   public func run(nextActions: [Action]) {

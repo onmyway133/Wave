@@ -10,14 +10,18 @@ import UIKit
 
 public extension Layer {
 
-  public struct CompoundAction {
+  public final class CompoundAction: Action {
 
-    var layer: CALayer?
-    var animations: [CAAnimation] = []
+    public var layer: CALayer?
+    public var animations: [CAAnimation] = []
+
+    public init() {
+      
+    }
   }
 }
 
-extension Layer.CompoundAction: Action {
+extension Layer.CompoundAction {
 
   public func run(nextActions: [Action]) {
     CATransaction.begin()
