@@ -42,7 +42,7 @@ extension Layer.CompoundAction: Action {
 
 extension Chain where A: Layer.CompoundAction {
 
-  public func add(chains: [Chain]) -> Chain {
+  public func add<T: LayerAnimationConfigurable>(chains: [Chain<T>]) -> Chain {
     return configure { (action: Layer.CompoundAction) in
       chains.forEach { chain in
         chain.actions.forEach { a in
@@ -54,7 +54,7 @@ extension Chain where A: Layer.CompoundAction {
     }
   }
 
-  public func add(chain: Chain) -> Chain {
+  public func add<T: LayerAnimationConfigurable>(chain: Chain<T>) -> Chain {
     return add([chain])
   }
 }
