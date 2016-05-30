@@ -167,14 +167,28 @@ public extension Chain where A: LayerBasicConfigurable {
 public extension Chain where A: LayerBasicConfigurable {
 
   public func flipX() -> Chain {
-    return self
+    var perspective = CATransform3DIdentity
+    perspective.m34 = 1.0 / -500
+
+    return animate()
+      .keyPath("transform")
+      .fromValue(NSValue(CATransform3D: CATransform3DMakeRotation(0, 0, 0, 0)))
+      .toValue(NSValue(CATransform3D: CATransform3DConcat(perspective, CATransform3DMakeRotation(CGFloat(M_PI), 0, 0, 0))))
   }
 
   public func flipY() -> Chain {
-    return self
+    var perspective = CATransform3DIdentity
+    perspective.m34 = 1.0 / -500
+
+    return animate()
+      .keyPath("transform")
+      .fromValue(NSValue(CATransform3D: CATransform3DMakeRotation(0, 0, 0, 0)))
+      .toValue(NSValue(CATransform3D: CATransform3DConcat(perspective, CATransform3DMakeRotation(CGFloat(M_PI), 1, 0, 0))))
   }
 
   public func flash() -> Chain {
-    return self
+    return animate()
+      .fadeOut()
+      .repeatCount(2)
   }
 }
