@@ -34,7 +34,7 @@ public extension UIView {
 
 public extension UIView {
 
-  public var ride: Ride {
+  public var wave: Ride {
     return Ride(view: self)
   }
 }
