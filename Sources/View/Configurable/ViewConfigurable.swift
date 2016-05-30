@@ -10,14 +10,15 @@ import UIKit
 
 public protocol ViewConfigurable: class {
 
+  var animation: View.Animation { get }
   var view: UIView? { get set }
 }
 
-public extension ViewConfigurable {
+public extension Chain where A: ViewConfigurable {
 
-  public func with(view: UIView) -> Self {
-    self.view = view
-
-    return self
+  public func view(view: UIView) -> Chain {
+    return configure { (action: ViewConfigurable) in
+      action.view = view
+    }
   }
 }

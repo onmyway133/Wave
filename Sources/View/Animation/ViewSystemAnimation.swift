@@ -10,14 +10,14 @@ import UIKit
 
 public extension View {
 
-  public class SystemAnimation {
+  public class SystemAnimation: View.Animation {
 
     var options: UIViewAnimationOptions = []
     var views: [UIView] = []
     var animation: UISystemAnimation = .Delete
     var parallelBlock: Block?
 
-    public required init() {
+    public override init() {
 
     }
   }

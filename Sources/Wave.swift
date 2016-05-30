@@ -25,8 +25,8 @@ public func run(actions: [Action]) {
 
 public extension UIView {
 
-  public var chain: View.BasicChain {
-    return View.BasicChain().with(self)
+  public var chain: Chain<View.BasicAction> {
+    return Chain<View.BasicAction>()
   }
 }
 

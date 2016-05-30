@@ -10,16 +10,15 @@ import UIKit
 
 public extension View {
 
-  public class TransitionAnimation {
+  public class TransitionAnimation: View.Animation {
 
-    var duration: NSTimeInterval = Config.duration
     var options: UIViewAnimationOptions = []
     var from: UIView?
     var to: UIView?
     var with: UIView?
     var block: (UIView -> Void)?
 
-    public required init() {
+    public override init() {
 
     }
   }
