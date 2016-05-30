@@ -8,7 +8,7 @@
 
 import UIKit
 
-public protocol LayerPropertyConfigurable: LayerConfigurable {
+public protocol LayerPropertyConfigurable: LayerAnimationConfigurable {
 
 }
 
@@ -17,7 +17,7 @@ public protocol LayerPropertyConfigurable: LayerConfigurable {
 public extension Chain where A: LayerPropertyConfigurable  {
 
   public func keyPath(keyPath: String) -> Chain {
-    return configure { (action: LayerConfigurable) in
+    return configure { (action: LayerAnimationConfigurable) in
       if let animation = action.animation as? CAPropertyAnimation {
         animation.keyPath = keyPath
       }
@@ -25,7 +25,7 @@ public extension Chain where A: LayerPropertyConfigurable  {
   }
 
   public func additive(additive: Bool) -> Chain {
-    return configure { (action: LayerConfigurable) in
+    return configure { (action: LayerAnimationConfigurable) in
       if let animation = action.animation as? CAPropertyAnimation {
         animation.additive = additive
       }
@@ -33,7 +33,7 @@ public extension Chain where A: LayerPropertyConfigurable  {
   }
 
   public func cumulative(cumulative: Bool) -> Chain {
-    return configure { (action: LayerConfigurable) in
+    return configure { (action: LayerAnimationConfigurable) in
       if let animation = action.animation as? CAPropertyAnimation {
         animation.cumulative = cumulative
       }
@@ -41,7 +41,7 @@ public extension Chain where A: LayerPropertyConfigurable  {
   }
 
   public func valueFunction(function: CAValueFunction) -> Chain {
-    return configure { (action: LayerConfigurable) in
+    return configure { (action: LayerAnimationConfigurable) in
       if let animation = action.animation as? CAPropertyAnimation {
         animation.valueFunction = function
       }

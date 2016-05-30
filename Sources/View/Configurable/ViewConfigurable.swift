@@ -10,7 +10,6 @@ import UIKit
 
 public protocol ViewConfigurable: class {
 
-  var animation: View.Animation { get }
   var view: UIView? { get set }
 }
 

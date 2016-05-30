@@ -34,21 +34,21 @@ public extension Ride {
   }
 
   public func morph() {
-    Chain<Layer.KeyframeAction>()
+    Chain<Layer.CompoundAction>()
       .layer(view.layer)
       .morph()
       .run()
   }
 
   public func squeeze() {
-    Chain<Layer.KeyframeAction>()
+    Chain<Layer.CompoundAction>()
       .layer(view.layer)
       .squeeze()
       .run()
   }
 
   public func wobble() {
-    Chain<Layer.KeyframeAction>()
+    Chain<Layer.CompoundAction>()
       .layer(view.layer)
       .wobble()
       .run()

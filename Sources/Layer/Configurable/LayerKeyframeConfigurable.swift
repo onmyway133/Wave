@@ -108,18 +108,6 @@ public extension Chain where A: LayerKeyframeConfigurable {
       .defaults()
   }
 
-  public func morph() -> Chain {
-    return self
-  }
-
-  public func squeeze() -> Chain {
-    return self
-  }
-
-  public func wobble() -> Chain {
-    return self
-  }
-
   public func swing() -> Chain {
     return animate()
       .keyPath("transform.rotation")

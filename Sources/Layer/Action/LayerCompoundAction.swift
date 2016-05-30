@@ -10,7 +10,7 @@ import UIKit
 
 public extension Layer {
 
-  public final class CompoundAction: Action {
+  public final class CompoundAction: LayerConfigurable {
 
     public var layer: CALayer?
     public var animations: [CAAnimation] = []
@@ -21,7 +21,7 @@ public extension Layer {
   }
 }
 
-extension Layer.CompoundAction {
+extension Layer.CompoundAction: Action {
 
   public func run(nextActions: [Action]) {
     CATransaction.begin()
@@ -38,13 +38,15 @@ extension Layer.CompoundAction {
   }
 }
 
+// MARK: - Configure
+
 extension Chain where A: Layer.CompoundAction {
 
   public func add(chains: [Chain]) -> Chain {
     return configure { (action: Layer.CompoundAction) in
       chains.forEach { chain in
         chain.actions.forEach { a in
-          if let a = a as? LayerConfigurable {
+          if let a = a as? LayerAnimationConfigurable {
             action.animations.append(a.animation)
           }
         }
@@ -54,5 +56,22 @@ extension Chain where A: Layer.CompoundAction {
 
   public func add(chain: Chain) -> Chain {
     return add([chain])
+  }
+}
+
+// MARK: - Animate
+
+extension Chain where A: Layer.CompoundAction {
+
+  public func morph() -> Chain {
+    return self
+  }
+
+  public func squeeze() -> Chain {
+    return self
+  }
+
+  public func wobble() -> Chain {
+    return self
   }
 }

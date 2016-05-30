@@ -8,7 +8,7 @@
 
 import UIKit
 
-public protocol ViewBasicConfigurable: ViewConfigurable {
+public protocol ViewBasicConfigurable: ViewAnimationConfigurable {
 
 }
 
@@ -66,7 +66,7 @@ public extension Chain where A: ViewBasicConfigurable {
   }
 
   public func move(value: CGPoint) -> Chain {
-    let action: ViewBasicConfigurable? = last()
+    let action: ViewConfigurable? = last()
 
     return animate().block {
       action?.view?.transform = CGAffineTransformMakeTranslation(value.x, value.y)
@@ -84,7 +84,7 @@ public extension Chain where A: ViewBasicConfigurable {
   }
 
   public func scale(value: CGPoint) -> Chain {
-    let action: ViewBasicConfigurable? = last()
+    let action: ViewConfigurable? = last()
 
     return animate().block {
       action?.view?.transform = CGAffineTransformMakeScale(value.x, value.y)
@@ -100,7 +100,7 @@ public extension Chain where A: ViewBasicConfigurable {
   // MARK: - Rotate
 
   public func rotate(angle: Double) -> Chain {
-    let action: ViewBasicConfigurable? = last()
+    let action: ViewConfigurable? = last()
 
     return animate().block {
       action?.view?.transform = CGAffineTransformMakeRotation(CGFloat(angle))
@@ -110,7 +110,7 @@ public extension Chain where A: ViewBasicConfigurable {
   // MARK: - Fade
 
   public func fade(visible: Bool) -> Chain {
-    let action: ViewBasicConfigurable? = last()
+    let action: ViewConfigurable? = last()
     
     return animate().block {
       action?.view?.alpha = visible ? 1 : 0

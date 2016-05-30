@@ -43,6 +43,8 @@
 		D23DC2E51CFCE5ED005C6F5E /* ViewSystemConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23DC2E41CFCE5ED005C6F5E /* ViewSystemConfigurable.swift */; };
 		D23DC2E71CFCE5F6005C6F5E /* ViewTransitionConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23DC2E61CFCE5F6005C6F5E /* ViewTransitionConfigurable.swift */; };
 		D23DC2E91CFCE601005C6F5E /* LayerSpringConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23DC2E81CFCE601005C6F5E /* LayerSpringConfigurable.swift */; };
+		D23DC2EB1CFCF11E005C6F5E /* ViewAnimationConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23DC2EA1CFCF11E005C6F5E /* ViewAnimationConfigurable.swift */; };
+		D23DC2ED1CFCF1AA005C6F5E /* LayerAnimationConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23DC2EC1CFCF1AA005C6F5E /* LayerAnimationConfigurable.swift */; };
 		D5B2E8AA1C3A780C00C0327D /* Wave.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B2E89F1C3A780C00C0327D /* Wave.framework */; };
 		D5C6294A1C3A7FAA007F7B7C /* Wave.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C629401C3A7FAA007F7B7C /* Wave.framework */; };
 		D5C629771C3A878E007F7B7C /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C629751C3A878E007F7B7C /* Quick.framework */; };
@@ -105,6 +107,8 @@
 		D23DC2E41CFCE5ED005C6F5E /* ViewSystemConfigurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewSystemConfigurable.swift; sourceTree = "<group>"; };
 		D23DC2E61CFCE5F6005C6F5E /* ViewTransitionConfigurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewTransitionConfigurable.swift; sourceTree = "<group>"; };
 		D23DC2E81CFCE601005C6F5E /* LayerSpringConfigurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerSpringConfigurable.swift; sourceTree = "<group>"; };
+		D23DC2EA1CFCF11E005C6F5E /* ViewAnimationConfigurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewAnimationConfigurable.swift; sourceTree = "<group>"; };
+		D23DC2EC1CFCF1AA005C6F5E /* LayerAnimationConfigurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerAnimationConfigurable.swift; sourceTree = "<group>"; };
 		D500FD111C3AABED00782D78 /* Playground-iOS.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Playground-iOS.playground"; sourceTree = "<group>"; };
 		D500FD121C3AAC8E00782D78 /* Playground-Mac.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Playground-Mac.playground"; sourceTree = "<group>"; };
 		D5B2E89F1C3A780C00C0327D /* Wave.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Wave.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -229,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				D209D11D1CFA399F000A45E3 /* ViewConfigurable.swift */,
+				D23DC2EA1CFCF11E005C6F5E /* ViewAnimationConfigurable.swift */,
 				D209D1211CFACBC5000A45E3 /* ViewBasicConfigurable.swift */,
 				D23DC2E21CFCE5E2005C6F5E /* ViewKeyframeConfigurable.swift */,
 				D23DC2E41CFCE5ED005C6F5E /* ViewSystemConfigurable.swift */,
@@ -241,6 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				D209D11A1CFA398B000A45E3 /* LayerConfigurable.swift */,
+				D23DC2EC1CFCF1AA005C6F5E /* LayerAnimationConfigurable.swift */,
 				D209D1291CFAD375000A45E3 /* LayerPropertyConfigurable.swift */,
 				D209D1251CFACEFB000A45E3 /* LayerBasicConfigurable.swift */,
 				D209D1351CFB1F76000A45E3 /* LayerKeyframeConfigurable.swift */,
@@ -562,6 +568,7 @@
 				D209D0FB1CFA3341000A45E3 /* ViewSpringAction.swift in Sources */,
 				D217938D1CF24E5600BB2467 /* Action.swift in Sources */,
 				D209D10C1CFA358B000A45E3 /* ViewSpringAnimation.swift in Sources */,
+				D23DC2EB1CFCF11E005C6F5E /* ViewAnimationConfigurable.swift in Sources */,
 				D209D13A1CFB61C7000A45E3 /* LayerCompoundAction.swift in Sources */,
 				D209D1081CFA345A000A45E3 /* ViewBasicAnimation.swift in Sources */,
 				D209D1031CFA3347000A45E3 /* LayerKeyframeAction.swift in Sources */,
@@ -570,6 +577,7 @@
 				D209D0FC1CFA3341000A45E3 /* ViewSystemAction.swift in Sources */,
 				D23DC2E91CFCE601005C6F5E /* LayerSpringConfigurable.swift in Sources */,
 				D23DC2E11CFCC1A9005C6F5E /* Chain.swift in Sources */,
+				D23DC2ED1CFCF1AA005C6F5E /* LayerAnimationConfigurable.swift in Sources */,
 				D209D0FD1CFA3341000A45E3 /* ViewTransitionAction.swift in Sources */,
 				D209D1261CFACEFB000A45E3 /* LayerBasicConfigurable.swift in Sources */,
 				D23DC2E31CFCE5E2005C6F5E /* ViewKeyframeConfigurable.swift in Sources */,
