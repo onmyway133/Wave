@@ -73,7 +73,7 @@ public extension Chain {
 
 public extension Chain {
 
-  public func animate() -> Chain {
+  public func newAction() -> Chain {
 
     return self
   }

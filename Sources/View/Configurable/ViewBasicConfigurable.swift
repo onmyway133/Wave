@@ -68,7 +68,7 @@ public extension Chain where A: ViewBasicConfigurable {
   public func move(value: CGPoint) -> Chain {
     let action: ViewConfigurable? = last()
 
-    return animate().block {
+    return newAction().block {
       action?.view?.transform = CGAffineTransformMakeTranslation(value.x, value.y)
     }
   }
@@ -86,7 +86,7 @@ public extension Chain where A: ViewBasicConfigurable {
   public func scale(value: CGPoint) -> Chain {
     let action: ViewConfigurable? = last()
 
-    return animate().block {
+    return newAction().block {
       action?.view?.transform = CGAffineTransformMakeScale(value.x, value.y)
     }
   }
@@ -102,7 +102,7 @@ public extension Chain where A: ViewBasicConfigurable {
   public func rotate(angle: Double) -> Chain {
     let action: ViewConfigurable? = last()
 
-    return animate().block {
+    return newAction().block {
       action?.view?.transform = CGAffineTransformMakeRotation(CGFloat(angle))
     }
   }
@@ -112,7 +112,7 @@ public extension Chain where A: ViewBasicConfigurable {
   public func fade(visible: Bool) -> Chain {
     let action: ViewConfigurable? = last()
     
-    return animate().block {
+    return newAction().block {
       action?.view?.alpha = visible ? 1 : 0
     }
   }

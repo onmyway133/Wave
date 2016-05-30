@@ -65,52 +65,52 @@ extension Chain where A: Layer.CompoundAction {
 
   public func morph() -> Chain {
     let x = Chain<Layer.KeyframeAction>()
-      .animate()
+      .newAction()
       .keyPath("transform.scale.x")
       .values([1, 1.3, 0.7, 1.3, 1])
       .keyTimes([0, 0.2, 0.4, 0.6, 0.8, 1])
 
     let y = Chain<Layer.KeyframeAction>()
-      .animate()
+      .newAction()
       .keyPath("transform.scale.x")
       .values([1, 1.3, 0.7, 1.3, 1])
       .keyTimes([0, 0.2, 0.4, 0.6, 0.8, 1])
 
-    return animate()
+    return newAction()
       .add([x, y])
   }
 
   public func squeeze() -> Chain {
     let x = Chain<Layer.KeyframeAction>()
-      .animate()
+      .newAction()
       .keyPath("transform.scale.x")
       .values([1, 1.5, 0.5, 1.5, 1])
       .keyTimes([0, 0.2, 0.4, 0.6, 0.8, 1])
 
     let y = Chain<Layer.KeyframeAction>()
-      .animate()
+      .newAction()
       .keyPath("transform.scale.x")
       .values([1, 0.5, 1, 0.5, 1])
       .keyTimes([0, 0.2, 0.4, 0.6, 0.8, 1])
 
-    return animate()
+    return newAction()
       .add([x, y])
   }
 
   public func wobble() -> Chain {
     let rotate = Chain<Layer.KeyframeAction>()
-      .animate()
+      .newAction()
       .keyPath("transform.rotation")
       .values([0, 0.3, -0.3, 0.3, 0])
       .keyTimes([0, 0.2, 0.4, 0.6, 0.8, 1])
 
     let x = Chain<Layer.KeyframeAction>()
-      .animate()
+      .newAction()
       .keyPath("position.x")
       .values([0, 30, -30, 30, 0])
       .keyTimes([0, 0.2, 0.4, 0.6, 0.8, 1])
 
-    return animate()
+    return newAction()
       .add([rotate, x])
   }
 }
