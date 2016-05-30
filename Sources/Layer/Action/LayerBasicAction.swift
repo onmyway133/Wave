@@ -10,10 +10,18 @@ import UIKit
 
 public extension Layer {
 
-  public struct BasicAction {
+  public final class BasicAction: LayerBasicConfigurable {
 
-    var layer: CALayer?
-    var animation = CABasicAnimation()
+    let _animation = CABasicAnimation()
+    public var layer: CALayer?
+
+    public var animation: CAAnimation {
+      return _animation
+    }
+
+    public init() {
+
+    }
   }
 }
 
@@ -26,7 +34,7 @@ extension Layer.BasicAction: Action {
       Wave.run(nextActions)
     }
     
-    layer?.addAnimation(animation, forKey: "")
+    layer?.addAnimation(_animation, forKey: "")
     
     CATransaction.commit()
   }

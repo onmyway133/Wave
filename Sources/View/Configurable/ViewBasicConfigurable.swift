@@ -18,9 +18,7 @@ public extension Chain where A: ViewBasicConfigurable {
 
   public func duration(interval: NSTimeInterval) -> Chain {
     return configure { (action: ViewBasicConfigurable) in
-      if let animation = action.animation as? View.BasicAnimation {
-        animation.duration = interval
-      }
+      action.animation.duration = interval
     }
   }
 

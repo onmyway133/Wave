@@ -10,10 +10,18 @@ import UIKit
 
 public extension Layer {
 
-  public struct KeyframeAction {
+  public final class KeyframeAction: LayerKeyframeConfigurable {
 
-    var layer: CALayer?
-    var animation = CAKeyframeAnimation()
+    let _animation = CAKeyframeAnimation()
+    public var layer: CALayer?
+
+    public var animation: CAAnimation {
+      return _animation
+    }
+
+    public init() {
+      
+    }
   }
 }
 
@@ -26,7 +34,7 @@ extension Layer.KeyframeAction: Action {
       Wave.run(nextActions)
     }
 
-    layer?.addAnimation(animation, forKey: "")
+    layer?.addAnimation(_animation, forKey: "")
 
     CATransaction.commit()
   }

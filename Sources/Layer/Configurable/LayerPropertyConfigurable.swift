@@ -10,39 +10,48 @@ import UIKit
 
 public protocol LayerPropertyConfigurable: LayerConfigurable {
 
-  associatedtype Animation: CAPropertyAnimation
 }
 
-public extension LayerPropertyConfigurable {
+// MARK: - Config
 
-  public func keyPath(keyPath: String) -> Self {
-    return configureAnimation { (animation: Animation) in
-      animation.keyPath = keyPath
+public extension Chain where A: LayerPropertyConfigurable  {
+
+  public func keyPath(keyPath: String) -> Chain {
+    return configure { (action: LayerConfigurable) in
+      if let animation = action.animation as? CAPropertyAnimation {
+        animation.keyPath = keyPath
+      }
     }
   }
 
-  public func additive(additive: Bool) -> Self {
-    return configureAnimation { (animation: Animation) in
-      animation.additive = additive
+  public func additive(additive: Bool) -> Chain {
+    return configure { (action: LayerConfigurable) in
+      if let animation = action.animation as? CAPropertyAnimation {
+        animation.additive = additive
+      }
     }
   }
 
-  public func cumulative(cumulative: Bool) -> Self {
-    return configureAnimation { (animation: Animation) in
-      animation.cumulative = cumulative
+  public func cumulative(cumulative: Bool) -> Chain {
+    return configure { (action: LayerConfigurable) in
+      if let animation = action.animation as? CAPropertyAnimation {
+        animation.cumulative = cumulative
+      }
     }
   }
 
-  public func valueFunction(function: CAValueFunction) -> Self {
-    return configureAnimation { (animation: Animation) in
-      animation.valueFunction = function
+  public func valueFunction(function: CAValueFunction) -> Chain {
+    return configure { (action: LayerConfigurable) in
+      if let animation = action.animation as? CAPropertyAnimation {
+        animation.valueFunction = function
+      }
     }
   }
 }
 
-public extension LayerPropertyConfigurable {
+public extension Chain where A: LayerPropertyConfigurable  {
 
-  public func applyDefaults() -> Self {
+  public func defaults() -> Chain {
     return duration(Config.duration)
       .timingFunction(Config.timingFunction)
       .additive(true)

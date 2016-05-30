@@ -20,55 +20,64 @@ public struct Ride {
 public extension Ride {
 
   public func shake() {
-    Layer.KeyframeChain(layer: view.layer)
+    Chain<Layer.KeyframeAction>()
+      .layer(view.layer)
       .shake()
       .run()
   }
 
   public func pop() {
-    Layer.KeyframeChain(layer: view.layer)
+    Chain<Layer.KeyframeAction>()
+      .layer(view.layer)
       .pop()
       .run()
   }
 
   public func morph() {
-    Layer.KeyframeChain(layer: view.layer)
+    Chain<Layer.KeyframeAction>()
+      .layer(view.layer)
       .morph()
       .run()
   }
 
   public func squeeze() {
-    Layer.KeyframeChain(layer: view.layer)
+    Chain<Layer.KeyframeAction>()
+      .layer(view.layer)
       .squeeze()
       .run()
   }
 
   public func wobble() {
-    Layer.KeyframeChain(layer: view.layer)
+    Chain<Layer.KeyframeAction>()
+      .layer(view.layer)
       .wobble()
       .run()
   }
 
   public func swing() {
-    Layer.KeyframeChain(layer: view.layer)
+    Chain<Layer.KeyframeAction>()
+      .layer(view.layer)
       .swing()
       .run()
   }
 
   public func flipX() {
-    Layer.BasicChain(layer: view.layer)
+    Chain<Layer.BasicAction>()
+      .layer(view.layer)
       .flipX()
       .run()
   }
 
   public func flipY() {
-    Layer.BasicChain(layer: view.layer)
+    Chain<Layer.BasicAction>()
+      .layer(view.layer)
       .flipY()
       .run()
   }
 
   public func flash() {
-    Layer.BasicChain(layer: view.layer)
+    Chain<Layer.BasicAction>()
+      .layer(view.layer)
       .flash()
       .run()
   }

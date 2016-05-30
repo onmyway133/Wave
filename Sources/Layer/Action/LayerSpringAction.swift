@@ -11,10 +11,18 @@ import UIKit
 public extension Layer {
 
   @available(iOS 9, *)
-  public struct SpringAction {
+  public final class SpringAction: LayerSpringConfigurable {
 
-    var layer: CALayer?
-    var animation = CASpringAnimation()
+    let _animation = CASpringAnimation()
+    public var layer: CALayer?
+
+    public var animation: CAAnimation {
+      return _animation
+    }
+
+    public init() {
+      
+    }
   }
 }
 
@@ -27,7 +35,7 @@ extension Layer.SpringAction: Action {
       Wave.run(nextActions)
     }
 
-    layer?.addAnimation(animation, forKey: "")
+    layer?.addAnimation(_animation, forKey: "")
 
     CATransaction.commit()
   }
