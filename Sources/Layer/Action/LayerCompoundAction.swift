@@ -37,3 +37,22 @@ extension Layer.CompoundAction {
     CATransaction.commit()
   }
 }
+
+extension Chain where A: Layer.CompoundAction {
+
+  public func add(chains: [Chain]) -> Chain {
+    return configure { (action: Layer.CompoundAction) in
+      chains.forEach { chain in
+        chain.actions.forEach { a in
+          if let a = a as? LayerConfigurable {
+            action.animations.append(a.animation)
+          }
+        }
+      }
+    }
+  }
+
+  public func add(chain: Chain) -> Chain {
+    return add([chain])
+  }
+}
