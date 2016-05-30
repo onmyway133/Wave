@@ -69,11 +69,13 @@ public extension Chain {
   }
 }
 
-// MARK: - Animate
+// MARK: - New Action
 
 public extension Chain {
 
   public func newAction() -> Chain {
+    let action = A()
+    actions.append(action)
 
     return self
   }
