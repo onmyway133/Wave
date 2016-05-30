@@ -30,7 +30,7 @@ public extension Chain {
 
 public extension Chain {
 
-  public func link(chain: Chain) -> Chain {
+  public func link<B>(chain: Chain<B>) -> Chain<B> {
     var actions = self.actions
     actions.appendContentsOf(chain.actions)
     chain.actions = actions
