@@ -19,6 +19,12 @@ view.center = CGPoint(x: containerView.frame.size.width/2,
 
 // MARK: - Wave
 
+Chain<View.BasicAnimation>()
+.newAction()
+.block {
+  view.frame.origin.x -= 120
+}
+.run()
 
 // MARK: - Live
 

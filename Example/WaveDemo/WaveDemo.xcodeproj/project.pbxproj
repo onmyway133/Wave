@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		030292A37C1CA6F52D3E462C /* Pods_WaveDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60FA063ED183C3196D5389E0 /* Pods_WaveDemo.framework */; };
 		D5C7F7701C3BCF14008CDDBA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5C7F76E1C3BCF14008CDDBA /* Main.storyboard */; };
 		D5C7F7751C3BCF14008CDDBA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5C7F7731C3BCF14008CDDBA /* LaunchScreen.storyboard */; };
 		D5C7F7821C3BCF90008CDDBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5C7F77E1C3BCF90008CDDBA /* Assets.xcassets */; };
@@ -16,9 +15,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		60FA063ED183C3196D5389E0 /* Pods_WaveDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WaveDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		65C0971E3B95FA10BC03AB53 /* Pods-WaveDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaveDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WaveDemo/Pods-WaveDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		CC95DA260593AB0A5616AA06 /* Pods-WaveDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaveDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-WaveDemo/Pods-WaveDemo.release.xcconfig"; sourceTree = "<group>"; };
 		D5C7F7671C3BCF14008CDDBA /* WaveDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WaveDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5C7F76F1C3BCF14008CDDBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D5C7F7741C3BCF14008CDDBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -33,37 +29,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				030292A37C1CA6F52D3E462C /* Pods_WaveDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		392B90541414033115B59ABE /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				60FA063ED183C3196D5389E0 /* Pods_WaveDemo.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		7101B222E8F65FDE86B4C00D /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				65C0971E3B95FA10BC03AB53 /* Pods-WaveDemo.debug.xcconfig */,
-				CC95DA260593AB0A5616AA06 /* Pods-WaveDemo.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		D5C7F75E1C3BCF14008CDDBA = {
 			isa = PBXGroup;
 			children = (
 				D5C7F7691C3BCF14008CDDBA /* WaveDemo */,
 				D5C7F7681C3BCF14008CDDBA /* Products */,
-				7101B222E8F65FDE86B4C00D /* Pods */,
-				392B90541414033115B59ABE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,12 +95,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D5C7F7791C3BCF14008CDDBA /* Build configuration list for PBXNativeTarget "WaveDemo" */;
 			buildPhases = (
-				3D77FAE860961D33E0E8A07E /* 📦 Check Pods Manifest.lock */,
 				D5C7F7631C3BCF14008CDDBA /* Sources */,
 				D5C7F7641C3BCF14008CDDBA /* Frameworks */,
 				D5C7F7651C3BCF14008CDDBA /* Resources */,
-				378C2E87F774F1E69C164757 /* 📦 Embed Pods Frameworks */,
-				299D235D8A726C2979994768 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -180,54 +153,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		299D235D8A726C2979994768 /* 📦 Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WaveDemo/Pods-WaveDemo-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		378C2E87F774F1E69C164757 /* 📦 Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WaveDemo/Pods-WaveDemo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		3D77FAE860961D33E0E8A07E /* 📦 Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D5C7F7631C3BCF14008CDDBA /* Sources */ = {
@@ -344,7 +269,6 @@
 		};
 		D5C7F77A1C3BCF14008CDDBA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 65C0971E3B95FA10BC03AB53 /* Pods-WaveDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WaveDemo/Info.plist;
@@ -356,7 +280,6 @@
 		};
 		D5C7F77B1C3BCF14008CDDBA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CC95DA260593AB0A5616AA06 /* Pods-WaveDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WaveDemo/Info.plist;

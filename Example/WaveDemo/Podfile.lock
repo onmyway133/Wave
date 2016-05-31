@@ -1,5 +1,7 @@
 PODS:
-  - Wave (0.1.0)
+  - Construction (1.0.0)
+  - Wave (0.1.0):
+    - Construction
 
 DEPENDENCIES:
   - Wave (from `../../`)
@@ -9,7 +11,8 @@ EXTERNAL SOURCES:
     :path: "../../"
 
 SPEC CHECKSUMS:
-  Wave: 1be4b77874696f0adf849590e2bdbee9a826a1fd
+  Construction: a252ff816a7b03c3e2e54594172f2d61c881cded
+  Wave: 542be22f3023f7829b73cf99ea2142e8219907b6
 
 PODFILE CHECKSUM: 32553e4a7866eb70ecdaa55d6738fd454162c1f4
 
