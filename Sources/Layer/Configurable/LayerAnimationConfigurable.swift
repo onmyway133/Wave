@@ -85,3 +85,11 @@ public extension Chain where A: LayerAnimationConfigurable {
     }
   }
 }
+
+public extension Chain where A: LayerAnimationConfigurable  {
+
+  public func defaults() -> Chain {
+    return duration(Config.duration)
+      .timingFunction(Config.timingFunction)
+  }
+}

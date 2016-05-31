@@ -48,12 +48,3 @@ public extension Chain where A: LayerPropertyAnimationConfigurable  {
     }
   }
 }
-
-public extension Chain where A: LayerPropertyAnimationConfigurable  {
-
-  public func defaults() -> Chain {
-    return duration(Config.duration)
-      .timingFunction(Config.timingFunction)
-      .additive(true)
-  }
-}
