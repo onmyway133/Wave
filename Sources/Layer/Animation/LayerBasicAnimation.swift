@@ -12,11 +12,11 @@ public extension Layer {
 
   public final class BasicAnimation: LayerBasicAnimationConfigurable {
 
-    let _animation = CABasicAnimation()
+    let _info = CABasicAnimation()
     public var layer: CALayer?
 
-    public var animation: CAAnimation {
-      return _animation
+    public var info: CAAnimation {
+      return _info
     }
 
     public init() {
@@ -34,7 +34,7 @@ extension Layer.BasicAnimation: Action {
       Wave.run(nextActions)
     }
     
-    layer?.addAnimation(_animation, forKey: "")
+    layer?.addAnimation(_info, forKey: "")
     
     CATransaction.commit()
   }

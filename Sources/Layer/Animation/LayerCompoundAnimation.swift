@@ -47,7 +47,7 @@ extension Chain where A: Layer.CompoundAnimation {
       chains.forEach { chain in
         chain.actions.forEach { a in
           if let a = a as? LayerAnimationConfigurable {
-            action.animations.append(a.animation)
+            action.animations.append(a.info)
           }
         }
       }

@@ -12,11 +12,11 @@ public extension Layer {
 
   public final class KeyframeAnimation: LayerKeyframeAnimationConfigurable {
 
-    let _animation = CAKeyframeAnimation()
+    let _info = CAKeyframeAnimation()
     public var layer: CALayer?
 
-    public var animation: CAAnimation {
-      return _animation
+    public var info: CAAnimation {
+      return _info
     }
 
     public init() {
@@ -34,7 +34,7 @@ extension Layer.KeyframeAnimation: Action {
       Wave.run(nextActions)
     }
 
-    layer?.addAnimation(_animation, forKey: "")
+    layer?.addAnimation(_info, forKey: "")
 
     CATransaction.commit()
   }

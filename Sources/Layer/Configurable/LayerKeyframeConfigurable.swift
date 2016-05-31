@@ -17,73 +17,73 @@ public protocol LayerKeyframeAnimationConfigurable: LayerPropertyAnimationConfig
 public extension Chain where A: LayerKeyframeAnimationConfigurable {
 
   public func values(values: [AnyObject]) -> Chain {
-    return configure { (action: LayerKeyframeAnimationConfigurable) in
-      if let animation = action.animation as? CAKeyframeAnimation {
-        animation.values = values
+    return configure { (animation: LayerKeyframeAnimationConfigurable) in
+      if let info = animation.info as? CAKeyframeAnimation {
+        info.values = values
       }
     }
   }
 
   public func path(path: UIBezierPath) -> Chain {
-    return configure { (action: LayerKeyframeAnimationConfigurable) in
-      if let animation = action.animation as? CAKeyframeAnimation {
-        animation.path = path.CGPath
+    return configure { (animation: LayerKeyframeAnimationConfigurable) in
+      if let info = animation.info as? CAKeyframeAnimation {
+        info.path = path.CGPath
       }
     }
   }
 
   public func keyTimes(keyTimes: [NSNumber]) -> Chain {
-    return configure { (action: LayerKeyframeAnimationConfigurable) in
-      if let animation = action.animation as? CAKeyframeAnimation {
-        animation.keyTimes = keyTimes
+    return configure { (animation: LayerKeyframeAnimationConfigurable) in
+      if let info = animation.info as? CAKeyframeAnimation {
+        info.keyTimes = keyTimes
       }
     }
   }
 
   public func timingFunctions(functions: [CAMediaTimingFunction]) -> Chain {
-    return configure { (action: LayerKeyframeAnimationConfigurable) in
-      if let animation = action.animation as? CAKeyframeAnimation {
-        animation.timingFunctions = functions
+    return configure { (animation: LayerKeyframeAnimationConfigurable) in
+      if let info = animation.info as? CAKeyframeAnimation {
+        info.timingFunctions = functions
       }
     }
   }
 
   public func calculationMode(mode: Layer.CalculationMode) -> Chain {
-    return configure { (action: LayerKeyframeAnimationConfigurable) in
-      if let animation = action.animation as? CAKeyframeAnimation {
-        animation.calculationMode = mode.value
+    return configure { (animation: LayerKeyframeAnimationConfigurable) in
+      if let info = animation.info as? CAKeyframeAnimation {
+        info.calculationMode = mode.value
       }
     }
   }
 
   public func tensionValues(values: [NSNumber]) -> Chain {
-    return configure { (action: LayerKeyframeAnimationConfigurable) in
-      if let animation = action.animation as? CAKeyframeAnimation {
-        animation.values = values
+    return configure { (animation: LayerKeyframeAnimationConfigurable) in
+      if let info = animation.info as? CAKeyframeAnimation {
+        info.values = values
       }
     }
   }
 
   public func continuityValues(values: [NSNumber]) -> Chain {
-    return configure { (action: LayerKeyframeAnimationConfigurable) in
-      if let animation = action.animation as? CAKeyframeAnimation {
-        animation.values = values
+    return configure { (animation: LayerKeyframeAnimationConfigurable) in
+      if let info = animation.info as? CAKeyframeAnimation {
+        info.values = values
       }
     }
   }
 
   public func biasValues(values: [NSNumber]) -> Chain {
-    return configure { (action: LayerKeyframeAnimationConfigurable) in
-      if let animation = action.animation as? CAKeyframeAnimation {
-        animation.values = values
+    return configure { (animation: LayerKeyframeAnimationConfigurable) in
+      if let info = animation.info as? CAKeyframeAnimation {
+        info.values = values
       }
     }
   }
 
   public func rotationMode(mode: Layer.RotationMode) -> Chain {
-    return configure { (action: LayerKeyframeAnimationConfigurable) in
-      if let animation = action.animation as? CAKeyframeAnimation {
-        animation.rotationMode = mode.value
+    return configure { (animation: LayerKeyframeAnimationConfigurable) in
+      if let info = animation.info as? CAKeyframeAnimation {
+        info.rotationMode = mode.value
       }
     }
   }

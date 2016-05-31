@@ -17,33 +17,33 @@ public protocol LayerPropertyAnimationConfigurable: LayerAnimationConfigurable {
 public extension Chain where A: LayerPropertyAnimationConfigurable  {
 
   public func keyPath(keyPath: String) -> Chain {
-    return configure { (action: LayerAnimationConfigurable) in
-      if let animation = action.animation as? CAPropertyAnimation {
-        animation.keyPath = keyPath
+    return configure { (animation: LayerAnimationConfigurable) in
+      if let info = animation.info as? CAPropertyAnimation {
+        info.keyPath = keyPath
       }
     }
   }
 
   public func additive(additive: Bool) -> Chain {
-    return configure { (action: LayerAnimationConfigurable) in
-      if let animation = action.animation as? CAPropertyAnimation {
-        animation.additive = additive
+    return configure { (animation: LayerAnimationConfigurable) in
+      if let info = animation.info as? CAPropertyAnimation {
+        info.additive = additive
       }
     }
   }
 
   public func cumulative(cumulative: Bool) -> Chain {
-    return configure { (action: LayerAnimationConfigurable) in
-      if let animation = action.animation as? CAPropertyAnimation {
-        animation.cumulative = cumulative
+    return configure { (animation: LayerAnimationConfigurable) in
+      if let info = animation.info as? CAPropertyAnimation {
+        info.cumulative = cumulative
       }
     }
   }
 
   public func valueFunction(function: CAValueFunction) -> Chain {
-    return configure { (action: LayerAnimationConfigurable) in
-      if let animation = action.animation as? CAPropertyAnimation {
-        animation.valueFunction = function
+    return configure { (animation: LayerAnimationConfigurable) in
+      if let info = animation.info as? CAPropertyAnimation {
+        info.valueFunction = function
       }
     }
   }

@@ -17,25 +17,25 @@ public protocol LayerBasicAnimationConfigurable: LayerPropertyAnimationConfigura
 public extension Chain where A: LayerBasicAnimationConfigurable {
 
   public func fromValue(value: AnyObject) -> Chain {
-    return configure { (action: LayerBasicAnimationConfigurable) in
-      if let animation = action.animation as? CABasicAnimation {
-        animation.fromValue = value
+    return configure { (animation: LayerBasicAnimationConfigurable) in
+      if let info = animation.info as? CABasicAnimation {
+        info.fromValue = value
       }
     }
   }
 
   public func toValue(value: AnyObject) -> Chain {
-    return configure { (action: LayerBasicAnimationConfigurable) in
-      if let animation = action.animation as? CABasicAnimation {
-        animation.toValue = value
+    return configure { (animation: LayerBasicAnimationConfigurable) in
+      if let info = animation.info as? CABasicAnimation {
+        info.toValue = value
       }
     }
   }
 
   public func byValue(value: AnyObject) -> Chain {
-    return configure { (action: LayerBasicAnimationConfigurable) in
-      if let animation = action.animation as? CABasicAnimation {
-        animation.byValue = value
+    return configure { (animation: LayerBasicAnimationConfigurable) in
+      if let info = animation.info as? CABasicAnimation {
+        info.byValue = value
       }
     }
   }
