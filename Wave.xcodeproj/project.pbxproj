@@ -23,6 +23,7 @@
 		D2045F011CFE2EDB00023462 /* LayerCompoundAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2045EFD1CFE2EDB00023462 /* LayerCompoundAnimation.swift */; };
 		D2045F021CFE2EDB00023462 /* LayerKeyframeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2045EFE1CFE2EDB00023462 /* LayerKeyframeAnimation.swift */; };
 		D2045F031CFE2EDB00023462 /* LayerSpringAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2045EFF1CFE2EDB00023462 /* LayerSpringAnimation.swift */; };
+		D2045F051CFE36FB00023462 /* LayerTransitionAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2045F041CFE36FB00023462 /* LayerTransitionAction.swift */; };
 		D209D0A31CF8C271000A45E3 /* Layer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D209D0A21CF8C271000A45E3 /* Layer.swift */; };
 		D209D0A51CF8C278000A45E3 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = D209D0A41CF8C278000A45E3 /* View.swift */; };
 		D209D11C1CFA398B000A45E3 /* LayerConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D209D11A1CFA398B000A45E3 /* LayerConfigurable.swift */; };
@@ -84,6 +85,7 @@
 		D2045EFD1CFE2EDB00023462 /* LayerCompoundAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerCompoundAnimation.swift; sourceTree = "<group>"; };
 		D2045EFE1CFE2EDB00023462 /* LayerKeyframeAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerKeyframeAnimation.swift; sourceTree = "<group>"; };
 		D2045EFF1CFE2EDB00023462 /* LayerSpringAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerSpringAnimation.swift; sourceTree = "<group>"; };
+		D2045F041CFE36FB00023462 /* LayerTransitionAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerTransitionAction.swift; sourceTree = "<group>"; };
 		D209D0A21CF8C271000A45E3 /* Layer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Layer.swift; sourceTree = "<group>"; };
 		D209D0A41CF8C278000A45E3 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		D209D11A1CFA398B000A45E3 /* LayerConfigurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerConfigurable.swift; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 				D2045EFD1CFE2EDB00023462 /* LayerCompoundAnimation.swift */,
 				D2045EFE1CFE2EDB00023462 /* LayerKeyframeAnimation.swift */,
 				D2045EFF1CFE2EDB00023462 /* LayerSpringAnimation.swift */,
+				D2045F041CFE36FB00023462 /* LayerTransitionAction.swift */,
 			);
 			path = Animation;
 			sourceTree = "<group>";
@@ -570,6 +573,7 @@
 				D2045EF91CFE2ED500023462 /* ViewSystemAnimationInfo.swift in Sources */,
 				D2045EF41CFE2ED500023462 /* ViewTransitionAnimation.swift in Sources */,
 				D209D1261CFACEFB000A45E3 /* LayerBasicConfigurable.swift in Sources */,
+				D2045F051CFE36FB00023462 /* LayerTransitionAction.swift in Sources */,
 				D209D1221CFACBC5000A45E3 /* ViewBasicAnimationConfigurable.swift in Sources */,
 				D2136DF01CF63F5800BE9C4F /* Then.swift in Sources */,
 				D2045EF31CFE2ED500023462 /* ViewSystemAnimation.swift in Sources */,
