@@ -10,7 +10,6 @@
 		D209D1381CFB26CD000A45E3 /* Ride.swift in Sources */ = {isa = PBXBuildFile; fileRef = D209D1371CFB26CD000A45E3 /* Ride.swift */; };
 		D21793881CF23D6700BB2467 /* Wave.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21793871CF23D6700BB2467 /* Wave.swift */; };
 		D217938A1CF23D9400BB2467 /* Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21793891CF23D9400BB2467 /* Spec.swift */; };
-		D21793A81CF254DE00BB2467 /* Construction.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D21793A71CF254DE00BB2467 /* Construction.framework */; };
 		D2B633221CFE4520001BE5DC /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B632ED1CFE4520001BE5DC /* Action.swift */; };
 		D2B633261CFE4520001BE5DC /* Then.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B632F21CFE4520001BE5DC /* Then.swift */; };
 		D2B6332C1CFE4520001BE5DC /* Wait.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B632F91CFE4520001BE5DC /* Wait.swift */; };
@@ -47,7 +46,6 @@
 		D5C6294A1C3A7FAA007F7B7C /* Wave.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C629401C3A7FAA007F7B7C /* Wave.framework */; };
 		D5C629771C3A878E007F7B7C /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C629751C3A878E007F7B7C /* Quick.framework */; };
 		D5C629781C3A878E007F7B7C /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C629761C3A878E007F7B7C /* Nimble.framework */; };
-		D5C6297B1C3A879F007F7B7C /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C629791C3A879F007F7B7C /* Quick.framework */; };
 		D5C6297C1C3A879F007F7B7C /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C6297A1C3A879F007F7B7C /* Nimble.framework */; };
 /* End PBXBuildFile section */
 
@@ -72,7 +70,6 @@
 		D209D1371CFB26CD000A45E3 /* Ride.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ride.swift; sourceTree = "<group>"; };
 		D21793871CF23D6700BB2467 /* Wave.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wave.swift; sourceTree = "<group>"; };
 		D21793891CF23D9400BB2467 /* Spec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spec.swift; sourceTree = "<group>"; };
-		D21793A71CF254DE00BB2467 /* Construction.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Construction.framework; path = Carthage/Build/iOS/Construction.framework; sourceTree = "<group>"; };
 		D2B632ED1CFE4520001BE5DC /* Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
 		D2B632F21CFE4520001BE5DC /* Then.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Then.swift; sourceTree = "<group>"; };
 		D2B632F91CFE4520001BE5DC /* Wait.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wait.swift; sourceTree = "<group>"; };
@@ -113,7 +110,6 @@
 		D5C629491C3A7FAA007F7B7C /* Wave-Mac-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Wave-Mac-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5C629751C3A878E007F7B7C /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		D5C629761C3A878E007F7B7C /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
-		D5C629791C3A879F007F7B7C /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/Mac/Quick.framework; sourceTree = "<group>"; };
 		D5C6297A1C3A879F007F7B7C /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/Mac/Nimble.framework; sourceTree = "<group>"; };
 		D5C6298B1C3A8BBD007F7B7C /* Info-iOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-iOS.plist"; sourceTree = "<group>"; };
 		D5C6298C1C3A8BBD007F7B7C /* Info-Mac.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-Mac.plist"; sourceTree = "<group>"; };
@@ -126,7 +122,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D21793A81CF254DE00BB2467 /* Construction.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,7 +146,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5C6297B1C3A879F007F7B7C /* Quick.framework in Frameworks */,
 				D5C6297C1C3A879F007F7B7C /* Nimble.framework in Frameworks */,
 				D5C6294A1C3A7FAA007F7B7C /* Wave.framework in Frameworks */,
 			);
@@ -163,8 +157,6 @@
 		D21793861CF23D5A00BB2467 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D21793A71CF254DE00BB2467 /* Construction.framework */,
-				D5C629791C3A879F007F7B7C /* Quick.framework */,
 				D5C6297A1C3A879F007F7B7C /* Nimble.framework */,
 				D5C629751C3A878E007F7B7C /* Quick.framework */,
 				D5C629761C3A878E007F7B7C /* Nimble.framework */,
@@ -186,24 +178,8 @@
 			isa = PBXGroup;
 			children = (
 				D2B632FB1CFE4520001BE5DC /* Chain.swift */,
-				D2B632FC1CFE4520001BE5DC /* Layer */,
-				D2B632FD1CFE4520001BE5DC /* View */,
 			);
 			path = Chain;
-			sourceTree = "<group>";
-		};
-		D2B632FC1CFE4520001BE5DC /* Layer */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Layer;
-			sourceTree = "<group>";
-		};
-		D2B632FD1CFE4520001BE5DC /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		D2B632FE1CFE4520001BE5DC /* Config */ = {

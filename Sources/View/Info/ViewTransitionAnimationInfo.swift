@@ -10,7 +10,7 @@ import UIKit
 
 public extension View {
 
-  public class TransitionAnimationInfo: View.AnimationInfo {
+  public class TransitionAnimationInfo: AnimationInfo {
 
     var options: UIViewAnimationOptions = []
     var from: UIView?

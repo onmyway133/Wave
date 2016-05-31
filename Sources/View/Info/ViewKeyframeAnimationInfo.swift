@@ -10,7 +10,7 @@ import UIKit
 
 public extension View {
 
-  public class KeyframeAnimationInfo: View.AnimationInfo {
+  public class KeyframeAnimationInfo: AnimationInfo {
 
     var options: UIViewKeyframeAnimationOptions = []
     var block: Block?
