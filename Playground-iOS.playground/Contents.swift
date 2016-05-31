@@ -2,9 +2,24 @@
 
 import UIKit
 import Wave
+import XCPlayground
 
-let button = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 40))
-button.setTitle("Hello", forState: .Normal)
-button.setTitleColor(UIColor.redColor(), forState: .Normal)
+// MARK: - Setup
 
-Chain<View.BasicAnimation>().duration(
+let containerView = UIView(frame: CGRect(x: 0, y: 0, width: 375, height: 667))
+
+let view = UIView()
+containerView.addSubview(view)
+
+view.backgroundColor = UIColor.redColor()
+view.frame.size = CGSize(width: 100, height: 100)
+view.center = CGPoint(x: containerView.frame.size.width/2,
+                      y: containerView.frame.size.height/2)
+
+
+// MARK: - Wave
+
+
+// MARK: - Live
+
+XCPlaygroundPage.currentPage.liveView = containerView
