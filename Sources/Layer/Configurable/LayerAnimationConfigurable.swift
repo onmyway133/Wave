@@ -13,17 +13,6 @@ public protocol LayerAnimationConfigurable: class {
   var info: CAAnimation { get }
 }
 
-// MARK: - Config
-
-public extension Chain where A: LayerAnimationConfigurable {
-
-  public func layer(layer: CALayer) -> Chain {
-    return configure { (animation: LayerConfigurable) in
-      animation.layer = layer
-    }
-  }
-}
-
 public extension Chain where A: LayerAnimationConfigurable {
 
   // MARK: - CAAnimation

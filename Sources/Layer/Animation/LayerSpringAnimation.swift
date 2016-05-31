@@ -11,7 +11,7 @@ import UIKit
 public extension Layer {
 
   @available(iOS 9, *)
-  public final class SpringAnimation: LayerSpringAnimationConfigurable {
+  public final class SpringAnimation: LayerConfigurable, LayerSpringAnimationConfigurable {
 
     let _info = CASpringAnimation()
     public var layer: CALayer?
