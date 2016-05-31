@@ -1,5 +1,5 @@
 //
-//  LayerKeyframeConfigurable.swift
+//  LayerKeyframeAnimationConfigurable.swift
 //  Wave
 //
 //  Created by Khoa Pham on 29/05/16.
@@ -8,16 +8,16 @@
 
 import UIKit
 
-public protocol LayerKeyframeConfigurable: LayerPropertyConfigurable {
+public protocol LayerKeyframeAnimationConfigurable: LayerPropertyAnimationConfigurable {
 
 }
 
 // MARK: - Config
 
-public extension Chain where A: LayerKeyframeConfigurable {
+public extension Chain where A: LayerKeyframeAnimationConfigurable {
 
   public func values(values: [AnyObject]) -> Chain {
-    return configure { (action: LayerKeyframeConfigurable) in
+    return configure { (action: LayerKeyframeAnimationConfigurable) in
       if let animation = action.animation as? CAKeyframeAnimation {
         animation.values = values
       }
@@ -25,7 +25,7 @@ public extension Chain where A: LayerKeyframeConfigurable {
   }
 
   public func path(path: UIBezierPath) -> Chain {
-    return configure { (action: LayerKeyframeConfigurable) in
+    return configure { (action: LayerKeyframeAnimationConfigurable) in
       if let animation = action.animation as? CAKeyframeAnimation {
         animation.path = path.CGPath
       }
@@ -33,7 +33,7 @@ public extension Chain where A: LayerKeyframeConfigurable {
   }
 
   public func keyTimes(keyTimes: [NSNumber]) -> Chain {
-    return configure { (action: LayerKeyframeConfigurable) in
+    return configure { (action: LayerKeyframeAnimationConfigurable) in
       if let animation = action.animation as? CAKeyframeAnimation {
         animation.keyTimes = keyTimes
       }
@@ -41,7 +41,7 @@ public extension Chain where A: LayerKeyframeConfigurable {
   }
 
   public func timingFunctions(functions: [CAMediaTimingFunction]) -> Chain {
-    return configure { (action: LayerKeyframeConfigurable) in
+    return configure { (action: LayerKeyframeAnimationConfigurable) in
       if let animation = action.animation as? CAKeyframeAnimation {
         animation.timingFunctions = functions
       }
@@ -49,7 +49,7 @@ public extension Chain where A: LayerKeyframeConfigurable {
   }
 
   public func calculationMode(mode: Layer.CalculationMode) -> Chain {
-    return configure { (action: LayerKeyframeConfigurable) in
+    return configure { (action: LayerKeyframeAnimationConfigurable) in
       if let animation = action.animation as? CAKeyframeAnimation {
         animation.calculationMode = mode.value
       }
@@ -57,7 +57,7 @@ public extension Chain where A: LayerKeyframeConfigurable {
   }
 
   public func tensionValues(values: [NSNumber]) -> Chain {
-    return configure { (action: LayerKeyframeConfigurable) in
+    return configure { (action: LayerKeyframeAnimationConfigurable) in
       if let animation = action.animation as? CAKeyframeAnimation {
         animation.values = values
       }
@@ -65,7 +65,7 @@ public extension Chain where A: LayerKeyframeConfigurable {
   }
 
   public func continuityValues(values: [NSNumber]) -> Chain {
-    return configure { (action: LayerKeyframeConfigurable) in
+    return configure { (action: LayerKeyframeAnimationConfigurable) in
       if let animation = action.animation as? CAKeyframeAnimation {
         animation.values = values
       }
@@ -73,7 +73,7 @@ public extension Chain where A: LayerKeyframeConfigurable {
   }
 
   public func biasValues(values: [NSNumber]) -> Chain {
-    return configure { (action: LayerKeyframeConfigurable) in
+    return configure { (action: LayerKeyframeAnimationConfigurable) in
       if let animation = action.animation as? CAKeyframeAnimation {
         animation.values = values
       }
@@ -81,7 +81,7 @@ public extension Chain where A: LayerKeyframeConfigurable {
   }
 
   public func rotationMode(mode: Layer.RotationMode) -> Chain {
-    return configure { (action: LayerKeyframeConfigurable) in
+    return configure { (action: LayerKeyframeAnimationConfigurable) in
       if let animation = action.animation as? CAKeyframeAnimation {
         animation.rotationMode = mode.value
       }
@@ -91,7 +91,7 @@ public extension Chain where A: LayerKeyframeConfigurable {
 
 // MARK: - Animate
 
-public extension Chain where A: LayerKeyframeConfigurable {
+public extension Chain where A: LayerKeyframeAnimationConfigurable {
 
   public func shake() -> Chain {
     return newAction()

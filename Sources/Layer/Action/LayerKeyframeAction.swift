@@ -10,7 +10,7 @@ import UIKit
 
 public extension Layer {
 
-  public final class KeyframeAction: LayerKeyframeConfigurable {
+  public final class KeyframeAction: LayerKeyframeAnimationConfigurable {
 
     let _animation = CAKeyframeAnimation()
     public var layer: CALayer?

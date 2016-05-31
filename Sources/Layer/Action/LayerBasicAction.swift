@@ -10,7 +10,7 @@ import UIKit
 
 public extension Layer {
 
-  public final class BasicAction: LayerBasicConfigurable {
+  public final class BasicAction: LayerBasicAnimationConfigurable {
 
     let _animation = CABasicAnimation()
     public var layer: CALayer?

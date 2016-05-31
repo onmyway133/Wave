@@ -1,5 +1,5 @@
 //
-//  ViewBasicConfigurable.swift
+//  ViewBasicAnimationConfigurable.swift
 //  Wave
 //
 //  Created by Khoa Pham on 29/05/16.
@@ -8,34 +8,34 @@
 
 import UIKit
 
-public protocol ViewBasicConfigurable: ViewAnimationConfigurable {
+public protocol ViewBasicAnimationConfigurable: ViewAnimationConfigurable {
 
 }
 
 // MARK: - Configure
 
-public extension Chain where A: ViewBasicConfigurable {
+public extension Chain where A: ViewBasicAnimationConfigurable {
 
   public func duration(interval: NSTimeInterval) -> Chain {
-    return configure { (action: ViewBasicConfigurable) in
+    return configure { (action: ViewBasicAnimationConfigurable) in
       action.animation.duration = interval
     }
   }
 
   public func delay(interval: NSTimeInterval) -> Chain {
-    return configure { (action: ViewBasicConfigurable) in
+    return configure { (action: ViewBasicAnimationConfigurable) in
       action.animation.delay = interval
     }
   }
 
   public func replay(number: UInt) -> Chain {
-    return configure { (action: ViewBasicConfigurable) in
+    return configure { (action: ViewBasicAnimationConfigurable) in
       action.animation.replay = number
     }
   }
 
   public func options(options: UIViewAnimationOptions) -> Chain {
-    return configure { (action: ViewBasicConfigurable) in
+    return configure { (action: ViewBasicAnimationConfigurable) in
       if let animation = action.animation as? View.BasicAnimation {
         animation.options = options
       }
@@ -43,7 +43,7 @@ public extension Chain where A: ViewBasicConfigurable {
   }
 
   public func block(block: Block) -> Chain {
-    return configure { (action: ViewBasicConfigurable) in
+    return configure { (action: ViewBasicAnimationConfigurable) in
       if let animation = action.animation as? View.BasicAnimation {
         animation.block = block
       }
@@ -53,7 +53,7 @@ public extension Chain where A: ViewBasicConfigurable {
 
 // MARk: - Animate
 
-public extension Chain where A: ViewBasicConfigurable {
+public extension Chain where A: ViewBasicAnimationConfigurable {
 
   // MARK: - Move
 

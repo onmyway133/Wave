@@ -1,5 +1,5 @@
 //
-//  LayerPropertyConfigurable.swift
+//  LayerPropertyAnimationConfigurable.swift
 //  Wave
 //
 //  Created by Khoa Pham on 29/05/16.
@@ -8,13 +8,13 @@
 
 import UIKit
 
-public protocol LayerPropertyConfigurable: LayerAnimationConfigurable {
+public protocol LayerPropertyAnimationConfigurable: LayerAnimationConfigurable {
 
 }
 
 // MARK: - Config
 
-public extension Chain where A: LayerPropertyConfigurable  {
+public extension Chain where A: LayerPropertyAnimationConfigurable  {
 
   public func keyPath(keyPath: String) -> Chain {
     return configure { (action: LayerAnimationConfigurable) in
@@ -49,7 +49,7 @@ public extension Chain where A: LayerPropertyConfigurable  {
   }
 }
 
-public extension Chain where A: LayerPropertyConfigurable  {
+public extension Chain where A: LayerPropertyAnimationConfigurable  {
 
   public func defaults() -> Chain {
     return duration(Config.duration)

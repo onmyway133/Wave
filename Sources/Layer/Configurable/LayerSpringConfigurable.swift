@@ -1,5 +1,5 @@
 //
-//  LayerSpringConfigurable.swift
+//  LayerSpringAnimationConfigurable.swift
 //  Wave
 //
 //  Created by Khoa Pham on 30/05/16.
@@ -8,16 +8,16 @@
 
 import UIKit
 
-public protocol LayerSpringConfigurable: LayerBasicConfigurable {
+public protocol LayerSpringAnimationConfigurable: LayerBasicAnimationConfigurable {
 
 }
 
 // MARK: - Config
 
-public extension Chain where A: LayerSpringConfigurable {
+public extension Chain where A: LayerSpringAnimationConfigurable {
 
   public func mass(value: Double) -> Chain {
-    return configure { (action: LayerSpringConfigurable) in
+    return configure { (action: LayerSpringAnimationConfigurable) in
       if let animation = action.animation as? CASpringAnimation {
         animation.mass = CGFloat(value)
       }
@@ -25,7 +25,7 @@ public extension Chain where A: LayerSpringConfigurable {
   }
 
   public func stiffness(value: Double) -> Chain {
-    return configure { (action: LayerSpringConfigurable) in
+    return configure { (action: LayerSpringAnimationConfigurable) in
       if let animation = action.animation as? CASpringAnimation {
         animation.mass = CGFloat(value)
       }
@@ -33,7 +33,7 @@ public extension Chain where A: LayerSpringConfigurable {
   }
 
   public func damping(value: Double) -> Chain {
-    return configure { (action: LayerSpringConfigurable) in
+    return configure { (action: LayerSpringAnimationConfigurable) in
       if let animation = action.animation as? CASpringAnimation {
         animation.mass = CGFloat(value)
       }
@@ -41,7 +41,7 @@ public extension Chain where A: LayerSpringConfigurable {
   }
 
   public func initialVelocity(value: Double) -> Chain {
-    return configure { (action: LayerSpringConfigurable) in
+    return configure { (action: LayerSpringAnimationConfigurable) in
       if let animation = action.animation as? CASpringAnimation {
         animation.mass = CGFloat(value)
       }

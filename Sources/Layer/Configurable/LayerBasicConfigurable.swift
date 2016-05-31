@@ -1,5 +1,5 @@
 //
-//  LayerBasicConfigurable.swift
+//  LayerBasicAnimationConfigurable.swift
 //  Wave
 //
 //  Created by Khoa Pham on 29/05/16.
@@ -8,16 +8,16 @@
 
 import UIKit
 
-public protocol LayerBasicConfigurable: LayerPropertyConfigurable {
+public protocol LayerBasicAnimationConfigurable: LayerPropertyAnimationConfigurable {
 
 }
 
 // MARK: - Config
 
-public extension Chain where A: LayerBasicConfigurable {
+public extension Chain where A: LayerBasicAnimationConfigurable {
 
   public func fromValue(value: AnyObject) -> Chain {
-    return configure { (action: LayerBasicConfigurable) in
+    return configure { (action: LayerBasicAnimationConfigurable) in
       if let animation = action.animation as? CABasicAnimation {
         animation.fromValue = value
       }
@@ -25,7 +25,7 @@ public extension Chain where A: LayerBasicConfigurable {
   }
 
   public func toValue(value: AnyObject) -> Chain {
-    return configure { (action: LayerBasicConfigurable) in
+    return configure { (action: LayerBasicAnimationConfigurable) in
       if let animation = action.animation as? CABasicAnimation {
         animation.toValue = value
       }
@@ -33,7 +33,7 @@ public extension Chain where A: LayerBasicConfigurable {
   }
 
   public func byValue(value: AnyObject) -> Chain {
-    return configure { (action: LayerBasicConfigurable) in
+    return configure { (action: LayerBasicAnimationConfigurable) in
       if let animation = action.animation as? CABasicAnimation {
         animation.byValue = value
       }
@@ -43,7 +43,7 @@ public extension Chain where A: LayerBasicConfigurable {
 
 // MARK: - Animate
 
-public extension Chain where A: LayerBasicConfigurable {
+public extension Chain where A: LayerBasicAnimationConfigurable {
 
   // MARK: - Move
 
@@ -164,7 +164,7 @@ public extension Chain where A: LayerBasicConfigurable {
   }
 }
 
-public extension Chain where A: LayerBasicConfigurable {
+public extension Chain where A: LayerBasicAnimationConfigurable {
 
   public func flipX() -> Chain {
     var perspective = CATransform3DIdentity

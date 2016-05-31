@@ -26,7 +26,7 @@
 		D209D1101CFA3642000A45E3 /* ViewTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D209D10F1CFA3642000A45E3 /* ViewTransitionAnimation.swift */; };
 		D209D11C1CFA398B000A45E3 /* LayerConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D209D11A1CFA398B000A45E3 /* LayerConfigurable.swift */; };
 		D209D11E1CFA399F000A45E3 /* ViewConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D209D11D1CFA399F000A45E3 /* ViewConfigurable.swift */; };
-		D209D1221CFACBC5000A45E3 /* ViewBasicConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D209D1211CFACBC5000A45E3 /* ViewBasicConfigurable.swift */; };
+		D209D1221CFACBC5000A45E3 /* ViewBasicAnimationConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D209D1211CFACBC5000A45E3 /* ViewBasicAnimationConfigurable.swift */; };
 		D209D1261CFACEFB000A45E3 /* LayerBasicConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D209D1251CFACEFB000A45E3 /* LayerBasicConfigurable.swift */; };
 		D209D12A1CFAD375000A45E3 /* LayerPropertyConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D209D1291CFAD375000A45E3 /* LayerPropertyConfigurable.swift */; };
 		D209D1321CFB1618000A45E3 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = D209D1311CFB1618000A45E3 /* Config.swift */; };
@@ -87,7 +87,7 @@
 		D209D10F1CFA3642000A45E3 /* ViewTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewTransitionAnimation.swift; sourceTree = "<group>"; };
 		D209D11A1CFA398B000A45E3 /* LayerConfigurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerConfigurable.swift; sourceTree = "<group>"; };
 		D209D11D1CFA399F000A45E3 /* ViewConfigurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewConfigurable.swift; sourceTree = "<group>"; };
-		D209D1211CFACBC5000A45E3 /* ViewBasicConfigurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewBasicConfigurable.swift; sourceTree = "<group>"; };
+		D209D1211CFACBC5000A45E3 /* ViewBasicAnimationConfigurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewBasicAnimationConfigurable.swift; sourceTree = "<group>"; };
 		D209D1251CFACEFB000A45E3 /* LayerBasicConfigurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerBasicConfigurable.swift; sourceTree = "<group>"; };
 		D209D1291CFAD375000A45E3 /* LayerPropertyConfigurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerPropertyConfigurable.swift; sourceTree = "<group>"; };
 		D209D1311CFB1618000A45E3 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
@@ -228,7 +228,7 @@
 			children = (
 				D209D11D1CFA399F000A45E3 /* ViewConfigurable.swift */,
 				D23DC2EA1CFCF11E005C6F5E /* ViewAnimationConfigurable.swift */,
-				D209D1211CFACBC5000A45E3 /* ViewBasicConfigurable.swift */,
+				D209D1211CFACBC5000A45E3 /* ViewBasicAnimationConfigurable.swift */,
 			);
 			path = Configurable;
 			sourceTree = "<group>";
@@ -570,7 +570,7 @@
 				D23DC2ED1CFCF1AA005C6F5E /* LayerAnimationConfigurable.swift in Sources */,
 				D209D0FD1CFA3341000A45E3 /* ViewTransitionAction.swift in Sources */,
 				D209D1261CFACEFB000A45E3 /* LayerBasicConfigurable.swift in Sources */,
-				D209D1221CFACBC5000A45E3 /* ViewBasicConfigurable.swift in Sources */,
+				D209D1221CFACBC5000A45E3 /* ViewBasicAnimationConfigurable.swift in Sources */,
 				D2136DF01CF63F5800BE9C4F /* Then.swift in Sources */,
 				D209D1321CFB1618000A45E3 /* Config.swift in Sources */,
 				D209D11C1CFA398B000A45E3 /* LayerConfigurable.swift in Sources */,

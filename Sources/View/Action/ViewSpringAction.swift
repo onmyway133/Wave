@@ -10,7 +10,7 @@ import UIKit
 
 public extension View {
 
-  public final class SpringAction: ViewBasicConfigurable {
+  public final class SpringAction: ViewBasicAnimationConfigurable {
 
     let _animation = View.SpringAnimation()
     public var view: UIView?
