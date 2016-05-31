@@ -97,7 +97,6 @@ public extension Chain where A: LayerKeyframeAnimationConfigurable {
     return newAction()
       .keyPath("position.x")
       .values([0, 15, -15, 15, 0])
-      .defaults()
   }
 
   public func pop() -> Chain {
@@ -105,7 +104,6 @@ public extension Chain where A: LayerKeyframeAnimationConfigurable {
       .keyPath("transform.scale")
       .values([0, 1.5, -1.5, 1.5, 0])
       .keyTimes([0, 0.2, 0.4, 0.6, 0.8, 1])
-      .defaults()
   }
 
   public func swing() -> Chain {
@@ -113,6 +111,5 @@ public extension Chain where A: LayerKeyframeAnimationConfigurable {
       .keyPath("transform.rotation")
       .values([0, 0.3, -0.3, 0.3, 0])
       .keyTimes([0, 0.2, 0.4, 0.6, 0.8, 1])
-      .defaults()
   }
 }

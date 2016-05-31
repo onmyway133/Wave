@@ -51,21 +51,18 @@ public extension Chain where A: LayerBasicAnimationConfigurable {
     return newAction()
       .keyPath("position.x")
       .toValue(value)
-      .defaults()
   }
 
   public func moveY(value: Double) -> Chain {
     return newAction()
       .keyPath("position.y")
       .toValue(value)
-      .defaults()
   }
 
   public func move(value: CGPoint) -> Chain {
     return newAction()
       .keyPath("position")
       .toValue(NSValue(CGPoint: value))
-      .defaults()
   }
 
   // MARK: - Move
@@ -74,21 +71,18 @@ public extension Chain where A: LayerBasicAnimationConfigurable {
     return newAction()
       .keyPath("transform.translation.x")
       .toValue(value)
-      .defaults()
   }
 
   public func translateY(value: Double) -> Chain {
     return newAction()
       .keyPath("transform.translation.y")
       .toValue(value)
-      .defaults()
   }
 
   public func translate(value: CGPoint) -> Chain {
     return newAction()
       .keyPath("transform.translation")
       .toValue(NSValue(CGPoint: value))
-      .defaults()
   }
 
   // MARK: - Scale
@@ -97,21 +91,18 @@ public extension Chain where A: LayerBasicAnimationConfigurable {
     return newAction()
       .keyPath("transform.scale.x")
       .toValue(value)
-      .defaults()
   }
 
   public func scaleY(value: Double) -> Chain {
     return newAction()
       .keyPath("transform.scale.y")
       .toValue(value)
-      .defaults()
   }
 
   public func scale(value: CGPoint) -> Chain {
     return newAction()
       .keyPath("transform.scale")
       .toValue(NSValue(CGPoint: value))
-      .defaults()
   }
 
   // MARK: - Zoom
@@ -126,21 +117,18 @@ public extension Chain where A: LayerBasicAnimationConfigurable {
     return newAction()
       .keyPath("transform.rotate.x")
       .toValue(angle)
-      .defaults()
   }
 
   public func rotateY(angle: Double) -> Chain {
     return newAction()
       .keyPath("transform.rotate.y")
       .toValue(angle)
-      .defaults()
   }
 
   public func rotateZ(angle: Double) -> Chain {
     return newAction()
       .keyPath("transform.rotate.z")
       .toValue(angle)
-      .defaults()
   }
 
 
@@ -151,8 +139,6 @@ public extension Chain where A: LayerBasicAnimationConfigurable {
       .keyPath("opacity")
       .fromValue(visible ? 0 : 1)
       .toValue(visible ? 1 : 0)
-      .defaults()
-
   }
 
   public func fadeIn() -> Chain {

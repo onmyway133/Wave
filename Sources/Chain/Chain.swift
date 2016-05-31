@@ -77,6 +77,12 @@ public extension Chain {
     let action = A()
     actions.append(action)
 
+    // FIXME
+    if let action = action as? LayerAnimationConfigurable {
+      action.info.duration = Config.duration
+      action.info.timingFunction = Config.timingFunction
+    }
+
     return self
   }
 }
