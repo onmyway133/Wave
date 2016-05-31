@@ -10,7 +10,7 @@ import UIKit
 
 public extension View {
 
-  public final class BasicAnimation: ViewBasicAnimationConfigurable {
+  public final class BasicAnimation: ViewConfigurable, ViewBasicAnimationConfigurable {
 
     let _info = View.BasicAnimationInfo()
     public var view: UIView?
