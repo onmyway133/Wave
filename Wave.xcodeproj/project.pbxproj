@@ -39,9 +39,6 @@
 		D217938D1CF24E5600BB2467 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = D217938C1CF24E5600BB2467 /* Action.swift */; };
 		D21793A81CF254DE00BB2467 /* Construction.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D21793A71CF254DE00BB2467 /* Construction.framework */; };
 		D23DC2E11CFCC1A9005C6F5E /* Chain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23DC2E01CFCC1A9005C6F5E /* Chain.swift */; };
-		D23DC2E31CFCE5E2005C6F5E /* ViewKeyframeConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23DC2E21CFCE5E2005C6F5E /* ViewKeyframeConfigurable.swift */; };
-		D23DC2E51CFCE5ED005C6F5E /* ViewSystemConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23DC2E41CFCE5ED005C6F5E /* ViewSystemConfigurable.swift */; };
-		D23DC2E71CFCE5F6005C6F5E /* ViewTransitionConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23DC2E61CFCE5F6005C6F5E /* ViewTransitionConfigurable.swift */; };
 		D23DC2E91CFCE601005C6F5E /* LayerSpringConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23DC2E81CFCE601005C6F5E /* LayerSpringConfigurable.swift */; };
 		D23DC2EB1CFCF11E005C6F5E /* ViewAnimationConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23DC2EA1CFCF11E005C6F5E /* ViewAnimationConfigurable.swift */; };
 		D23DC2ED1CFCF1AA005C6F5E /* LayerAnimationConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23DC2EC1CFCF1AA005C6F5E /* LayerAnimationConfigurable.swift */; };
@@ -103,9 +100,6 @@
 		D217938C1CF24E5600BB2467 /* Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
 		D21793A71CF254DE00BB2467 /* Construction.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Construction.framework; path = Carthage/Build/iOS/Construction.framework; sourceTree = "<group>"; };
 		D23DC2E01CFCC1A9005C6F5E /* Chain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chain.swift; sourceTree = "<group>"; };
-		D23DC2E21CFCE5E2005C6F5E /* ViewKeyframeConfigurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewKeyframeConfigurable.swift; sourceTree = "<group>"; };
-		D23DC2E41CFCE5ED005C6F5E /* ViewSystemConfigurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewSystemConfigurable.swift; sourceTree = "<group>"; };
-		D23DC2E61CFCE5F6005C6F5E /* ViewTransitionConfigurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewTransitionConfigurable.swift; sourceTree = "<group>"; };
 		D23DC2E81CFCE601005C6F5E /* LayerSpringConfigurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerSpringConfigurable.swift; sourceTree = "<group>"; };
 		D23DC2EA1CFCF11E005C6F5E /* ViewAnimationConfigurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewAnimationConfigurable.swift; sourceTree = "<group>"; };
 		D23DC2EC1CFCF1AA005C6F5E /* LayerAnimationConfigurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerAnimationConfigurable.swift; sourceTree = "<group>"; };
@@ -235,9 +229,6 @@
 				D209D11D1CFA399F000A45E3 /* ViewConfigurable.swift */,
 				D23DC2EA1CFCF11E005C6F5E /* ViewAnimationConfigurable.swift */,
 				D209D1211CFACBC5000A45E3 /* ViewBasicConfigurable.swift */,
-				D23DC2E21CFCE5E2005C6F5E /* ViewKeyframeConfigurable.swift */,
-				D23DC2E41CFCE5ED005C6F5E /* ViewSystemConfigurable.swift */,
-				D23DC2E61CFCE5F6005C6F5E /* ViewTransitionConfigurable.swift */,
 			);
 			path = Configurable;
 			sourceTree = "<group>";
@@ -563,7 +554,6 @@
 				D209D1041CFA3347000A45E3 /* LayerSpringAction.swift in Sources */,
 				D204000B1CF3A4010073B328 /* Wait.swift in Sources */,
 				D209D0A31CF8C271000A45E3 /* Layer.swift in Sources */,
-				D23DC2E71CFCE5F6005C6F5E /* ViewTransitionConfigurable.swift in Sources */,
 				D209D1021CFA3347000A45E3 /* LayerBasicAction.swift in Sources */,
 				D209D0FB1CFA3341000A45E3 /* ViewSpringAction.swift in Sources */,
 				D217938D1CF24E5600BB2467 /* Action.swift in Sources */,
@@ -580,12 +570,10 @@
 				D23DC2ED1CFCF1AA005C6F5E /* LayerAnimationConfigurable.swift in Sources */,
 				D209D0FD1CFA3341000A45E3 /* ViewTransitionAction.swift in Sources */,
 				D209D1261CFACEFB000A45E3 /* LayerBasicConfigurable.swift in Sources */,
-				D23DC2E31CFCE5E2005C6F5E /* ViewKeyframeConfigurable.swift in Sources */,
 				D209D1221CFACBC5000A45E3 /* ViewBasicConfigurable.swift in Sources */,
 				D2136DF01CF63F5800BE9C4F /* Then.swift in Sources */,
 				D209D1321CFB1618000A45E3 /* Config.swift in Sources */,
 				D209D11C1CFA398B000A45E3 /* LayerConfigurable.swift in Sources */,
-				D23DC2E51CFCE5ED005C6F5E /* ViewSystemConfigurable.swift in Sources */,
 				D209D10A1CFA3582000A45E3 /* ViewKeyframeAnimation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
