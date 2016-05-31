@@ -2,7 +2,7 @@
 //  ViewKeyframeAnimation.swift
 //  Wave
 //
-//  Created by Khoa Pham on 28/05/16.
+//  Created by Khoa Pham on 27/05/16.
 //  Copyright © 2016 Fantageek. All rights reserved.
 //
 
@@ -10,25 +10,54 @@ import UIKit
 
 public extension View {
 
-  public class KeyframeAnimation: View.Animation {
+  public final class KeyframeAnimation: ViewConfigurable {
 
-    var options: UIViewKeyframeAnimationOptions = []
-    var block: Block?
-    var items: [View.KeyframeAnimationItem] = []
+    let _info = View.KeyframeAnimationInfo()
+    public var view: UIView?
 
-    public override init() {
+    public var info: View.AnimationInfo {
+      return _info
+    }
+
+    public init() {
 
     }
   }
+}
 
-  public class KeyframeAnimationItem {
+extension View.KeyframeAnimation: Action {
 
-    var startTime: NSTimeInterval = 0
-    var duration: NSTimeInterval = 0
-    let block: Block
+  public func run(nextActions: [Action]) {
+    UIView.animateKeyframesWithDuration(info.duration, delay: info.delay,
+                                        options: _info.options,
+                                        animations:
+      {
+        self._info.items.forEach { item in
+          UIView.addKeyframeWithRelativeStartTime(item.startTime,
+            relativeDuration:
+            item.duration,
+            animations: item.block)
+        }
 
-    public init(block: Block) {
-      self.block = block
+        self._info.block?()
+
+      }, completion: { _ in
+        Wave.run(nextActions)
+    })
+  }
+}
+
+public extension Chain where A: View.KeyframeAnimation {
+
+  public func add(startTime: NSTimeInterval = 0, duration: NSTimeInterval = 0, block: Block) -> Chain {
+    return configure { (animation: View.KeyframeAnimation) in
+      if let info = animation.info as? View.KeyframeAnimationInfo {
+        let item = View.KeyframeAnimationInfoItem(block: block)
+        item.startTime = startTime
+        item.duration = duration
+
+        info.items.append(item)
+      }
     }
   }
 }

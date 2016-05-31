@@ -1,5 +1,5 @@
 //
-//  LayerCompoundAction.swift
+//  LayerCompoundAnimation.swift
 //  Wave
 //
 //  Created by Khoa Pham on 29/05/16.
@@ -10,7 +10,7 @@ import UIKit
 
 public extension Layer {
 
-  public final class CompoundAction: LayerConfigurable {
+  public final class CompoundAnimation: LayerConfigurable {
 
     public var layer: CALayer?
     public var animations: [CAAnimation] = []
@@ -21,7 +21,7 @@ public extension Layer {
   }
 }
 
-extension Layer.CompoundAction: Action {
+extension Layer.CompoundAnimation: Action {
 
   public func run(nextActions: [Action]) {
     CATransaction.begin()
@@ -40,10 +40,10 @@ extension Layer.CompoundAction: Action {
 
 // MARK: - Configure
 
-extension Chain where A: Layer.CompoundAction {
+extension Chain where A: Layer.CompoundAnimation {
 
   public func add<T: LayerAnimationConfigurable>(chains: [Chain<T>]) -> Chain {
-    return configure { (action: Layer.CompoundAction) in
+    return configure { (action: Layer.CompoundAnimation) in
       chains.forEach { chain in
         chain.actions.forEach { a in
           if let a = a as? LayerAnimationConfigurable {
@@ -61,16 +61,16 @@ extension Chain where A: Layer.CompoundAction {
 
 // MARK: - Animate
 
-extension Chain where A: Layer.CompoundAction {
+extension Chain where A: Layer.CompoundAnimation {
 
   public func morph() -> Chain {
-    let x = Chain<Layer.KeyframeAction>()
+    let x = Chain<Layer.KeyframeAnimation>()
       .newAction()
       .keyPath("transform.scale.x")
       .values([1, 1.3, 0.7, 1.3, 1])
       .keyTimes([0, 0.2, 0.4, 0.6, 0.8, 1])
 
-    let y = Chain<Layer.KeyframeAction>()
+    let y = Chain<Layer.KeyframeAnimation>()
       .newAction()
       .keyPath("transform.scale.x")
       .values([1, 1.3, 0.7, 1.3, 1])
@@ -81,13 +81,13 @@ extension Chain where A: Layer.CompoundAction {
   }
 
   public func squeeze() -> Chain {
-    let x = Chain<Layer.KeyframeAction>()
+    let x = Chain<Layer.KeyframeAnimation>()
       .newAction()
       .keyPath("transform.scale.x")
       .values([1, 1.5, 0.5, 1.5, 1])
       .keyTimes([0, 0.2, 0.4, 0.6, 0.8, 1])
 
-    let y = Chain<Layer.KeyframeAction>()
+    let y = Chain<Layer.KeyframeAnimation>()
       .newAction()
       .keyPath("transform.scale.x")
       .values([1, 0.5, 1, 0.5, 1])
@@ -98,13 +98,13 @@ extension Chain where A: Layer.CompoundAction {
   }
 
   public func wobble() -> Chain {
-    let rotate = Chain<Layer.KeyframeAction>()
+    let rotate = Chain<Layer.KeyframeAnimation>()
       .newAction()
       .keyPath("transform.rotation")
       .values([0, 0.3, -0.3, 0.3, 0])
       .keyTimes([0, 0.2, 0.4, 0.6, 0.8, 1])
 
-    let x = Chain<Layer.KeyframeAction>()
+    let x = Chain<Layer.KeyframeAnimation>()
       .newAction()
       .keyPath("position.x")
       .values([0, 30, -30, 30, 0])

@@ -20,63 +20,63 @@ public struct Ride {
 public extension Ride {
 
   public func shake() {
-    Chain<Layer.KeyframeAction>()
+    Chain<Layer.KeyframeAnimation>()
       .layer(view.layer)
       .shake()
       .run()
   }
 
   public func pop() {
-    Chain<Layer.KeyframeAction>()
+    Chain<Layer.KeyframeAnimation>()
       .layer(view.layer)
       .pop()
       .run()
   }
 
   public func morph() {
-    Chain<Layer.CompoundAction>()
+    Chain<Layer.CompoundAnimation>()
       .layer(view.layer)
       .morph()
       .run()
   }
 
   public func squeeze() {
-    Chain<Layer.CompoundAction>()
+    Chain<Layer.CompoundAnimation>()
       .layer(view.layer)
       .squeeze()
       .run()
   }
 
   public func wobble() {
-    Chain<Layer.CompoundAction>()
+    Chain<Layer.CompoundAnimation>()
       .layer(view.layer)
       .wobble()
       .run()
   }
 
   public func swing() {
-    Chain<Layer.KeyframeAction>()
+    Chain<Layer.KeyframeAnimation>()
       .layer(view.layer)
       .swing()
       .run()
   }
 
   public func flipX() {
-    Chain<Layer.BasicAction>()
+    Chain<Layer.BasicAnimation>()
       .layer(view.layer)
       .flipX()
       .run()
   }
 
   public func flipY() {
-    Chain<Layer.BasicAction>()
+    Chain<Layer.BasicAnimation>()
       .layer(view.layer)
       .flipY()
       .run()
   }
 
   public func flash() {
-    Chain<Layer.BasicAction>()
+    Chain<Layer.BasicAnimation>()
       .layer(view.layer)
       .flash()
       .run()

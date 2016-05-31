@@ -10,7 +10,7 @@ import UIKit
 
 public extension View {
 
-  public class Animation {
+  public class AnimationInfo {
 
     var duration: NSTimeInterval = Config.duration
     var delay: NSTimeInterval = Config.delay

@@ -1,5 +1,5 @@
 //
-//  LayerBasicAction.swift
+//  LayerBasicAnimation.swift
 //  Wave
 //
 //  Created by Khoa Pham on 27/05/16.
@@ -10,7 +10,7 @@ import UIKit
 
 public extension Layer {
 
-  public final class BasicAction: LayerBasicAnimationConfigurable {
+  public final class BasicAnimation: LayerBasicAnimationConfigurable {
 
     let _animation = CABasicAnimation()
     public var layer: CALayer?
@@ -25,7 +25,7 @@ public extension Layer {
   }
 }
 
-extension Layer.BasicAction: Action {
+extension Layer.BasicAnimation: Action {
 
   public func run(nextActions: [Action]) {
     CATransaction.begin()

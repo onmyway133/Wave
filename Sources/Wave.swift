@@ -25,8 +25,8 @@ public func run(actions: [Action]) {
 
 public extension UIView {
 
-  public var chain: Chain<View.BasicAction> {
-    return Chain<View.BasicAction>()
+  public var chain: Chain<View.BasicAnimation> {
+    return Chain<View.BasicAnimation>()
   }
 }
 

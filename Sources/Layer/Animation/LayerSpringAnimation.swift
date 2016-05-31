@@ -1,5 +1,5 @@
 //
-//  LayerKeyframeAction.swift
+//  LayerSpringAnimation.swift
 //  Wave
 //
 //  Created by Khoa Pham on 27/05/16.
@@ -10,9 +10,10 @@ import UIKit
 
 public extension Layer {
 
-  public final class KeyframeAction: LayerKeyframeAnimationConfigurable {
+  @available(iOS 9, *)
+  public final class SpringAnimation: LayerSpringAnimationConfigurable {
 
-    let _animation = CAKeyframeAnimation()
+    let _animation = CASpringAnimation()
     public var layer: CALayer?
 
     public var animation: CAAnimation {
@@ -25,7 +26,7 @@ public extension Layer {
   }
 }
 
-extension Layer.KeyframeAction: Action {
+extension Layer.SpringAnimation: Action {
 
   public func run(nextActions: [Action]) {
     CATransaction.begin()

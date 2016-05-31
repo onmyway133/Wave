@@ -10,5 +10,5 @@ import UIKit
 
 public protocol ViewAnimationConfigurable: class {
 
-  var animation: View.Animation { get }
+  var info: View.AnimationInfo { get }
 }
