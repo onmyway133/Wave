@@ -64,50 +64,44 @@ extension Chain where A: Layer.CompoundAnimation {
 extension Chain where A: Layer.CompoundAnimation {
 
   public func morph() -> Chain {
-    let x = Chain<Layer.KeyframeAnimation>()
+    let chain = Chain<Layer.KeyframeAnimation>()
+      .newAction()
+      .keyPath("transform.scale.x")
+      .values([1, 1.3, 0.7, 1.3, 1])
+      .keyTimes([0, 0.2, 0.4, 0.6, 0.8, 1])
       .newAction()
       .keyPath("transform.scale.x")
       .values([1, 1.3, 0.7, 1.3, 1])
       .keyTimes([0, 0.2, 0.4, 0.6, 0.8, 1])
 
-    let y = Chain<Layer.KeyframeAnimation>()
-      .newAction()
-      .keyPath("transform.scale.x")
-      .values([1, 1.3, 0.7, 1.3, 1])
-      .keyTimes([0, 0.2, 0.4, 0.6, 0.8, 1])
-
-    return add([x, y])
+    return add(chain)
   }
 
   public func squeeze() -> Chain {
-    let x = Chain<Layer.KeyframeAnimation>()
+    let chain = Chain<Layer.KeyframeAnimation>()
       .newAction()
       .keyPath("transform.scale.x")
       .values([1, 1.5, 0.5, 1.5, 1])
       .keyTimes([0, 0.2, 0.4, 0.6, 0.8, 1])
-
-    let y = Chain<Layer.KeyframeAnimation>()
       .newAction()
       .keyPath("transform.scale.x")
       .values([1, 0.5, 1, 0.5, 1])
       .keyTimes([0, 0.2, 0.4, 0.6, 0.8, 1])
 
-    return add([x, y])
+    return add(chain)
   }
 
   public func wobble() -> Chain {
-    let rotate = Chain<Layer.KeyframeAnimation>()
+    let chain = Chain<Layer.KeyframeAnimation>()
       .newAction()
       .keyPath("transform.rotation")
       .values([0, 0.3, -0.3, 0.3, 0])
       .keyTimes([0, 0.2, 0.4, 0.6, 0.8, 1])
-
-    let x = Chain<Layer.KeyframeAnimation>()
       .newAction()
       .keyPath("position.x")
       .values([0, 30, -30, 30, 0])
       .keyTimes([0, 0.2, 0.4, 0.6, 0.8, 1])
 
-    return add([rotate, x])
+    return add(chain)
   }
 }
