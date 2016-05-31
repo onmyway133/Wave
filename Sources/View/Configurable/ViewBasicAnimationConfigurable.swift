@@ -67,9 +67,10 @@ public extension Chain where A: ViewBasicAnimationConfigurable {
 
   public func move(value: CGPoint) -> Chain {
     let animation: ViewConfigurable? = last()
+    weak var view = animation?.view
 
     return newAction().block {
-      animation?.view?.transform = CGAffineTransformMakeTranslation(value.x, value.y)
+      view?.transform = CGAffineTransformMakeTranslation(value.x, value.y)
     }
   }
 
@@ -85,9 +86,10 @@ public extension Chain where A: ViewBasicAnimationConfigurable {
 
   public func scale(value: CGPoint) -> Chain {
     let animation: ViewConfigurable? = last()
+    weak var view = animation?.view
 
     return newAction().block {
-      animation?.view?.transform = CGAffineTransformMakeScale(value.x, value.y)
+      view?.transform = CGAffineTransformMakeScale(value.x, value.y)
     }
   }
 
@@ -101,9 +103,10 @@ public extension Chain where A: ViewBasicAnimationConfigurable {
 
   public func rotate(angle: Double) -> Chain {
     let animation: ViewConfigurable? = last()
+    weak var view = animation?.view
 
     return newAction().block {
-      animation?.view?.transform = CGAffineTransformMakeRotation(CGFloat(angle))
+      view?.transform = CGAffineTransformMakeRotation(CGFloat(angle))
     }
   }
 
@@ -111,9 +114,10 @@ public extension Chain where A: ViewBasicAnimationConfigurable {
 
   public func fade(visible: Bool) -> Chain {
     let animation: ViewConfigurable? = last()
+    weak var view = animation?.view
     
     return newAction().block {
-      animation?.view?.alpha = visible ? 1 : 0
+      view?.alpha = visible ? 1 : 0
     }
   }
 
