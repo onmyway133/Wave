@@ -48,60 +48,60 @@ public extension Chain where A: LayerBasicAnimationConfigurable {
   // MARK: - Move
 
   public func moveX(value: Double) -> Chain {
-    return newAction()
-      .keyPath("position.x")
+    return
+      keyPath("position.x")
       .toValue(value)
   }
 
   public func moveY(value: Double) -> Chain {
-    return newAction()
-      .keyPath("position.y")
+    return
+      keyPath("position.y")
       .toValue(value)
   }
 
   public func move(value: CGPoint) -> Chain {
-    return newAction()
-      .keyPath("position")
+    return
+      keyPath("position")
       .toValue(NSValue(CGPoint: value))
   }
 
   // MARK: - Move
 
   public func translateX(value: Double) -> Chain {
-    return newAction()
-      .keyPath("transform.translation.x")
+    return
+      keyPath("transform.translation.x")
       .toValue(value)
   }
 
   public func translateY(value: Double) -> Chain {
-    return newAction()
-      .keyPath("transform.translation.y")
+    return
+      keyPath("transform.translation.y")
       .toValue(value)
   }
 
   public func translate(value: CGPoint) -> Chain {
-    return newAction()
-      .keyPath("transform.translation")
+    return
+      keyPath("transform.translation")
       .toValue(NSValue(CGPoint: value))
   }
 
   // MARK: - Scale
 
   public func scaleX(value: Double) -> Chain {
-    return newAction()
-      .keyPath("transform.scale.x")
+    return
+      keyPath("transform.scale.x")
       .toValue(value)
   }
 
   public func scaleY(value: Double) -> Chain {
-    return newAction()
-      .keyPath("transform.scale.y")
+    return
+      keyPath("transform.scale.y")
       .toValue(value)
   }
 
   public func scale(value: CGPoint) -> Chain {
-    return newAction()
-      .keyPath("transform.scale")
+    return
+      keyPath("transform.scale")
       .toValue(NSValue(CGPoint: value))
   }
 
@@ -114,20 +114,20 @@ public extension Chain where A: LayerBasicAnimationConfigurable {
   // MARK: - Rotate
 
   public func rotateX(angle: Double) -> Chain {
-    return newAction()
-      .keyPath("transform.rotate.x")
+    return
+      keyPath("transform.rotate.x")
       .toValue(angle)
   }
 
   public func rotateY(angle: Double) -> Chain {
-    return newAction()
-      .keyPath("transform.rotate.y")
+    return
+      keyPath("transform.rotate.y")
       .toValue(angle)
   }
 
   public func rotateZ(angle: Double) -> Chain {
-    return newAction()
-      .keyPath("transform.rotate.z")
+    return
+      keyPath("transform.rotate.z")
       .toValue(angle)
   }
 
@@ -135,8 +135,8 @@ public extension Chain where A: LayerBasicAnimationConfigurable {
   // MARK: - Fade
 
   public func fade(visible: Bool) -> Chain {
-    return newAction()
-      .keyPath("opacity")
+    return
+      keyPath("opacity")
       .fromValue(visible ? 0 : 1)
       .toValue(visible ? 1 : 0)
   }
@@ -156,8 +156,8 @@ public extension Chain where A: LayerBasicAnimationConfigurable {
     var perspective = CATransform3DIdentity
     perspective.m34 = 1.0 / -500
 
-    return newAction()
-      .keyPath("transform")
+    return
+      keyPath("transform")
       .fromValue(NSValue(CATransform3D: CATransform3DMakeRotation(0, 0, 0, 0)))
       .toValue(NSValue(CATransform3D: CATransform3DConcat(perspective, CATransform3DMakeRotation(CGFloat(M_PI), 0, 0, 0))))
   }
@@ -166,15 +166,15 @@ public extension Chain where A: LayerBasicAnimationConfigurable {
     var perspective = CATransform3DIdentity
     perspective.m34 = 1.0 / -500
 
-    return newAction()
-      .keyPath("transform")
+    return
+      keyPath("transform")
       .fromValue(NSValue(CATransform3D: CATransform3DMakeRotation(0, 0, 0, 0)))
       .toValue(NSValue(CATransform3D: CATransform3DConcat(perspective, CATransform3DMakeRotation(CGFloat(M_PI), 1, 0, 0))))
   }
 
   public func flash() -> Chain {
-    return newAction()
-      .fadeOut()
+    return
+      fadeOut()
       .repeatCount(2)
   }
 }

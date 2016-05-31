@@ -94,21 +94,21 @@ public extension Chain where A: LayerKeyframeAnimationConfigurable {
 public extension Chain where A: LayerKeyframeAnimationConfigurable {
 
   public func shake() -> Chain {
-    return newAction()
-      .keyPath("position.x")
+    return
+      keyPath("position.x")
       .values([0, 15, -15, 15, 0])
   }
 
   public func pop() -> Chain {
-    return newAction()
-      .keyPath("transform.scale")
+    return
+      keyPath("transform.scale")
       .values([0, 1.5, -1.5, 1.5, 0])
       .keyTimes([0, 0.2, 0.4, 0.6, 0.8, 1])
   }
 
   public func swing() -> Chain {
-    return newAction()
-      .keyPath("transform.rotation")
+    return
+      keyPath("transform.rotation")
       .values([0, 0.3, -0.3, 0.3, 0])
       .keyTimes([0, 0.2, 0.4, 0.6, 0.8, 1])
   }

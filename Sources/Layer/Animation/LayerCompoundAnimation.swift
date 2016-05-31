@@ -76,8 +76,7 @@ extension Chain where A: Layer.CompoundAnimation {
       .values([1, 1.3, 0.7, 1.3, 1])
       .keyTimes([0, 0.2, 0.4, 0.6, 0.8, 1])
 
-    return newAction()
-      .add([x, y])
+    return add([x, y])
   }
 
   public func squeeze() -> Chain {
@@ -93,8 +92,7 @@ extension Chain where A: Layer.CompoundAnimation {
       .values([1, 0.5, 1, 0.5, 1])
       .keyTimes([0, 0.2, 0.4, 0.6, 0.8, 1])
 
-    return newAction()
-      .add([x, y])
+    return add([x, y])
   }
 
   public func wobble() -> Chain {
@@ -110,7 +108,6 @@ extension Chain where A: Layer.CompoundAnimation {
       .values([0, 30, -30, 30, 0])
       .keyTimes([0, 0.2, 0.4, 0.6, 0.8, 1])
 
-    return newAction()
-      .add([rotate, x])
+    return add([rotate, x])
   }
 }
