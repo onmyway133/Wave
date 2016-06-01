@@ -72,7 +72,6 @@ class ViewController: UIViewController {
         .fadeOut()
         .log("done fade out")
         .wait(2)
-        .newAction()
         .fadeIn()
         .log("done fade in")
         .run()

@@ -78,9 +78,23 @@ public extension Chain {
     actions.append(action)
 
     // FIXME
+
+    // Configure defaults for layer
     if let action = action as? LayerAnimationConfigurable {
       action.info.duration = Config.duration
       action.info.timingFunction = Config.timingFunction
+    }
+
+    // Assign last view
+    if let action = action as? ViewConfigurable {
+      let l: ViewConfigurable? = last()
+      action.view = l?.view
+    }
+
+    // Assig last action
+    if let action = action as? LayerConfigurable {
+      let l: LayerConfigurable? = last()
+      action.layer = l?.layer
     }
 
     return self
