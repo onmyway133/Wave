@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		64ED3634B8C82FDB5B0B1AA2 /* Pods_WaveDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B03252AFB08090205B014E0B /* Pods_WaveDemo.framework */; };
+		D221FFFA1CFF711F004F6A60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D221FFF91CFF711F004F6A60 /* Main.storyboard */; };
+		D221FFFC1CFF719F004F6A60 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = D221FFFB1CFF719F004F6A60 /* Item.swift */; };
 		D5C7F7701C3BCF14008CDDBA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5C7F76E1C3BCF14008CDDBA /* Main.storyboard */; };
 		D5C7F7751C3BCF14008CDDBA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5C7F7731C3BCF14008CDDBA /* LaunchScreen.storyboard */; };
 		D5C7F7821C3BCF90008CDDBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5C7F77E1C3BCF90008CDDBA /* Assets.xcassets */; };
@@ -19,6 +21,8 @@
 		01E82CEF6E60F5525E0EB5CA /* Pods-WaveDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaveDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WaveDemo/Pods-WaveDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		3ED4356FAADE8E307C87361A /* Pods-WaveDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaveDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-WaveDemo/Pods-WaveDemo.release.xcconfig"; sourceTree = "<group>"; };
 		B03252AFB08090205B014E0B /* Pods_WaveDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WaveDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D221FFF91CFF711F004F6A60 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		D221FFFB1CFF719F004F6A60 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		D5C7F7671C3BCF14008CDDBA /* WaveDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WaveDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5C7F76F1C3BCF14008CDDBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D5C7F7741C3BCF14008CDDBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -108,6 +112,8 @@
 			children = (
 				D5C7F7801C3BCF90008CDDBA /* AppDelegate.swift */,
 				D5C7F7811C3BCF90008CDDBA /* ViewController.swift */,
+				D221FFF91CFF711F004F6A60 /* Main.storyboard */,
+				D221FFFB1CFF719F004F6A60 /* Item.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -176,6 +182,7 @@
 				D5C7F7751C3BCF14008CDDBA /* LaunchScreen.storyboard in Resources */,
 				D5C7F7821C3BCF90008CDDBA /* Assets.xcassets in Resources */,
 				D5C7F7701C3BCF14008CDDBA /* Main.storyboard in Resources */,
+				D221FFFA1CFF711F004F6A60 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,6 +242,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5C7F7841C3BCF90008CDDBA /* ViewController.swift in Sources */,
+				D221FFFC1CFF719F004F6A60 /* Item.swift in Sources */,
 				D5C7F7831C3BCF90008CDDBA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
