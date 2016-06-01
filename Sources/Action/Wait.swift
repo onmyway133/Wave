@@ -17,7 +17,8 @@ public struct Wait: Action {
   }
 
   public func run(nextActions: [Action]) {
-    UIView.animateWithDuration(0, delay: interval, options: [], animations: {
+    // Can't use duration == 0
+    UIView.animateWithDuration(0.1, delay: interval, options: [], animations: {
 
     }, completion: { _ in
       Wave.run(nextActions)
