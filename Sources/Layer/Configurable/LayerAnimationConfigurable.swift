@@ -88,8 +88,13 @@ public extension Chain where A: LayerAnimationConfigurable {
 
 public extension Chain where A: LayerAnimationConfigurable  {
 
-  public func defaults() -> Chain {
+  public func defaultConfig() -> Chain {
     return duration(Config.duration)
       .timingFunction(Config.timingFunction)
+  }
+
+  public func coolConfig() -> Chain {
+    return duration(0.7)
+      .timingFunction(Layer.TimingFunction.EaseIn)
   }
 }

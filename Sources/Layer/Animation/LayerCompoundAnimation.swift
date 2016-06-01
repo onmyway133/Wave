@@ -69,10 +69,12 @@ extension Chain where A: Layer.CompoundAnimation {
       .keyPath("transform.scale.x")
       .values([1, 1.3, 0.7, 1.3, 1])
       .keyTimes([0, 0.2, 0.4, 0.6, 0.8, 1])
+      .coolConfig()
       .newAction()
       .keyPath("transform.scale.x")
       .values([1, 1.3, 0.7, 1.3, 1])
       .keyTimes([0, 0.2, 0.4, 0.6, 0.8, 1])
+      .coolConfig()
 
     return add(chain)
   }
@@ -83,10 +85,12 @@ extension Chain where A: Layer.CompoundAnimation {
       .keyPath("transform.scale.x")
       .values([1, 1.5, 0.5, 1.5, 1])
       .keyTimes([0, 0.2, 0.4, 0.6, 0.8, 1])
+      .coolConfig()
       .newAction()
       .keyPath("transform.scale.x")
       .values([1, 0.5, 1, 0.5, 1])
       .keyTimes([0, 0.2, 0.4, 0.6, 0.8, 1])
+      .coolConfig()
 
     return add(chain)
   }
@@ -97,10 +101,12 @@ extension Chain where A: Layer.CompoundAnimation {
       .keyPath("transform.rotation")
       .values([0, 0.3, -0.3, 0.3, 0])
       .keyTimes([0, 0.2, 0.4, 0.6, 0.8, 1])
+      .coolConfig()
       .newAction()
       .keyPath("position.x")
       .values([0, 30, -30, 30, 0])
       .keyTimes([0, 0.2, 0.4, 0.6, 0.8, 1])
+      .coolConfig()
 
     return add(chain)
   }
