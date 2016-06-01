@@ -101,12 +101,12 @@ public extension Chain where A: ViewBasicAnimationConfigurable {
 
   // MARK: - Rotate
 
-  public func rotate(angle: Double) -> Chain {
+  public func rotate(radian: Double) -> Chain {
     let animation: ViewConfigurable? = last()
     weak var view = animation?.view
 
     return newAction().block {
-      view?.transform = CGAffineTransformMakeRotation(CGFloat(angle))
+      view?.transform = CGAffineTransformMakeRotation(CGFloat(radian))
     }
   }
 
