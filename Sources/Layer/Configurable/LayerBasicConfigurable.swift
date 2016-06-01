@@ -158,8 +158,8 @@ public extension Chain where A: LayerBasicAnimationConfigurable {
 
     return
       keyPath("transform")
-      .fromValue(NSValue(CATransform3D: CATransform3DMakeRotation(0, 0, 0, 0)))
-      .toValue(NSValue(CATransform3D: CATransform3DConcat(perspective, CATransform3DMakeRotation(CGFloat(M_PI), 0, 0, 0))))
+      .fromValue(NSValue(CATransform3D: CATransform3DIdentity))
+      .toValue(NSValue(CATransform3D: CATransform3DConcat(perspective, CATransform3DMakeRotation(CGFloat(M_PI), 0, 1, 0))))
   }
 
   public func flipY() -> Chain {
@@ -168,7 +168,7 @@ public extension Chain where A: LayerBasicAnimationConfigurable {
 
     return
       keyPath("transform")
-      .fromValue(NSValue(CATransform3D: CATransform3DMakeRotation(0, 0, 0, 0)))
+      .fromValue(NSValue(CATransform3D: CATransform3DIdentity))
       .toValue(NSValue(CATransform3D: CATransform3DConcat(perspective, CATransform3DMakeRotation(CGFloat(M_PI), 1, 0, 0))))
   }
 
