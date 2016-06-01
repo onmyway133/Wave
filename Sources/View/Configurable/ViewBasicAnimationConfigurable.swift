@@ -69,7 +69,7 @@ public extension Chain where A: ViewBasicAnimationConfigurable {
     let animation: ViewConfigurable? = last()
     weak var view = animation?.view
 
-    return newAction().block {
+    return block {
       view?.transform = CGAffineTransformMakeTranslation(value.x, value.y)
     }
   }
@@ -88,7 +88,7 @@ public extension Chain where A: ViewBasicAnimationConfigurable {
     let animation: ViewConfigurable? = last()
     weak var view = animation?.view
 
-    return newAction().block {
+    return block {
       view?.transform = CGAffineTransformMakeScale(value.x, value.y)
     }
   }
@@ -105,7 +105,7 @@ public extension Chain where A: ViewBasicAnimationConfigurable {
     let animation: ViewConfigurable? = last()
     weak var view = animation?.view
 
-    return newAction().block {
+    return block {
       view?.transform = CGAffineTransformMakeRotation(CGFloat(radian))
     }
   }
@@ -116,7 +116,7 @@ public extension Chain where A: ViewBasicAnimationConfigurable {
     let animation: ViewConfigurable? = last()
     weak var view = animation?.view
     
-    return newAction().block {
+    return block {
       view?.alpha = visible ? 1 : 0
     }
   }
