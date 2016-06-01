@@ -65,6 +65,20 @@ class ViewController: UIViewController {
       box1.wave.swing()
     }))
 
+    // Basic
+
+    items.append(Item(name: "wait log", action: {
+      box1.chain
+        .fadeOut()
+        .log("done fade out")
+        .wait(2)
+        .newAction()
+        .fadeIn()
+        .log("done fade in")
+        .run()
+
+    }))
+
     // View
 
     items.append(Item(name: "view rotate move move", action: {
