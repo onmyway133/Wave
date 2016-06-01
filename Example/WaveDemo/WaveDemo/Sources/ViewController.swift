@@ -67,7 +67,7 @@ class ViewController: UIViewController {
 
     // View
 
-    items.append(Item(name: "view 1", action: {
+    items.append(Item(name: "view rotate move move", action: {
         Chain<View.BasicAnimation>()
         .newAction()
         .view(box1)
