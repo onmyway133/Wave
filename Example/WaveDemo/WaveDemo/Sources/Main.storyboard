@@ -27,7 +27,7 @@
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bC2-UM-bPb">
                                 <rect key="frame" x="0.0" y="452" width="600" height="148"/>
-                                <color key="backgroundColor" red="1" green="0.97001071632616442" blue="0.75315667809005094" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.50126146800000004" green="0.75704702479999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="148" id="2QX-VE-0wG"/>
                                 </constraints>
@@ -49,7 +49,7 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="1" green="0.97001071630000002" blue="0.75315667809999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.50126146800000004" green="0.75704702479999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -74,14 +74,14 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OoQ-Ay-znO">
                                 <rect key="frame" x="20" y="45" width="120" height="120"/>
-                                <color key="backgroundColor" red="0.50126146803828586" green="0.75704702476192465" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="FvM-eV-3uH"/>
                                     <constraint firstAttribute="width" constant="120" id="Lb8-5s-RWy"/>
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="0.90000000000000002" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="0EO-lg-brS" firstAttribute="centerY" secondItem="tjp-eV-uul" secondAttribute="centerY" id="EPS-5U-99x"/>
                             <constraint firstItem="0EO-lg-brS" firstAttribute="centerX" secondItem="tjp-eV-uul" secondAttribute="centerX" id="GgP-Pb-O7D"/>
