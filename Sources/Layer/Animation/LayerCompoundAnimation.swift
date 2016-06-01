@@ -101,11 +101,13 @@ extension Chain where A: Layer.CompoundAnimation {
       .keyPath("transform.rotation")
       .values([0, 0.3, -0.3, 0.3, 0])
       .keyTimes([0, 0.2, 0.4, 0.6, 0.8, 1])
+      .additive(true)
       .coolConfig()
       .newAction()
       .keyPath("position.x")
       .values([0, 30, -30, 30, 0])
       .keyTimes([0, 0.2, 0.4, 0.6, 0.8, 1])
+      .additive(true)
       .coolConfig()
 
     return add(chain)

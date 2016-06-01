@@ -94,7 +94,7 @@ public extension Chain where A: LayerAnimationConfigurable  {
   }
 
   public func coolConfig() -> Chain {
-    return duration(0.7)
+    return duration(0.5)
       .timingFunction(Layer.TimingFunction.EaseIn)
   }
 }
