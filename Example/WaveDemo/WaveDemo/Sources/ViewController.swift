@@ -68,13 +68,14 @@ class ViewController: UIViewController {
     // View
 
     items.append(Item(name: "view rotate move move", action: {
-        Chain<View.BasicAnimation>()
+        box1.chain
         .newAction()
-        .view(box1)
-        .rotate(M_PI_2)
+        .rotate(M_PI_4)
+        .newAction()
+        .view(box2)
+        .moveX(-10)
         .newAction()
         .block {
-          box2.frame.origin.y -= 40
           box3.frame.origin.y += 10
         }
         .run()
