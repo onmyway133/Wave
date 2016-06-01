@@ -69,7 +69,6 @@ class ViewController: UIViewController {
 
     items.append(Item(name: "view rotate move move", action: {
         box1.chain
-        .newAction()
         .rotate(M_PI_4)
         .newAction()
         .view(box2)
