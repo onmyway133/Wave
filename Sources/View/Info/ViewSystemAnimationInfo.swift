@@ -10,7 +10,7 @@ import UIKit
 
 public extension View {
 
-  public class SystemAnimationInfo: AnimationInfo {
+  public class SystemAnimationInfo: ViewAnimationInfo {
 
     var options: UIViewAnimationOptions = []
     var views: [UIView] = []

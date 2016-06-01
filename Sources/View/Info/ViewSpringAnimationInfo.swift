@@ -10,7 +10,7 @@ import UIKit
 
 public extension View {
 
-  public class SpringAnimationInfo: BasicAnimationInfo {
+  public class SpringAnimationInfo: View.BasicAnimationInfo {
 
     var damping: CGFloat = 1
     var velocity: CGFloat = 1

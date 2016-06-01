@@ -8,17 +8,15 @@
 
 import UIKit
 
-public extension View {
+// TODO: Lose the View namespace to please the compiler 😅
 
-  public class AnimationInfo {
+public class ViewAnimationInfo {
 
-    var duration: NSTimeInterval = Config.duration
-    var delay: NSTimeInterval = Config.delay
-    var replay: UInt?
+  var duration: NSTimeInterval = Config.duration
+  var delay: NSTimeInterval = Config.delay
+  var replay: UInt?
 
-    public init() {
-      
-    }
+  public init() {
+
   }
 }
-

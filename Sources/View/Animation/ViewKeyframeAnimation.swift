@@ -15,7 +15,7 @@ public extension View {
     let _info = View.KeyframeAnimationInfo()
     public var view: UIView?
 
-    public var info: View.AnimationInfo {
+    public var info: ViewAnimationInfo {
       return _info
     }
 

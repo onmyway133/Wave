@@ -10,7 +10,7 @@ import UIKit
 
 public extension View {
 
-  public class BasicAnimationInfo: AnimationInfo {
+  public class BasicAnimationInfo: ViewAnimationInfo {
 
     var options: UIViewAnimationOptions = []
     var block: Block?
