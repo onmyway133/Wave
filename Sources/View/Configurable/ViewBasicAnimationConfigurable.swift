@@ -121,11 +121,11 @@ public extension Chain where A: ViewBasicAnimationConfigurable {
     }
   }
 
-  public func fadeIn(visible: Bool) -> Chain {
+  public func fadeIn() -> Chain {
     return fade(true)
   }
 
-  public func fadeOut(visible: Bool) -> Chain {
+  public func fadeOut() -> Chain {
     return fade(false)
   }
 }
