@@ -54,4 +54,16 @@ public extension Layer {
     public static let Backwards = FillMode(value: kCAFillModeBackwards)
     public static let Both = FillMode(value: kCAFillModeBoth)
   }
+
+
+  public struct TimingFunction {
+
+    public static let Default = CAMediaTimingFunction(name: kCAMediaTimingFunctionDefault)
+    public static let Linear = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
+    public static let EaseIn = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
+    public static let EaseOut = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
+    public static let EaseInEaseOut = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+
+    public static let EaseInCubic = CAMediaTimingFunction(controlPoints: 0.55, 0.055, 0.675, 0.19)
+  }
 }

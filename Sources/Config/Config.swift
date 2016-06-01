@@ -12,5 +12,5 @@ public struct Config {
 
   public static var duration: NSTimeInterval = 0.25
   public static var delay: NSTimeInterval = 0
-  public static var timingFunction: CAMediaTimingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionDefault)
+  public static var timingFunction: CAMediaTimingFunction = Layer.TimingFunction.Default
 }
