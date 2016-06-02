@@ -1,5 +1,5 @@
 //
-//  Then.swift
+//  Custom.swift
 //  Wave
 //
 //  Created by Khoa Pham on 25/05/16.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct Then: Action {
+public struct Custom: Action {
 
   public var block: Block?
 

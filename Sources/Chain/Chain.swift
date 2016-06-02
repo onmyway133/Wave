@@ -55,15 +55,15 @@ public extension Chain {
     return link(action)
   }
 
-  public func then(block: Block) -> Chain {
-    var action = Then()
+  public func custom(block: Block) -> Chain {
+    var action = Custom()
     action.block = block
     
     return link(action)
   }
 
   public func log(string: String) -> Chain {
-    return then {
+    return custom {
       print(string)
     }
   }
