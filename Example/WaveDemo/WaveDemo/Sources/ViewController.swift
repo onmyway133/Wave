@@ -68,7 +68,9 @@ class ViewController: UIViewController {
     // Basic
 
     items.append(Item(name: "wait log", action: {
-      box1.chain
+      Chain<View.BasicAnimation>()
+        .newAction()
+        .view(box1)
         .fadeOut()
         .log("done fade out")
         .wait(2)
@@ -81,7 +83,9 @@ class ViewController: UIViewController {
     // View
 
     items.append(Item(name: "view rotate move move", action: {
-        box1.chain
+        Chain<View.BasicAnimation>()
+        .newAction()
+        .view(box1)
         .rotate(M_PI_4)
         .newAction()
         .view(box2)

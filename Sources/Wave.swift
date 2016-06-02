@@ -20,17 +20,6 @@ public func run(actions: [Action]) {
   }
 }
 
-// MARK: - Chain
-
-public extension UIView {
-
-  public var chain: Chain<View.BasicAnimation> {
-    return Chain<View.BasicAnimation>()
-      .newAction()
-      .view(self)
-  }
-}
-
 // MARK: - Ride
 
 public extension UIView {
