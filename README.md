@@ -71,6 +71,7 @@ Chain<Layer.Action>()
   .keyTimes([0, 0.2, 0.4, 0.6, 0.8, 1])
   .coolConfig()
 )
+.run()
 ```
 
 ### What can we do with the chain
@@ -251,6 +252,7 @@ Chain<Layer.Action>()
   .keyTimes([0, 0.2, 0.4, 0.6, 0.8, 1])
   .coolConfig()
 )
+.run()
 ```
 
 Useful types
