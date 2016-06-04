@@ -49,6 +49,25 @@ public extension Chain where A: View.Action {
 extension View.Action: Action {
 
   public func run(nextActions: [Action]) {
+    // Find animation that has the longest run time
 
+    func time(animation: ViewAnimation) -> NSTimeInterval {
+      let repeatCount = animation._repeatCount > 0 ? animation._repeatCount : 1
+      return animation._delay + (animation._duration * NSTimeInterval(repeatCount))
+    }
+
+    let sortedAnimations: [ViewAnimation] = animations.sort { anim1, anim2 in
+      return time(anim1) > time(anim2)
+    }
+
+    if let first = sortedAnimations.first {
+      first.run {
+        Wave.run(nextActions)
+      }
+    }
+
+    sortedAnimations.dropFirst().forEach {
+      $0.run(nil)
+    }
   }
 }
