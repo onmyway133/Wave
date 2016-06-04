@@ -8,56 +8,62 @@
 
 import UIKit
 
-public extension View {
+public final class ViewKeyframeAnimation: ViewAnimation {
 
-  public final class KeyframeAnimation: ViewConfigurable {
+  public var _options: UIViewKeyframeAnimationOptions = []
+  public var _block: Block?
+  public var _items: [ViewKeyframeAnimationItem] = []
 
-    let _info = View.KeyframeAnimationInfo()
-    public var view: UIView?
-
-    public var info: ViewAnimationInfo {
-      return _info
-    }
-
-    public init() {
-
-    }
-  }
-}
-
-extension View.KeyframeAnimation: Action {
-
-  public func run(nextActions: [Action]) {
-    UIView.animateKeyframesWithDuration(info.duration, delay: info.delay,
-                                        options: _info.options,
+  public override func run(completion: Block?) {
+    UIView.animateKeyframesWithDuration(_duration, delay: _delay,
+                                        options: _options,
                                         animations:
       {
-        self._info.items.forEach { item in
+        self._items.forEach { item in
           UIView.addKeyframeWithRelativeStartTime(item.startTime,
             relativeDuration:
             item.duration,
             animations: item.block)
         }
 
-        self._info.block?()
+        self._block?()
 
       }, completion: { _ in
-        Wave.run(nextActions)
+       completion?()
     })
   }
 }
 
-public extension Chain where A: View.KeyframeAnimation {
+public extension ViewKeyframeAnimation {
 
-  public func add(startTime: NSTimeInterval = 0, duration: NSTimeInterval = 0, block: Block) -> Chain {
-    return configure { (animation: View.KeyframeAnimation) in
-      if let info = animation.info as? View.KeyframeAnimationInfo {
-        let item = View.KeyframeAnimationInfoItem(block: block)
-        item.startTime = startTime
-        item.duration = duration
+  public func options(options: UIViewKeyframeAnimationOptions) -> Self {
+    _options = options
+    return self
+  }
 
-        info.items.append(item)
-      }
-    }
+  public func options(block: Block) -> Self {
+    _block = block
+    return self
+  }
+
+  public func add(startTime: NSTimeInterval = 0, duration: NSTimeInterval = 0, block: Block) -> Self {
+    let item = ViewKeyframeAnimationItem(block: block)
+    item.startTime = startTime
+    item.duration = duration
+
+    _items.append(item)
+
+    return self
+  }
+}
+
+public final class ViewKeyframeAnimationItem {
+
+  public var startTime: NSTimeInterval = 0
+  public var duration: NSTimeInterval = 0
+  public let block: Block
+
+  public init(block: Block) {
+    self.block = block
   }
 }

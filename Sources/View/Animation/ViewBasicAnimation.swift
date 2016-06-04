@@ -8,36 +8,35 @@
 
 import UIKit
 
-public extension View {
+public class ViewBasicAnimation: ViewAnimation {
 
-  public final class BasicAnimation: ViewConfigurable, ViewBasicAnimationConfigurable {
+  public var _options: UIViewAnimationOptions = []
+  public var _block: Block?
 
-    let _info = View.BasicAnimationInfo()
-    public var view: UIView?
+  public override func run(completion: Block?) {
+    UIView.animateWithDuration(_duration, delay: _delay, options: _options,
+                               animations:
+      {
+        if self._repeatCount > 0 {
+          UIView.setAnimationRepeatCount(Float(self._repeatCount))
+        }
 
-    public var info: ViewAnimationInfo {
-      return _info
-    }
-
-    public init() {
-
-    }
+        self._block?()
+      }, completion: { _ in
+        completion?()
+    })
   }
 }
 
-extension View.BasicAnimation: Action {
+public extension ViewBasicAnimation {
 
-  public func run(nextActions: [Action]) {
-    UIView.animateWithDuration(info.duration, delay: _info.delay, options: _info.options,
-                               animations:
-      {
-        if let replay = self.info.replay {
-          UIView.setAnimationRepeatCount(Float(replay))
-        }
+  public func options(options: UIViewAnimationOptions) -> Self {
+    _options = options
+    return self
+  }
 
-        self._info.block?()
-      }, completion: { _ in
-        Wave.run(nextActions)
-    })
+  public func block(block: Block) -> Self {
+    _block = block
+    return self
   }
 }

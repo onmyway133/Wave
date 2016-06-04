@@ -8,57 +8,37 @@
 
 import UIKit
 
-public extension View {
+public final class ViewSpringAnimation: ViewBasicAnimation {
 
-  public final class SpringAnimation: ViewConfigurable, ViewBasicAnimationConfigurable {
+  public var _damping: CGFloat = 1
+  public var _velocity: CGFloat = 1
 
-    let _info = View.SpringAnimationInfo()
-    public var view: UIView?
-
-    public var info: ViewAnimationInfo {
-      return _info
-    }
-
-    public init() {
-
-    }
-  }
-}
-
-extension View.SpringAnimation: Action {
-
-  public func run(nextActions: [Action]) {
-    UIView.animateWithDuration(info.duration, delay: info.delay,
-                               usingSpringWithDamping: _info.damping,
-                               initialSpringVelocity: _info.velocity,
-                               options: _info.options, animations:
+  public override func run(completion: Block?) {
+    UIView.animateWithDuration(_duration, delay: _delay,
+                               usingSpringWithDamping: _damping,
+                               initialSpringVelocity: _velocity,
+                               options: _options, animations:
       {
-        if let replay = self.info.replay {
-          UIView.setAnimationRepeatCount(Float(replay))
+        if self._repeatCount > 0 {
+          UIView.setAnimationRepeatCount(Float(self._repeatCount))
         }
 
-        self._info.block?()
+        self._block?()
       }, completion: { _ in
-        Wave.run(nextActions)
+        completion?()
     })
   }
 }
 
-public extension Chain where A: View.SpringAnimation {
+public extension ViewSpringAnimation {
 
-  public func damping(value: CGFloat) -> Chain {
-    return configure { (animation: View.SpringAnimation) in
-      if let info = animation.info as? View.SpringAnimationInfo {
-        info.damping = value
-      }
-    }
+  public func damping(damping: CGFloat) -> Self {
+    _damping = damping
+    return self
   }
 
-  public func velocity(value: CGFloat) -> Chain {
-    return configure { (animation: View.SpringAnimation) in
-      if let info = animation.info as? View.SpringAnimationInfo {
-        info.damping = value
-      }
-    }
+  public func velocity(velocity: CGFloat) -> Self {
+    _velocity = velocity
+    return self
   }
 }

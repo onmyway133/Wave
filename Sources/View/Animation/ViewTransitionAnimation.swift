@@ -8,89 +8,57 @@
 
 import UIKit
 
-public extension View {
+public final class ViewTransitionAnimation: ViewAnimation {
 
-  public final class TransitionAnimation: ViewConfigurable {
+  public var _options: UIViewAnimationOptions = []
+  public var _from: UIView?
+  public var _to: UIView?
+  public var _with: UIView?
+  public var _block: (UIView -> Void)?
 
-    let _info = View.TransitionAnimationInfo()
-    public var view: UIView?
+  public override func run(completion: Block?) {
 
-    public var info: ViewAnimationInfo {
-      return _info
-    }
-
-    public init() {
-
-    }
-  }
-}
-
-extension View.TransitionAnimation: Action {
-
-  public func run(nextActions: [Action]) {
-    if let with = _info.with {
-      UIView.transitionWithView(with, duration: info.duration, options: _info.options,
+    if let with = _with {
+      UIView.transitionWithView(with, duration: _duration, options: _options,
                                 animations: {
-                                  self._info.block?(with)
+                                  self._block?(with)
         }, completion: { _ in
-          Wave.run(nextActions)
+          completion?()
       })
-    } else if let from = _info.from, to = _info.to {
-      UIView.transitionFromView(from, toView: to, duration: info.duration, options: _info.options,
+    } else if let from = _from, to = _to {
+      UIView.transitionFromView(from, toView: to, duration: _duration, options: _options,
                                 completion: { _ in
-        Wave.run(nextActions)
+                                  completion?()
       })
     }
   }
 }
 
-extension Chain where A: View.TransitionAnimation {
+public extension ViewTransitionAnimation {
 
-  public func duration(interval: NSTimeInterval) -> Chain {
-    return configure { (animation: View.TransitionAnimation) in
-      if let info = animation.info as? View.TransitionAnimationInfo {
-        info.duration = interval
-      }
-    }
+  public func options(options: UIViewAnimationOptions) -> Self {
+    _options = options
+    return self
   }
 
-  public func options(options: UIViewAnimationOptions) -> Chain {
-    return configure { (animation: View.TransitionAnimation) in
-      if let info = animation.info as? View.TransitionAnimationInfo {
-        info.options = options
-      }
-    }
+  public func from(view: UIView) -> Self {
+    _from = view
+    return self
   }
 
-  public func from(view: UIView) -> Chain {
-    return configure { (animation: View.TransitionAnimation) in
-      if let info = animation.info as? View.TransitionAnimationInfo {
-        info.from = view
-      }
-    }
+  public func to(view: UIView) -> Self {
+    _to = view
+    return self
   }
 
-  public func to(view: UIView) -> Chain {
-    return configure { (animation: View.TransitionAnimation) in
-      if let info = animation.info as? View.TransitionAnimationInfo {
-        info.to = view
-      }
-    }
+  public func with(view: UIView) -> Self {
+    _with = view
+    return self
   }
 
-  public func with(view: UIView) -> Chain {
-    return configure { (animation: View.TransitionAnimation) in
-      if let info = animation.info as? View.TransitionAnimationInfo {
-        info.with = view
-      }
-    }
-  }
-
-  public func block(block: UIView -> Void) -> Chain {
-    return configure { (animation: View.TransitionAnimation) in
-      if let info = animation.info as? View.TransitionAnimationInfo {
-        info.block = block
-      }
-    }
+  public func block(block: UIView -> Void) -> Self {
+    _block = block
+    return self
   }
 }
+

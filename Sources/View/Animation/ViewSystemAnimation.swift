@@ -8,51 +8,48 @@
 
 import UIKit
 
-public extension View {
+public final class ViewSystemAnimation: ViewAnimation {
 
-  public final class SystemAnimation: ViewConfigurable {
+  public var _options: UIViewAnimationOptions = []
+  public var _views: [UIView] = []
+  public var _animation: UISystemAnimation = .Delete
+  public var _parallelBlock: Block?
 
-    let _info = View.SystemAnimationInfo()
-    public var view: UIView?
+  public override func run(completion: Block?) {
 
-    public var info: ViewAnimationInfo {
-      return _info
-    }
-
-    public init() {
-
-    }
-  }
-}
-
-extension View.SystemAnimation: Action {
-
-  public func run(nextActions: [Action]) {
-    UIView.performSystemAnimation(_info.animation, onViews: _info.views, options: _info.options,
+    UIView.performSystemAnimation(_animation, onViews: _views, options: _options,
                                   animations:
       {
-        self._info.parallelBlock?()
+        if self._repeatCount > 0 {
+          UIView.setAnimationRepeatCount(Float(self._repeatCount))
+        }
+        
+        self._parallelBlock?()
       }, completion: { _ in
-        Wave.run(nextActions)
+        completion?()
     })
   }
 }
 
-extension Chain where A: View.SystemAnimation {
+public extension ViewSystemAnimation {
 
-  public func options(options: UIViewAnimationOptions) -> Chain {
-    return configure { (animation: View.SystemAnimation) in
-      if let info = animation.info as? View.SystemAnimationInfo {
-        info.options = options
-      }
-    }
+  public func options(options: UIViewAnimationOptions) -> Self {
+    _options = options
+    return self
   }
 
-  public func parallelBlock(block: Block) -> Chain {
-    return configure { (animation: View.SystemAnimation) in
-      if let info = animation.info as? View.SystemAnimationInfo {
-        info.parallelBlock = block
-      }
-    }
+  public func views(views: [UIView]) -> Self {
+    _views = views
+    return self
+  }
+
+  public func animation(animation: UISystemAnimation) -> Self {
+    _animation = animation
+    return self
+  }
+
+  public func parallelBlock(block: Block) -> Self {
+    _parallelBlock = block
+    return self
   }
 }
