@@ -8,79 +8,36 @@
 
 import UIKit
 
-public extension Layer {
+public final class LayerTransitionAnimation: LayerAnimation {
 
-  public final class TransitionAnimation: LayerConfigurable, LayerAnimationConfigurable {
+  public override init() {
+    super.init()
+    info = CATransition()
+  }
 
-    let _info = CATransition()
-    public var layer: CALayer?
+  public func startProgress(progress: Float) -> Self {
+    (info as? CATransition)?.startProgress = progress
+    return self
+  }
 
-    public var info: CAAnimation {
-      return _info
-    }
+  public func endProgress(progress: Float) -> Self {
+    (info as? CATransition)?.endProgress = progress
+    return self
+  }
 
-    public init() {
+  public func type(type: String) -> Self {
+    (info as? CATransition)?.type = type
+    return self
+  }
 
-    }
+  public func subtype(subtype: String) -> Self {
+    (info as? CATransition)?.subtype = subtype
+    return self
+  }
+
+  public func filter(filter: AnyObject) -> Self {
+    (info as? CATransition)?.filter = filter
+    return self
   }
 }
 
-extension Layer.TransitionAnimation: Action {
-
-  public func run(nextActions: [Action]) {
-    CATransaction.begin()
-
-    CATransaction.setCompletionBlock {
-      Wave.run(nextActions)
-    }
-
-    layer?.addAnimation(_info, forKey: "")
-
-    CATransaction.commit()
-  }
-}
-
-// MARK: - Configure
-
-extension Chain where A: Layer.TransitionAnimation {
-
-  public func startProgress(progress: Float) -> Chain {
-    return configure { (animation: Layer.TransitionAnimation) in
-      if let info = animation.info as? CATransition {
-        info.startProgress = progress
-      }
-    }
-  }
-
-  public func endProgress(progress: Float) -> Chain {
-    return configure { (animation: Layer.TransitionAnimation) in
-      if let info = animation.info as? CATransition {
-        info.endProgress = progress
-      }
-    }
-  }
-
-  public func type(type: String) -> Chain {
-    return configure { (animation: Layer.TransitionAnimation) in
-      if let info = animation.info as? CATransition {
-        info.type = type
-      }
-    }
-  }
-
-  public func subtype(subtype: String) -> Chain {
-    return configure { (animation: Layer.TransitionAnimation) in
-      if let info = animation.info as? CATransition {
-        info.subtype = subtype
-      }
-    }
-  }
-
-  public func filter(filter: AnyObject) -> Chain {
-    return configure { (animation: Layer.TransitionAnimation) in
-      if let info = animation.info as? CATransition {
-        info.filter = filter
-      }
-    }
-  }
-}

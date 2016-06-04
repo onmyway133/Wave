@@ -8,34 +8,56 @@
 
 import UIKit
 
-public extension Layer {
+public final class LayerKeyframeAnimation: LayerPropertyAnimation {
 
-  public final class KeyframeAnimation: LayerConfigurable, LayerKeyframeAnimationConfigurable {
+  public override init() {
+    super.init()
+    info = CAKeyframeAnimation()
+  }
 
-    let _info = CAKeyframeAnimation()
-    public var layer: CALayer?
+  public func values(values: [AnyObject]) -> Self {
+    (info as? CAKeyframeAnimation)?.values = values
+    return self
+  }
 
-    public var info: CAAnimation {
-      return _info
-    }
+  public func path(path: UIBezierPath) -> Self {
+    (info as? CAKeyframeAnimation)?.path = path.CGPath
+    return self
+  }
 
-    public init() {
-      
-    }
+  public func keyTimes(keyTimes: [NSNumber]) -> Self {
+    (info as? CAKeyframeAnimation)?.keyTimes = keyTimes
+    return self
+  }
+
+  public func timingFunctions(functions: [CAMediaTimingFunction]) -> Self {
+    (info as? CAKeyframeAnimation)?.timingFunctions = functions
+    return self
+  }
+
+  public func calculationMode(mode: Layer.CalculationMode) -> Self {
+    (info as? CAKeyframeAnimation)?.calculationMode = mode.value
+    return self
+  }
+
+  public func tensionValues(values: [NSNumber]) -> Self {
+    (info as? CAKeyframeAnimation)?.values = values
+    return self
+  }
+
+  public func continuityValues(values: [NSNumber]) -> Self {
+    (info as? CAKeyframeAnimation)?.values = values
+    return self
+  }
+
+  public func biasValues(values: [NSNumber]) -> Self {
+    (info as? CAKeyframeAnimation)?.values = values
+    return self
+  }
+
+  public func rotationMode(mode: Layer.RotationMode) -> Self {
+    (info as? CAKeyframeAnimation)?.rotationMode = mode.value
+    return self
   }
 }
 
-extension Layer.KeyframeAnimation: Action {
-
-  public func run(nextActions: [Action]) {
-    CATransaction.begin()
-
-    CATransaction.setCompletionBlock {
-      Wave.run(nextActions)
-    }
-
-    layer?.addAnimation(_info, forKey: "")
-
-    CATransaction.commit()
-  }
-}

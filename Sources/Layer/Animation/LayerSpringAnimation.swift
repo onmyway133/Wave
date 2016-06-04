@@ -8,35 +8,31 @@
 
 import UIKit
 
-public extension Layer {
+@available(iOS 9, *)
+public final class LayerSpringAnimation: LayerBasicAnimation {
 
-  @available(iOS 9, *)
-  public final class SpringAnimation: LayerConfigurable, LayerSpringAnimationConfigurable {
-
-    let _info = CASpringAnimation()
-    public var layer: CALayer?
-
-    public var info: CAAnimation {
-      return _info
-    }
-
-    public init() {
-      
-    }
+  public override init() {
+    super.init()
+    info = CASpringAnimation()
   }
-}
 
-extension Layer.SpringAnimation: Action {
+  public func mass(value: Double) -> Self {
+    (info as? CASpringAnimation)?.mass = CGFloat(value)
+    return self
+  }
 
-  public func run(nextActions: [Action]) {
-    CATransaction.begin()
+  public func stiffness(value: Double) -> Self {
+    (info as? CASpringAnimation)?.mass = CGFloat(value)
+    return self
+  }
 
-    CATransaction.setCompletionBlock {
-      Wave.run(nextActions)
-    }
+  public func damping(value: Double) -> Self {
+    (info as? CASpringAnimation)?.mass = CGFloat(value)
+    return self
+  }
 
-    layer?.addAnimation(_info, forKey: "")
-
-    CATransaction.commit()
+  public func initialVelocity(value: Double) -> Self {
+    (info as? CASpringAnimation)?.mass = CGFloat(value)
+    return self
   }
 }

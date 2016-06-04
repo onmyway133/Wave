@@ -19,75 +19,152 @@ public struct Ride {
 
 public extension Ride {
 
-  public func shake() {
-    Chain<Layer.KeyframeAnimation>()
-      .newAction()
+  public func shake() -> Chain<Layer.Action> {
+    return
+      Chain<Layer.Action>()
       .layer(view.layer)
-      .shake()
-      .run()
+      .add(LayerKeyframeAnimation()
+        .keyPath("position.x")
+        .values([0, 15, -15, 15, 0])
+        .additive(true)
+        .coolConfig()
+      )
   }
 
-  public func pop() {
-    Chain<Layer.KeyframeAnimation>()
-      .newAction()
+  public func pop() -> Chain<Layer.Action> {
+    return
+      Chain<Layer.Action>()
       .layer(view.layer)
-      .pop()
-      .run()
+      .add(LayerKeyframeAnimation()
+        .keyPath("transform.scale")
+        .values([0, 0.2, -0.2, 0.2, 0])
+        .keyTimes([0, 0.2, 0.4, 0.6, 0.8, 1])
+        .additive(true)
+        .coolConfig()
+      )
   }
 
-  public func morph() {
-    Chain<Layer.CompoundAnimation>()
-      .newAction()
+  public func morph() -> Chain<Layer.Action> {
+    return
+      Chain<Layer.Action>()
       .layer(view.layer)
-      .morph()
-      .run()
+      .add(LayerKeyframeAnimation()
+        .keyPath("transform.scale.x")
+        .values([1, 1.3, 0.7, 1.3, 1])
+        .keyTimes([0, 0.2, 0.4, 0.6, 0.8, 1])
+        .coolConfig()
+      )
+      .add(LayerKeyframeAnimation()
+        .keyPath("transform.scale.x")
+        .values([1, 1.3, 0.7, 1.3, 1])
+        .keyTimes([0, 0.2, 0.4, 0.6, 0.8, 1])
+        .coolConfig()
+      )
   }
 
-  public func squeeze() {
-    Chain<Layer.CompoundAnimation>()
-      .newAction()
+  public func squeeze() -> Chain<Layer.Action> {
+    return
+      Chain<Layer.Action>()
       .layer(view.layer)
-      .squeeze()
-      .run()
+      .add(LayerKeyframeAnimation()
+        .keyPath("transform.scale.x")
+        .values([1, 1.5, 0.5, 1.5, 1])
+        .keyTimes([0, 0.2, 0.4, 0.6, 0.8, 1])
+        .coolConfig()
+      )
+      .add(LayerKeyframeAnimation()
+        .keyPath("transform.scale.x")
+        .values([1, 0.5, 1, 0.5, 1])
+        .keyTimes([0, 0.2, 0.4, 0.6, 0.8, 1])
+        .coolConfig()
+      )
   }
 
-  public func wobble() {
-    Chain<Layer.CompoundAnimation>()
-      .newAction()
+  public func wobble() -> Chain<Layer.Action> {
+    return
+      Chain<Layer.Action>()
       .layer(view.layer)
-      .wobble()
-      .run()
+      .add(LayerKeyframeAnimation()
+        .keyPath("transform.rotation")
+        .values([0, 0.3, -0.3, 0.3, 0])
+        .keyTimes([0, 0.2, 0.4, 0.6, 0.8, 1])
+        .additive(true)
+        .coolConfig()
+      )
+      .add(LayerKeyframeAnimation()
+        .keyPath("position.x")
+        .values([0, 30, -30, 30, 0])
+        .keyTimes([0, 0.2, 0.4, 0.6, 0.8, 1])
+        .additive(true)
+        .coolConfig()
+      )
   }
 
-  public func swing() {
-    Chain<Layer.KeyframeAnimation>()
-      .newAction()
+  public func swing() -> Chain<Layer.Action> {
+    return
+      Chain<Layer.Action>()
       .layer(view.layer)
-      .swing()
-      .run()
+      .add(LayerKeyframeAnimation()
+        .keyPath("transform.rotation")
+        .values([0, 0.3, -0.3, 0.3, 0])
+        .keyTimes([0, 0.2, 0.4, 0.6, 0.8, 1])
+        .additive(true)
+        .coolConfig()
+      )
   }
 
-  public func flipX() {
-    Chain<Layer.BasicAnimation>()
-      .newAction()
-      .layer(view.layer)
-      .flipX()
-      .run()
+  public func flipX() -> Chain<Layer.Action> {
+    var perspective = CATransform3DIdentity
+    perspective.m34 = 1.0 / -500
+
+    return
+      Chain<Layer.Action>()
+        .layer(view.layer)
+        .add(LayerBasicAnimation()
+          .keyPath("transform")
+          .fromValue(NSValue(CATransform3D: CATransform3DIdentity))
+          .toValue(NSValue(CATransform3D: CATransform3DConcat(perspective, CATransform3DMakeRotation(CGFloat(M_PI), 0, 1, 0))))
+          .coolConfig()
+        )
   }
 
-  public func flipY() {
-    Chain<Layer.BasicAnimation>()
-      .newAction()
-      .layer(view.layer)
-      .flipY()
-      .run()
+  public func flipY() -> Chain<Layer.Action> {
+    var perspective = CATransform3DIdentity
+    perspective.m34 = 1.0 / -500
+
+    return
+      Chain<Layer.Action>()
+        .layer(view.layer)
+        .add(LayerBasicAnimation()
+          .keyPath("transform")
+          .fromValue(NSValue(CATransform3D: CATransform3DIdentity))
+          .toValue(NSValue(CATransform3D: CATransform3DConcat(perspective, CATransform3DMakeRotation(CGFloat(M_PI), 1, 0, 0))))
+          .coolConfig()
+        )
   }
 
-  public func flash() {
-    Chain<Layer.BasicAnimation>()
-      .newAction()
-      .layer(view.layer)
-      .flash()
-      .run()
+  public func flash() -> Chain<Layer.Action> {
+    return
+      Chain<Layer.Action>()
   }
+
+  public func fade(visible: Bool) -> Chain<Layer.Action> {
+    return
+      Chain<Layer.Action>()
+        .layer(view.layer)
+        .add(LayerBasicAnimation()
+          .keyPath("opacity")
+          .fromValue(visible ? 0 : 1)
+          .toValue(visible ? 1 : 0)
+        )
+  }
+
+  public func fadeIn() -> Chain<Layer.Action> {
+    return fade(true)
+  }
+
+  public func fadeOut() -> Chain<Layer.Action> {
+    return fade(false)
+  }
+
 }

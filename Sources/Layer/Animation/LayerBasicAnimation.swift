@@ -8,34 +8,26 @@
 
 import UIKit
 
-public extension Layer {
+public class LayerBasicAnimation: LayerPropertyAnimation {
 
-  public final class BasicAnimation: LayerConfigurable, LayerBasicAnimationConfigurable {
+  public override init() {
+    super.init()
+    info = CABasicAnimation()
+  }
 
-    let _info = CABasicAnimation()
-    public var layer: CALayer?
+  public func fromValue(value: AnyObject) -> Self {
+    (info as? CABasicAnimation)?.fromValue = value
+    return self
+  }
 
-    public var info: CAAnimation {
-      return _info
-    }
+  public func toValue(value: AnyObject) -> Self {
+    (info as? CABasicAnimation)?.toValue = value
+    return self
+  }
 
-    public init() {
-
-    }
+  public func byValue(value: AnyObject) -> Self {
+    (info as? CABasicAnimation)?.byValue = value
+    return self
   }
 }
 
-extension Layer.BasicAnimation: Action {
-
-  public func run(nextActions: [Action]) {
-    CATransaction.begin()
-
-    CATransaction.setCompletionBlock {
-      Wave.run(nextActions)
-    }
-    
-    layer?.addAnimation(_info, forKey: "")
-    
-    CATransaction.commit()
-  }
-}
