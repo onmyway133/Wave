@@ -119,13 +119,13 @@ public extension Ride {
 
     return
       Chain<Layer.Action>()
-        .layer(view.layer)
-        .add(LayerBasicAnimation()
-          .keyPath("transform")
-          .fromValue(NSValue(CATransform3D: CATransform3DIdentity))
-          .toValue(NSValue(CATransform3D: CATransform3DConcat(perspective, CATransform3DMakeRotation(CGFloat(M_PI), 0, 1, 0))))
-          .coolConfig()
-        )
+      .layer(view.layer)
+      .add(LayerBasicAnimation()
+        .keyPath("transform")
+        .fromValue(NSValue(CATransform3D: CATransform3DIdentity))
+        .toValue(NSValue(CATransform3D: CATransform3DConcat(perspective, CATransform3DMakeRotation(CGFloat(M_PI), 0, 1, 0))))
+        .coolConfig()
+      )
   }
 
   public func flipY() -> Chain<Layer.Action> {
@@ -134,40 +134,23 @@ public extension Ride {
 
     return
       Chain<Layer.Action>()
-        .layer(view.layer)
-        .add(LayerBasicAnimation()
-          .keyPath("transform")
-          .fromValue(NSValue(CATransform3D: CATransform3DIdentity))
-          .toValue(NSValue(CATransform3D: CATransform3DConcat(perspective, CATransform3DMakeRotation(CGFloat(M_PI), 1, 0, 0))))
-          .coolConfig()
-        )
+      .layer(view.layer)
+      .add(LayerBasicAnimation()
+        .keyPath("transform")
+        .fromValue(NSValue(CATransform3D: CATransform3DIdentity))
+        .toValue(NSValue(CATransform3D: CATransform3DConcat(perspective, CATransform3DMakeRotation(CGFloat(M_PI), 1, 0, 0))))
+        .coolConfig()
+      )
   }
 
   public func flash() -> Chain<Layer.Action> {
     return
-      fadeOut()
-      .configureAnimation { (animation: LayerBasicAnimation) in
-        animation.repeatCount(2)
-      }
-  }
-
-  public func fade(visible: Bool) -> Chain<Layer.Action> {
-    return
       Chain<Layer.Action>()
-        .layer(view.layer)
-        .add(LayerBasicAnimation()
-          .keyPath("opacity")
-          .fromValue(visible ? 0 : 1)
-          .toValue(visible ? 1 : 0)
-        )
+      .layer(view.layer)
+      .add(LayerBasicAnimation()
+        .fadeOut()
+        .repeatCount(2)
+        .coolConfig()
+      )
   }
-
-  public func fadeIn() -> Chain<Layer.Action> {
-    return fade(true)
-  }
-
-  public func fadeOut() -> Chain<Layer.Action> {
-    return fade(false)
-  }
-
 }
