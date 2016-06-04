@@ -12,7 +12,7 @@ public extension Layer {
 
   public final class Action {
 
-    public var layer: CALayer?
+    public weak var layer: CALayer?
     var animations: [LayerAnimation] = []
 
     public init() {

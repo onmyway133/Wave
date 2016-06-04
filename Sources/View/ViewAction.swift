@@ -12,7 +12,7 @@ public extension View {
 
   public final class Action {
 
-    public var view: UIView?
+    public weak var view: UIView?
     public var animations: [ViewAnimation] = []
 
     public init() {

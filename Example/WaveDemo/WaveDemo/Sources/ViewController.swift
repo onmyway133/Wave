@@ -68,6 +68,14 @@ class ViewController: UIViewController {
 
     // View
 
+    items.append(Item(name: "view move change color", action: {
+      Chain<View.Action>()
+        .view(box2)
+        .add(ViewBasicAnimation().fadeOut().moveX(20))
+        .add(ViewBasicAnimation().changeBackground(UIColor.blueColor()))
+        .run()
+    }))
+
     items.append(Item(name: "blink", action: {
       Chain<View.Action>()
         .add(ViewBasicAnimation().view(box1).fadeOut())
@@ -93,7 +101,13 @@ class ViewController: UIViewController {
 
     items.append(Item(name: "view rotate move move", action: {
       Chain<View.Action>()
-      .add(ViewBasicAnimation().view(box3).moveY(10))
+      .add(ViewBasicAnimation()
+        .view(box3)
+        .moveY(100)
+        .delay(2)
+        .duration(3)
+        .repeatCount(2)
+        .options([UIViewAnimationOptions.CurveEaseIn]))
       .then()
       .add(ViewBasicAnimation().view(box2).moveX(-10))
       .then()
@@ -140,6 +154,24 @@ class ViewController: UIViewController {
     }))
 
     tableView.reloadData()
+
+    let chain = Chain<Layer.Action>()
+
+    var wait = Wait()
+    wait.interval = 2
+
+    var custom = Custom()
+    custom.block = {
+      print("wave")
+    }
+
+    chain
+    .then()
+    .add(LayerSpringAnimation())
+    .then(Chain<View.Action>())
+    .add(ViewKeyframeAnimation())
+
+    chain.then(wait).then(custom)
   }
 }
 

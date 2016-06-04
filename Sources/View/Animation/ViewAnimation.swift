@@ -10,7 +10,7 @@ import UIKit
 
 public class ViewAnimation {
 
-  var _view: UIView?
+  weak var _view: UIView?
   var _duration: NSTimeInterval = Config.duration
   var _delay: NSTimeInterval = Config.delay
   var _repeatCount: UInt = 0
