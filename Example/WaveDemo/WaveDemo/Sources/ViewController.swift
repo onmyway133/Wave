@@ -9,6 +9,7 @@ class ViewController: UIViewController {
   @IBOutlet weak var box3: UIView!
 
   var items: [Item] = []
+  var counter = 0
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -65,7 +66,7 @@ class ViewController: UIViewController {
       box1.wave.swing().run()
     }))
 
-    // Basic
+    // View
 
     items.append(Item(name: "blink", action: {
       Chain<View.Action>()
@@ -90,17 +91,16 @@ class ViewController: UIViewController {
       .run()
     }))
 
-    // View
-
     items.append(Item(name: "view rotate move move", action: {
       Chain<View.Action>()
-      .add(ViewBasicAnimation().view(box1).rotate(M_PI_4))
+      .add(ViewBasicAnimation().view(box3).moveY(10))
       .then()
       .add(ViewBasicAnimation().view(box2).moveX(-10))
       .then()
       .add(ViewSpringAnimation()
         .block {
-          box3.frame.origin.y += 10
+          self.counter = (self.counter + 1) % 4
+          box1.transform = CGAffineTransformMakeRotation(CGFloat(M_PI_4) * CGFloat(self.counter))
         }
       )
       .run()
