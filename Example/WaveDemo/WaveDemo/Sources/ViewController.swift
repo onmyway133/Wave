@@ -69,12 +69,11 @@ class ViewController: UIViewController {
 
     items.append(Item(name: "wait log", action: {
       Chain<View.Action>()
-      .view(box1)
-      .add(ViewBasicAnimation().fadeOut())
+      .add(ViewBasicAnimation().view(box1).fadeOut())
       .thenLog("done fade out")
       .thenWait(2)
       .then()
-      .add(ViewBasicAnimation().fadeIn())
+      .add(ViewBasicAnimation().view(box1).fadeIn())
       .thenLog("done fade in")
       .run()
     }))
