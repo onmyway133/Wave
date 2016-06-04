@@ -14,7 +14,6 @@
   "social_media_url": "https://twitter.com/onmyway133",
   "platforms": {
     "ios": "8.0",
-    "osx": "10.9",
     "tvos": "9.2"
   },
   "requires_arc": true,
@@ -27,10 +26,5 @@
   },
   "tvos": {
     "source_files": "Sources/**/*"
-  },
-  "dependencies": {
-    "Construction": [
-
-    ]
   }
 }

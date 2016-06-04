@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		64ED3634B8C82FDB5B0B1AA2 /* Pods_WaveDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B03252AFB08090205B014E0B /* Pods_WaveDemo.framework */; };
+		26628F1CD0FD1895B5381ACD /* Pods_WaveDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 222392E9CBBAD508BAFC6149 /* Pods_WaveDemo.framework */; };
 		D221FFFA1CFF711F004F6A60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D221FFF91CFF711F004F6A60 /* Main.storyboard */; };
 		D221FFFC1CFF719F004F6A60 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = D221FFFB1CFF719F004F6A60 /* Item.swift */; };
 		D5C7F7701C3BCF14008CDDBA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5C7F76E1C3BCF14008CDDBA /* Main.storyboard */; };
@@ -18,9 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		01E82CEF6E60F5525E0EB5CA /* Pods-WaveDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaveDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WaveDemo/Pods-WaveDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		3ED4356FAADE8E307C87361A /* Pods-WaveDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaveDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-WaveDemo/Pods-WaveDemo.release.xcconfig"; sourceTree = "<group>"; };
-		B03252AFB08090205B014E0B /* Pods_WaveDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WaveDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		222392E9CBBAD508BAFC6149 /* Pods_WaveDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WaveDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B72B6E8C7B9BC4B83C15D27 /* Pods-WaveDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaveDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-WaveDemo/Pods-WaveDemo.release.xcconfig"; sourceTree = "<group>"; };
+		BB5199634D2C36A06C6D9341 /* Pods-WaveDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaveDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WaveDemo/Pods-WaveDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		D221FFF91CFF711F004F6A60 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		D221FFFB1CFF719F004F6A60 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		D5C7F7671C3BCF14008CDDBA /* WaveDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WaveDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -37,28 +37,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				64ED3634B8C82FDB5B0B1AA2 /* Pods_WaveDemo.framework in Frameworks */,
+				26628F1CD0FD1895B5381ACD /* Pods_WaveDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		50A37F62FAD2B48FB827D560 /* Pods */ = {
+		95DB47251B22C46F7E89476B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				01E82CEF6E60F5525E0EB5CA /* Pods-WaveDemo.debug.xcconfig */,
-				3ED4356FAADE8E307C87361A /* Pods-WaveDemo.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		6C4B01F5C857E940C4597ECA /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				B03252AFB08090205B014E0B /* Pods_WaveDemo.framework */,
+				222392E9CBBAD508BAFC6149 /* Pods_WaveDemo.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AA39C7A41A01706200F97221 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BB5199634D2C36A06C6D9341 /* Pods-WaveDemo.debug.xcconfig */,
+				5B72B6E8C7B9BC4B83C15D27 /* Pods-WaveDemo.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		D5C7F75E1C3BCF14008CDDBA = {
@@ -66,8 +66,8 @@
 			children = (
 				D5C7F7691C3BCF14008CDDBA /* WaveDemo */,
 				D5C7F7681C3BCF14008CDDBA /* Products */,
-				50A37F62FAD2B48FB827D560 /* Pods */,
-				6C4B01F5C857E940C4597ECA /* Frameworks */,
+				AA39C7A41A01706200F97221 /* Pods */,
+				95DB47251B22C46F7E89476B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,12 +125,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D5C7F7791C3BCF14008CDDBA /* Build configuration list for PBXNativeTarget "WaveDemo" */;
 			buildPhases = (
-				0A79F8D7F8CFF59552C6FFEE /* 📦 Check Pods Manifest.lock */,
+				B7BF6173EA63EB5731D0C12D /* 📦 Check Pods Manifest.lock */,
 				D5C7F7631C3BCF14008CDDBA /* Sources */,
 				D5C7F7641C3BCF14008CDDBA /* Frameworks */,
 				D5C7F7651C3BCF14008CDDBA /* Resources */,
-				BCEE35F004877E230C17982D /* 📦 Embed Pods Frameworks */,
-				DAC7443340B18CD8ABE4FEF2 /* 📦 Copy Pods Resources */,
+				083EF1000159EFE984B2836E /* 📦 Embed Pods Frameworks */,
+				8DFA615088D8308B99C79F99 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -189,22 +189,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0A79F8D7F8CFF59552C6FFEE /* 📦 Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		BCEE35F004877E230C17982D /* 📦 Embed Pods Frameworks */ = {
+		083EF1000159EFE984B2836E /* 📦 Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -219,7 +204,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WaveDemo/Pods-WaveDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DAC7443340B18CD8ABE4FEF2 /* 📦 Copy Pods Resources */ = {
+		8DFA615088D8308B99C79F99 /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -232,6 +217,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WaveDemo/Pods-WaveDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B7BF6173EA63EB5731D0C12D /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -352,7 +352,7 @@
 		};
 		D5C7F77A1C3BCF14008CDDBA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 01E82CEF6E60F5525E0EB5CA /* Pods-WaveDemo.debug.xcconfig */;
+			baseConfigurationReference = BB5199634D2C36A06C6D9341 /* Pods-WaveDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WaveDemo/Info.plist;
@@ -364,7 +364,7 @@
 		};
 		D5C7F77B1C3BCF14008CDDBA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3ED4356FAADE8E307C87361A /* Pods-WaveDemo.release.xcconfig */;
+			baseConfigurationReference = 5B72B6E8C7B9BC4B83C15D27 /* Pods-WaveDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WaveDemo/Info.plist;
