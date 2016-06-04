@@ -54,11 +54,9 @@ public extension ViewBasicAnimation {
   }
 
   public func move(value: CGPoint) -> Self {
-    weak var view = _view
-
-    return block {
-      view?.frame.origin.x += value.x
-      view?.frame.origin.y += value.y
+    return block { [weak self] in
+      self?._view?.frame.origin.x += value.x
+      self?._view?.frame.origin.y += value.y
     }
   }
 
@@ -73,10 +71,8 @@ public extension ViewBasicAnimation {
   }
 
   public func translate(value: CGPoint) -> Self {
-    weak var view = _view
-
-    return block {
-      view?.transform = CGAffineTransformMakeTranslation(value.x, value.y)
+    return block { [weak self] in
+      self?._view?.transform = CGAffineTransformMakeTranslation(value.x, value.y)
     }
   }
 
@@ -91,10 +87,8 @@ public extension ViewBasicAnimation {
   }
 
   public func scale(value: CGPoint) -> Self {
-    weak var view = _view
-
-    return block {
-      view?.transform = CGAffineTransformMakeScale(value.x, value.y)
+    return block { [weak self] in
+      self?._view?.transform = CGAffineTransformMakeScale(value.x, value.y)
     }
   }
 
@@ -107,20 +101,16 @@ public extension ViewBasicAnimation {
   // MARK: - Rotate
 
   public func rotate(radian: Double) -> Self {
-    weak var view = _view
-
-    return block {
-      view?.transform = CGAffineTransformMakeRotation(CGFloat(radian))
+    return block { [weak self] in
+      self?._view?.transform = CGAffineTransformMakeRotation(CGFloat(radian))
     }
   }
 
   // MARK: - Fade
 
   public func fade(visible: Bool) -> Self {
-    weak var view = _view
-
-    return block {
-      view?.alpha = visible ? 1 : 0
+    return block { [weak self] in
+      self?._view?.alpha = visible ? 1 : 0
     }
   }
 
@@ -135,10 +125,8 @@ public extension ViewBasicAnimation {
   // MARK: - Color
 
   public func changeBackground(color: UIColor) -> Self {
-    weak var view = _view
-
-    return block {
-      view?.backgroundColor = color
+    return block { [weak self] in
+      self?._view?.backgroundColor = color
     }
   }
 
