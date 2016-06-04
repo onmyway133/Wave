@@ -57,6 +57,25 @@ public extension ViewBasicAnimation {
     weak var view = _view
 
     return block {
+      view?.frame.origin.x += value.x
+      view?.frame.origin.y += value.y
+    }
+  }
+
+  // MARK: - Translation
+
+  public func translateX(value: Double) -> Self {
+    return translate(CGPoint(x: value, y: 0))
+  }
+
+  public func translateY(value: Double) -> Self {
+    return translate(CGPoint(x: 0, y: value))
+  }
+
+  public func translate(value: CGPoint) -> Self {
+    weak var view = _view
+
+    return block {
       view?.transform = CGAffineTransformMakeTranslation(value.x, value.y)
     }
   }
@@ -64,11 +83,11 @@ public extension ViewBasicAnimation {
   // MARK: - Scale
 
   public func scaleX(value: Double) -> Self {
-    return move(CGPoint(x: value, y: 0))
+    return scale(CGPoint(x: value, y: 0))
   }
 
   public func scaleY(value: Double) -> Self {
-    return move(CGPoint(x: 0, y: value))
+    return scale(CGPoint(x: 0, y: value))
   }
 
   public func scale(value: CGPoint) -> Self {
