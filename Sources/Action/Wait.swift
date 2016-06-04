@@ -17,12 +17,12 @@ public struct Wait: Action {
   }
 
   public func run(nextActions: [Action]) {
-    // Can't use duration == 0
-    UIView.animateWithDuration(0.1, delay: interval, options: [], animations: {
+    // TODO: Prefer to use UIView animation
 
-    }, completion: { _ in
+    let time = dispatch_time(DISPATCH_TIME_NOW, Int64(interval * Double(NSEC_PER_SEC)))
+    dispatch_after(time, dispatch_get_main_queue()) {
       Wave.run(nextActions)
-    })
+    }
   }
 }
 
