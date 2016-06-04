@@ -10,9 +10,9 @@ import UIKit
 
 public final class ViewKeyframeAnimation: ViewAnimation {
 
-  public var _options: UIViewKeyframeAnimationOptions = []
-  public var _block: Block?
-  public var _items: [ViewKeyframeAnimationItem] = []
+  var _options: UIViewKeyframeAnimationOptions = []
+  var _block: Block?
+  var _items: [ViewKeyframeAnimationItem] = []
 
   public override func run(completion: Block?) {
     UIView.animateKeyframesWithDuration(_duration, delay: _delay,

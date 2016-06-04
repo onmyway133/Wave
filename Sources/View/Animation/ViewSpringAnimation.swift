@@ -10,8 +10,8 @@ import UIKit
 
 public final class ViewSpringAnimation: ViewBasicAnimation {
 
-  public var _damping: CGFloat = 1
-  public var _velocity: CGFloat = 1
+  var _damping: CGFloat = 1
+  var _velocity: CGFloat = 1
 
   public override func run(completion: Block?) {
     UIView.animateWithDuration(_duration, delay: _delay,

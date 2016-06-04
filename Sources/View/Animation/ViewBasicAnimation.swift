@@ -10,8 +10,8 @@ import UIKit
 
 public class ViewBasicAnimation: ViewAnimation {
 
-  public var _options: UIViewAnimationOptions = []
-  public var _block: Block?
+  var _options: UIViewAnimationOptions = []
+  var _block: Block?
 
   public override func run(completion: Block?) {
     UIView.animateWithDuration(_duration, delay: _delay, options: _options,

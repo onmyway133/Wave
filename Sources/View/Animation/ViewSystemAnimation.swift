@@ -10,10 +10,10 @@ import UIKit
 
 public final class ViewSystemAnimation: ViewAnimation {
 
-  public var _options: UIViewAnimationOptions = []
-  public var _views: [UIView] = []
-  public var _animation: UISystemAnimation = .Delete
-  public var _parallelBlock: Block?
+  var _options: UIViewAnimationOptions = []
+  var _views: [UIView] = []
+  var _animation: UISystemAnimation = .Delete
+  var _parallelBlock: Block?
 
   public override func run(completion: Block?) {
 

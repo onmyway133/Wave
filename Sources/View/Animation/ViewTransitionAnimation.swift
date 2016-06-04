@@ -10,11 +10,11 @@ import UIKit
 
 public final class ViewTransitionAnimation: ViewAnimation {
 
-  public var _options: UIViewAnimationOptions = []
-  public var _from: UIView?
-  public var _to: UIView?
-  public var _with: UIView?
-  public var _block: (UIView -> Void)?
+  var _options: UIViewAnimationOptions = []
+  var _from: UIView?
+  var _to: UIView?
+  var _with: UIView?
+  var _block: (UIView -> Void)?
 
   public override func run(completion: Block?) {
 
