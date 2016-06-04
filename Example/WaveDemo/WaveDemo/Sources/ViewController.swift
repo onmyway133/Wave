@@ -133,6 +133,12 @@ class ViewController: UIViewController {
 
     }))
 
+    items.append(Item(name: "layer morph and flash", action: {
+      box1.wave.morph()
+      .then(box1.wave.flash())
+      .run()
+    }))
+
     tableView.reloadData()
   }
 }
