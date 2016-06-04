@@ -145,7 +145,10 @@ public extension Ride {
 
   public func flash() -> Chain<Layer.Action> {
     return
-      Chain<Layer.Action>()
+      fadeOut()
+      .configureAnimation { (animation: LayerBasicAnimation) in
+        animation.repeatCount(2)
+      }
   }
 
   public func fade(visible: Bool) -> Chain<Layer.Action> {

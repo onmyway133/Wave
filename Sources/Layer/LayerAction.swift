@@ -34,6 +34,14 @@ public extension Chain where A: Layer.Action {
       action.animations.append(animation)
     }
   }
+
+  public func configureAnimation<T>(block: T -> Void) -> Chain {
+    return configure { (action: Layer.Action) in
+      if let animation = action.animations.last as? T {
+        block(animation)
+      }
+    }
+  }
 }
 
 extension Layer.Action: Action {
