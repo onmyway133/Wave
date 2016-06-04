@@ -48,22 +48,22 @@ public extension Chain {
 
 public extension Chain {
 
-  public func wait(interval: NSTimeInterval) -> Chain {
+  public func thenWait(interval: NSTimeInterval) -> Chain {
     var action = Wait()
     action.interval = interval
 
     return then(action)
   }
 
-  public func custom(block: Block) -> Chain {
+  public func thenDo(block: Block) -> Chain {
     var action = Custom()
     action.block = block
     
     return then(action)
   }
 
-  public func log(string: String) -> Chain {
-    return custom {
+  public func thenLog(string: String) -> Chain {
+    return thenDo {
       print(string)
     }
   }
