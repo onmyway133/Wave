@@ -67,6 +67,18 @@ class ViewController: UIViewController {
 
     // Basic
 
+    items.append(Item(name: "blink", action: {
+      Chain<View.Action>()
+        .add(ViewBasicAnimation().view(box1).fadeOut())
+        .add(ViewBasicAnimation().view(box2).fadeOut())
+        .add(ViewBasicAnimation().view(box3).fadeOut())
+        .then()
+        .add(ViewBasicAnimation().view(box1).fadeIn())
+        .add(ViewBasicAnimation().view(box2).fadeIn())
+        .add(ViewBasicAnimation().view(box3).fadeIn())
+        .run()
+    }))
+
     items.append(Item(name: "wait log", action: {
       Chain<View.Action>()
       .add(ViewBasicAnimation().view(box1).fadeOut())
