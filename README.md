@@ -41,7 +41,7 @@ public protocol Action {
   - View.Action: UIView animations
   - Layer.Action: Core Animation animations
 
-**Example**: fade out, wait, fade in, log
+**Example** fade out, wait, fade in, log
 
 ```swift
 Chain<View.Action>()
@@ -52,6 +52,25 @@ Chain<View.Action>()
   .add(ViewBasicAnimation().view(box1).fadeIn())
   .thenLog("done fade in")
   .run()
+```
+
+**Example** how morph works using layer action
+
+```swift
+Chain<Layer.Action>()
+.layer(view.layer)
+.add(LayerKeyframeAnimation()
+  .keyPath("transform.scale.x")
+  .values([1, 1.3, 0.7, 1.3, 1])
+  .keyTimes([0, 0.2, 0.4, 0.6, 0.8, 1])
+  .coolConfig()
+)
+.add(LayerKeyframeAnimation()
+  .keyPath("transform.scale.x")
+  .values([1, 1.3, 0.7, 1.3, 1])
+  .keyTimes([0, 0.2, 0.4, 0.6, 0.8, 1])
+  .coolConfig()
+)
 ```
 
 ### What can we do with the chain
@@ -213,6 +232,25 @@ box1.wave.swing()
   .then()
   .add(ViewBasicAnimation().view(box1).moveY(10))
   .run()
+```
+
+**Example** how morph works using layer action
+
+```swift
+Chain<Layer.Action>()
+.layer(view.layer)
+.add(LayerKeyframeAnimation()
+  .keyPath("transform.scale.x")
+  .values([1, 1.3, 0.7, 1.3, 1])
+  .keyTimes([0, 0.2, 0.4, 0.6, 0.8, 1])
+  .coolConfig()
+)
+.add(LayerKeyframeAnimation()
+  .keyPath("transform.scale.x")
+  .values([1, 1.3, 0.7, 1.3, 1])
+  .keyTimes([0, 0.2, 0.4, 0.6, 0.8, 1])
+  .coolConfig()
+)
 ```
 
 Useful types
