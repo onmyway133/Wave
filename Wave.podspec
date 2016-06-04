@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "Wave"
-  s.summary          = "Chainable animations in Swift"
+  s.summary          = "Declarative chainable animations in Swift"
   s.version          = "0.1.0"
   s.homepage         = "https://github.com/onmyway133/Wave"
   s.license          = 'MIT'

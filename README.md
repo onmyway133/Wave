@@ -1,5 +1,5 @@
 # Wave
-Chainable animations in Swift
+Declarative chainable animations in Swift
 
 [![CI Status](http://img.shields.io/travis/onmyway133/Wave.svg?style=flat)](https://travis-ci.org/onmyway133/Wave)
 [![Version](https://img.shields.io/cocoapods/v/Wave.svg?style=flat)](http://cocoadocs.org/docsets/Wave)
