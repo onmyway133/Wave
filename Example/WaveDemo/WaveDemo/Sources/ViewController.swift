@@ -20,7 +20,7 @@ class ViewController: UIViewController {
   }
 
   @IBAction func reset(sender: UIButton) {
-    
+    view.setNeedsLayout()
   }
 
   func setup() {
@@ -84,7 +84,7 @@ class ViewController: UIViewController {
       Chain<View.Action>()
       .add(ViewBasicAnimation().view(box1).fadeOut())
       .thenLog("done fade out")
-      .thenWait(2)
+      .thenWait(1)
       .then()
       .add(ViewBasicAnimation().view(box1).fadeIn())
       .thenLog("done fade in")
@@ -106,7 +106,32 @@ class ViewController: UIViewController {
       .run()
     }))
 
+    items.append(Item(name: "layer then view", action: {
+      box1.wave.swing()
+      .then(Chain<View.Action>())
+      .add(ViewBasicAnimation().view(box1).moveX(10))
+      .then()
+      .add(ViewBasicAnimation().view(box1).moveY(10))
+      .run()
+    }))
+
     // Layer
+
+    items.append(Item(name: "layer path", action: {
+      let path = UIBezierPath(arcCenter: box2.center, radius: 100, startAngle: 10, endAngle: 100, clockwise: true)
+
+      Chain<Layer.Action>()
+      .layer(box2.layer)
+      .add(LayerKeyframeAnimation()
+        .keyPath("position")
+        .calculationMode(Layer.CalculationMode.Paced)
+        .fillMode(Layer.FillMode.Forwards)
+        .duration(3)
+        .path(path)
+      )
+      .run()
+
+    }))
 
     tableView.reloadData()
   }
