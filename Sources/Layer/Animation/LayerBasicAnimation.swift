@@ -14,6 +14,9 @@ public class LayerBasicAnimation: LayerPropertyAnimation {
     super.init()
     info = CABasicAnimation()
   }
+}
+
+public extension LayerBasicAnimation {
 
   public func fromValue(value: AnyObject) -> Self {
     (info as? CABasicAnimation)?.fromValue = value

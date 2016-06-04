@@ -14,6 +14,9 @@ public class LayerPropertyAnimation: LayerAnimation {
     super.init()
     info = CAPropertyAnimation()
   }
+}
+
+public extension LayerPropertyAnimation {
 
   public func keyPath(keyPath: String) -> Self {
     (info as? CAPropertyAnimation)?.keyPath = keyPath

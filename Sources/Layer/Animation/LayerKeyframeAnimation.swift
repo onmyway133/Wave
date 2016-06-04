@@ -14,6 +14,9 @@ public final class LayerKeyframeAnimation: LayerPropertyAnimation {
     super.init()
     info = CAKeyframeAnimation()
   }
+}
+
+public extension LayerKeyframeAnimation {
 
   public func values(values: [AnyObject]) -> Self {
     (info as? CAKeyframeAnimation)?.values = values

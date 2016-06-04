@@ -14,6 +14,9 @@ public final class LayerTransitionAnimation: LayerAnimation {
     super.init()
     info = CATransition()
   }
+}
+
+public extension LayerTransitionAnimation {
 
   public func startProgress(progress: Float) -> Self {
     (info as? CATransition)?.startProgress = progress

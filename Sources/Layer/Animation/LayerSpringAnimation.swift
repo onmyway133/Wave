@@ -15,6 +15,10 @@ public final class LayerSpringAnimation: LayerBasicAnimation {
     super.init()
     info = CASpringAnimation()
   }
+}
+
+@available(iOS 9, *)
+public extension LayerSpringAnimation {
 
   public func mass(value: Double) -> Self {
     (info as? CASpringAnimation)?.mass = CGFloat(value)
