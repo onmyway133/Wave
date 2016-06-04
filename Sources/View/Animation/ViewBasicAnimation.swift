@@ -132,4 +132,14 @@ public extension ViewBasicAnimation {
     return fade(false)
   }
 
+  // MARK: - Color
+
+  public func changeBackground(color: UIColor) -> Self {
+    weak var view = _view
+
+    return block {
+      view?.backgroundColor = color
+    }
+  }
+
 }
