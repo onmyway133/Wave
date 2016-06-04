@@ -91,6 +91,7 @@ class ViewController: UIViewController {
           box3.frame.origin.y += 10
         }
       )
+      .run()
     }))
 
     // Layer
