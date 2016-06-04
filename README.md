@@ -119,6 +119,17 @@ box1.wave.flipX().run()
 
 - `View.Action` maintains a list of UIView animations, which can be run in parallel
 - Each animation can be associated with a `UIView`, or be assigned `UIView` from `View.Action` automatically when it is inited
+- `View.Action` completes when the longest animation completes
+
+**Example** using view from `View.Action`, move and change background at the same time
+
+```swift
+Chain<View.Action>()
+  .view(box2)
+  .add(ViewBasicAnimation().fadeOut().moveX(20))
+  .add(ViewBasicAnimation().changeBackground(UIColor.blueColor()))
+  .run()
+```
 
 Supported animations
 
@@ -142,6 +153,28 @@ Chain<View.Action>()
   .run()
 ```
 
+**Example** move down 2 times, then move left, then a custom spring animation
+
+```swift
+Chain<View.Action>()
+  .add(ViewBasicAnimation()
+    .view(box3)
+    .moveY(100)
+    .delay(2)
+    .duration(3)
+    .repeatCount(2)
+    .options([UIViewAnimationOptions.CurveEaseIn]))
+  .then()
+  .add(ViewBasicAnimation().view(box2).moveX(-10))
+  .then()
+  .add(ViewSpringAnimation()
+    .block {
+      self.counter = (self.counter + 1) % 4
+      box1.transform = CGAffineTransformMakeRotation(CGFloat(M_PI_4) * CGFloat(self.counter))
+    })
+  .run()
+```
+
 Available predefined UIView configurations
 
 - move
@@ -161,11 +194,33 @@ Supported animations
 - LayerSpringAnimation: CALayer spring animation (available on iOS 9+)
 - LayerTransitionAnimation: CALayer transition animation
 
-Available Core Animation animations
+Available Core Animation configurations
 
--
+- move
+- translate
+- scale
+- zoom
+- rotate
+- fade
+- coolConfig: set the duration to 0.5 and use `EaseIn` timing function, which is cool
 
-### Add action to a chain
+**Example** swing with layer, then move with view
+
+```swift
+box1.wave.swing()
+  .then(Chain<View.Action>())
+  .add(ViewBasicAnimation().view(box1).moveX(10))
+  .then()
+  .add(ViewBasicAnimation().view(box1).moveY(10))
+  .run()
+```
+
+Useful types
+
+- Layer.CalculationMode
+- Layer.RotationMode
+- Layer.FillMode
+- Layer.TimingFunction
 
 ## Installation
 
