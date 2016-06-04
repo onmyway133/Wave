@@ -40,3 +40,77 @@ public extension ViewBasicAnimation {
     return self
   }
 }
+
+public extension ViewBasicAnimation {
+
+  // MARK: - Move
+
+  public func moveX(value: Double) -> Self {
+    return move(CGPoint(x: value, y: 0))
+  }
+
+  public func moveY(value: Double) -> Self {
+    return move(CGPoint(x: 0, y: value))
+  }
+
+  public func move(value: CGPoint) -> Self {
+    weak var view = _view
+
+    return block {
+      view?.transform = CGAffineTransformMakeTranslation(value.x, value.y)
+    }
+  }
+
+  // MARK: - Scale
+
+  public func scaleX(value: Double) -> Self {
+    return move(CGPoint(x: value, y: 0))
+  }
+
+  public func scaleY(value: Double) -> Self {
+    return move(CGPoint(x: 0, y: value))
+  }
+
+  public func scale(value: CGPoint) -> Self {
+    weak var view = _view
+
+    return block {
+      view?.transform = CGAffineTransformMakeScale(value.x, value.y)
+    }
+  }
+
+  // MARK: - Zoom
+
+  public func zoom(value: Double) -> Self {
+    return scale(CGPoint(x: value, y: value))
+  }
+
+  // MARK: - Rotate
+
+  public func rotate(radian: Double) -> Self {
+    weak var view = _view
+
+    return block {
+      view?.transform = CGAffineTransformMakeRotation(CGFloat(radian))
+    }
+  }
+
+  // MARK: - Fade
+
+  public func fade(visible: Bool) -> Self {
+    weak var view = _view
+
+    return block {
+      view?.alpha = visible ? 1 : 0
+    }
+  }
+
+  public func fadeIn() -> Self {
+    return fade(true)
+  }
+
+  public func fadeOut() -> Self {
+    return fade(false)
+  }
+
+}

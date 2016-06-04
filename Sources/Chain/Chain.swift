@@ -13,7 +13,7 @@ public final class Chain<A: Action> {
   var actions: [Action] = []
 
   public init() {
-    
+    newAction()
   }
 }
 
@@ -30,7 +30,7 @@ public extension Chain {
 
 public extension Chain {
 
-  public func link<B>(chain: Chain<B>) -> Chain<B> {
+  public func then<B>(chain: Chain<B>) -> Chain<B> {
     var actions = self.actions
     actions.appendContentsOf(chain.actions)
     chain.actions = actions
@@ -38,7 +38,7 @@ public extension Chain {
     return chain
   }
 
-  public func link(action: Action) -> Self {
+  public func then(action: Action) -> Self {
     actions.append(action)
     return self
   }
@@ -52,14 +52,14 @@ public extension Chain {
     var action = Wait()
     action.interval = interval
 
-    return link(action)
+    return then(action)
   }
 
   public func custom(block: Block) -> Chain {
     var action = Custom()
     action.block = block
     
-    return link(action)
+    return then(action)
   }
 
   public func log(string: String) -> Chain {
@@ -78,6 +78,10 @@ public extension Chain {
     actions.append(action)
 
     return self
+  }
+
+  public func then() -> Chain {
+    return newAction()
   }
 }
 

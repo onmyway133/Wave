@@ -30,71 +30,67 @@ class ViewController: UIViewController {
     // Ride
 
     items.append(Item(name: "flipX", action: {
-      box1.wave.flipX()
+      box1.wave.flipX().run()
     }))
 
     items.append(Item(name: "flipY", action: {
-      box1.wave.flipY()
+      box1.wave.flipY().run()
     }))
 
     items.append(Item(name: "flash", action: {
-      box1.wave.flash()
+      box1.wave.flash().run()
     }))
 
     items.append(Item(name: "shake", action: {
-      box1.wave.shake()
+      box1.wave.shake().run()
     }))
 
     items.append(Item(name: "pop", action: {
-      box1.wave.pop()
+      box1.wave.pop().run()
     }))
 
     items.append(Item(name: "morph", action: {
-      box1.wave.morph()
+      box1.wave.morph().run()
     }))
 
     items.append(Item(name: "squeeze", action: {
-      box1.wave.squeeze()
+      box1.wave.squeeze().run()
     }))
 
     items.append(Item(name: "wobble", action: {
-      box1.wave.wobble()
+      box1.wave.wobble().run()
     }))
 
     items.append(Item(name: "swing", action: {
-      box1.wave.swing()
+      box1.wave.swing().run()
     }))
 
     // Basic
 
     items.append(Item(name: "wait log", action: {
-      Chain<View.BasicAnimation>()
-        .newAction()
-        .view(box1)
-        .fadeOut()
-        .log("done fade out")
-        .wait(2)
-        .fadeIn()
-        .log("done fade in")
-        .run()
-
+      Chain<View.Action>()
+      .view(box1)
+      .add(ViewBasicAnimation().fadeOut())
+      .log("done fade out")
+      .wait(2)
+      .add(ViewBasicAnimation().fadeIn())
+      .log("done fade in")
+      .run()
     }))
 
     // View
 
     items.append(Item(name: "view rotate move move", action: {
-        Chain<View.BasicAnimation>()
-        .newAction()
-        .view(box1)
-        .rotate(M_PI_4)
-        .newAction()
-        .view(box2)
-        .moveX(-10)
-        .newAction()
+      Chain<View.Action>()
+      .add(ViewBasicAnimation().view(box1).rotate(M_PI_4))
+      .then()
+      .add(ViewBasicAnimation().view(box2).moveX(-10))
+      .then()
+      .add(ViewSpringAnimation()
         .block {
           box3.frame.origin.y += 10
         }
-        .run()
+      )
     }))
 
     // Layer
