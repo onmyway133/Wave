@@ -60,6 +60,10 @@ github "onmyway133/Wave"
 
 Khoa Pham, onmyway133@gmail.com
 
+## Credit
+
+- https://www.swiftbysundell.com/posts/building-a-declarative-animation-framework-in-swift-part-1
+
 ## Contributing
 
 We would love you to contribute to **Wave**, check the [CONTRIBUTING](https://github.com/onmyway133/Wave/blob/master/CONTRIBUTING.md) file for more info.
