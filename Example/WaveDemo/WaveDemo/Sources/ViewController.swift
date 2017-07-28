@@ -69,6 +69,16 @@ class ViewController: UIViewController {
     // View
 
     items.append(Item(name: "view move change color", action: {
+      box1?.run(.sequence([
+        .fadeIn(),
+        .fadeOut(),
+        .parallel([
+          .shake(),
+          .sequence([
+            .flipX()
+          ])
+        ])
+      ]))
 //      Chain<View.Action>()
 //        .view(box2)
 //        .add(ViewBasicAnimation().fadeOut().moveX(20))
