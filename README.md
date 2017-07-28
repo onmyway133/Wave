@@ -30,9 +30,10 @@ view.run(.sequence([
   .fadeOut(),
   .parallel([
     .wait(0.5),
-    .shake(),
-    .log("Has just been shaked")
+    .squeeze()
     .sequence([
+      .shake(),
+      .log("Has just been shaked")
       .flipX()
     ]),
     .morph()
