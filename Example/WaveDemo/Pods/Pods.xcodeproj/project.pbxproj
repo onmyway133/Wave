@@ -15,6 +15,9 @@
 		B43D5313550B8C363F4692E8C9792A4B /* Pods-WaveDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 42D0CEA90795D3835FF2E05C85F2CF2C /* Pods-WaveDemo-dummy.m */; };
 		C29C08A18B90AF23E7BEF82CF7C7C74A /* Pods-WaveDemo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EBB9121F52E8C02A7A074EEECE89BFE9 /* Pods-WaveDemo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CAE92C34F65E693F418B27983828CD9C /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AAEBC999D93BA74A422C594DEA6A0F /* Action.swift */; };
+		D22C73AF1F2B57D6002182A9 /* Action+Composite.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22C73AE1F2B57D6002182A9 /* Action+Composite.swift */; };
+		D22C73B11F2B57E8002182A9 /* Action+Layer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22C73B01F2B57E8002182A9 /* Action+Layer.swift */; };
+		D22C73B31F2B5814002182A9 /* Action+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22C73B21F2B5814002182A9 /* Action+View.swift */; };
 		DF6431C8B99BCC252A59743806A0B1DA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +52,9 @@
 		BC2BD789B189659DADC2215F6E1DD7B2 /* Wave.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Wave.modulemap; sourceTree = "<group>"; };
 		CB0CF7C8CD91E4BDD200410FDC9F3242 /* Wave.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Wave.xcconfig; sourceTree = "<group>"; };
 		D087D80C42C84EDC0AA6AEA9089292EF /* Pods-WaveDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WaveDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D22C73AE1F2B57D6002182A9 /* Action+Composite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Action+Composite.swift"; sourceTree = "<group>"; };
+		D22C73B01F2B57E8002182A9 /* Action+Layer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Action+Layer.swift"; sourceTree = "<group>"; };
+		D22C73B21F2B5814002182A9 /* Action+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Action+View.swift"; sourceTree = "<group>"; };
 		D377032A502779AA7A8CC931B62C7ACF /* Pods-WaveDemo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-WaveDemo.modulemap"; sourceTree = "<group>"; };
 		D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		EBB9121F52E8C02A7A074EEECE89BFE9 /* Pods-WaveDemo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WaveDemo-umbrella.h"; sourceTree = "<group>"; };
@@ -138,6 +144,9 @@
 			children = (
 				05AAEBC999D93BA74A422C594DEA6A0F /* Action.swift */,
 				60F0851477A7C3D4705D628BE035714A /* Wave.swift */,
+				D22C73AE1F2B57D6002182A9 /* Action+Composite.swift */,
+				D22C73B01F2B57E8002182A9 /* Action+Layer.swift */,
+				D22C73B21F2B5814002182A9 /* Action+View.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -268,8 +277,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D22C73B31F2B5814002182A9 /* Action+View.swift in Sources */,
 				CAE92C34F65E693F418B27983828CD9C /* Action.swift in Sources */,
+				D22C73AF1F2B57D6002182A9 /* Action+Composite.swift in Sources */,
 				48861B6F0C26761C1803D7BD1659A458 /* Wave-dummy.m in Sources */,
+				D22C73B11F2B57E8002182A9 /* Action+Layer.swift in Sources */,
 				1BB30FD2E7BC67A0E76D11BEA8B2181B /* Wave.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
