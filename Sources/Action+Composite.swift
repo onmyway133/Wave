@@ -1,7 +1,7 @@
 import UIKit
 
 public extension Action {
-  public static func sequence(actions: [Action]) -> Action {
+  public static func sequence(_ actions: [Action]) -> Action {
     func loop(view: UIView, actions: [Action], completion: @escaping Closure) {
       guard let first = actions.first else {
         completion()
@@ -20,7 +20,7 @@ public extension Action {
     })
   }
 
-  public static func parallel(actions: [Action]) -> Action {
+  public static func parallel(_ actions: [Action]) -> Action {
     return Action(animation: { view, completion in
       var actions = actions
       let first = actions.removeFirst()
