@@ -31,7 +31,7 @@ class ViewController: UIViewController {
     // Ride
 
     items.append(Item(name: "flipX", action: {
-//      box1.wave.flipX().run()
+      box1?.wave(action: .flipX())
     }))
 
     items.append(Item(name: "flipY", action: {
