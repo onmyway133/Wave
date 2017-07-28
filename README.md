@@ -17,7 +17,10 @@ Declarative chainable animations in Swift
 - Support UIView and Core Animation animations
 - Extensible
 
-![](Screenshots/wave.gif)
+<div align = "center">
+<img src="Screenshots/wave.gif" width="300" />
+<br />
+</div>
 
 ## Usage
 
@@ -31,7 +34,8 @@ view.run(.sequence([
     .log("Has just been shaked")
     .sequence([
       .flipX()
-    ])
+    ]),
+    .morph()
   ])
 ]))
 ```
