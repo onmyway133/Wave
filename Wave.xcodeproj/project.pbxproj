@@ -7,46 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D209D1381CFB26CD000A45E3 /* Ride.swift in Sources */ = {isa = PBXBuildFile; fileRef = D209D1371CFB26CD000A45E3 /* Ride.swift */; };
 		D21793881CF23D6700BB2467 /* Wave.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21793871CF23D6700BB2467 /* Wave.swift */; };
-		D217938A1CF23D9400BB2467 /* Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21793891CF23D9400BB2467 /* Spec.swift */; };
-		D2B633221CFE4520001BE5DC /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B632ED1CFE4520001BE5DC /* Action.swift */; };
-		D2B633261CFE4520001BE5DC /* Then.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B632F21CFE4520001BE5DC /* Then.swift */; };
-		D2B6332C1CFE4520001BE5DC /* Wait.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B632F91CFE4520001BE5DC /* Wait.swift */; };
-		D2B6332D1CFE4520001BE5DC /* Chain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B632FB1CFE4520001BE5DC /* Chain.swift */; };
-		D2B6332E1CFE4520001BE5DC /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B632FF1CFE4520001BE5DC /* Config.swift */; };
-		D2B6332F1CFE4520001BE5DC /* LayerBasicAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B633021CFE4520001BE5DC /* LayerBasicAnimation.swift */; };
-		D2B633301CFE4520001BE5DC /* LayerCompoundAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B633031CFE4520001BE5DC /* LayerCompoundAnimation.swift */; };
-		D2B633311CFE4520001BE5DC /* LayerKeyframeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B633041CFE4520001BE5DC /* LayerKeyframeAnimation.swift */; };
-		D2B633321CFE4520001BE5DC /* LayerSpringAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B633051CFE4520001BE5DC /* LayerSpringAnimation.swift */; };
-		D2B633331CFE4520001BE5DC /* LayerTransitionAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B633061CFE4520001BE5DC /* LayerTransitionAction.swift */; };
-		D2B633341CFE4520001BE5DC /* LayerAnimationConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B633081CFE4520001BE5DC /* LayerAnimationConfigurable.swift */; };
-		D2B633351CFE4520001BE5DC /* LayerBasicConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B633091CFE4520001BE5DC /* LayerBasicConfigurable.swift */; };
-		D2B633361CFE4520001BE5DC /* LayerConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B6330A1CFE4520001BE5DC /* LayerConfigurable.swift */; };
-		D2B633371CFE4520001BE5DC /* LayerKeyframeConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B6330B1CFE4520001BE5DC /* LayerKeyframeConfigurable.swift */; };
-		D2B633381CFE4520001BE5DC /* LayerPropertyConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B6330C1CFE4520001BE5DC /* LayerPropertyConfigurable.swift */; };
-		D2B633391CFE4520001BE5DC /* LayerSpringConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B6330D1CFE4520001BE5DC /* LayerSpringConfigurable.swift */; };
-		D2B6333A1CFE4520001BE5DC /* Layer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B6330E1CFE4520001BE5DC /* Layer.swift */; };
-		D2B6333B1CFE4520001BE5DC /* ViewBasicAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B633111CFE4520001BE5DC /* ViewBasicAnimation.swift */; };
-		D2B6333C1CFE4520001BE5DC /* ViewKeyframeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B633121CFE4520001BE5DC /* ViewKeyframeAnimation.swift */; };
-		D2B6333D1CFE4520001BE5DC /* ViewSpringAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B633131CFE4520001BE5DC /* ViewSpringAnimation.swift */; };
-		D2B6333E1CFE4520001BE5DC /* ViewSystemAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B633141CFE4520001BE5DC /* ViewSystemAnimation.swift */; };
-		D2B6333F1CFE4520001BE5DC /* ViewTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B633151CFE4520001BE5DC /* ViewTransitionAnimation.swift */; };
-		D2B633401CFE4520001BE5DC /* ViewAnimationConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B633171CFE4520001BE5DC /* ViewAnimationConfigurable.swift */; };
-		D2B633411CFE4520001BE5DC /* ViewBasicAnimationConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B633181CFE4520001BE5DC /* ViewBasicAnimationConfigurable.swift */; };
-		D2B633421CFE4520001BE5DC /* ViewConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B633191CFE4520001BE5DC /* ViewConfigurable.swift */; };
-		D2B633431CFE4520001BE5DC /* ViewAnimationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B6331B1CFE4520001BE5DC /* ViewAnimationInfo.swift */; };
-		D2B633441CFE4520001BE5DC /* ViewBasicAnimationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B6331C1CFE4520001BE5DC /* ViewBasicAnimationInfo.swift */; };
-		D2B633451CFE4520001BE5DC /* ViewKeyframeAnimationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B6331D1CFE4520001BE5DC /* ViewKeyframeAnimationInfo.swift */; };
-		D2B633461CFE4520001BE5DC /* ViewSpringAnimationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B6331E1CFE4520001BE5DC /* ViewSpringAnimationInfo.swift */; };
-		D2B633471CFE4520001BE5DC /* ViewSystemAnimationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B6331F1CFE4520001BE5DC /* ViewSystemAnimationInfo.swift */; };
-		D2B633481CFE4520001BE5DC /* ViewTransitionAnimationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B633201CFE4520001BE5DC /* ViewTransitionAnimationInfo.swift */; };
-		D2B633491CFE4520001BE5DC /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B633211CFE4520001BE5DC /* View.swift */; };
+		D255DEBD1F2B439F00B9FCAE /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = D255DEBC1F2B439F00B9FCAE /* Action.swift */; };
 		D5B2E8AA1C3A780C00C0327D /* Wave.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B2E89F1C3A780C00C0327D /* Wave.framework */; };
-		D5C6294A1C3A7FAA007F7B7C /* Wave.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C629401C3A7FAA007F7B7C /* Wave.framework */; };
-		D5C629771C3A878E007F7B7C /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C629751C3A878E007F7B7C /* Quick.framework */; };
-		D5C629781C3A878E007F7B7C /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C629761C3A878E007F7B7C /* Nimble.framework */; };
-		D5C6297C1C3A879F007F7B7C /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C6297A1C3A879F007F7B7C /* Nimble.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,64 +20,16 @@
 			remoteGlobalIDString = D5B2E89E1C3A780C00C0327D;
 			remoteInfo = Wave;
 		};
-		D5C6294B1C3A7FAA007F7B7C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D5B2E8961C3A780C00C0327D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D5C6293F1C3A7FAA007F7B7C;
-			remoteInfo = "Wave-Mac";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D209D1371CFB26CD000A45E3 /* Ride.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ride.swift; sourceTree = "<group>"; };
 		D21793871CF23D6700BB2467 /* Wave.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wave.swift; sourceTree = "<group>"; };
-		D21793891CF23D9400BB2467 /* Spec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spec.swift; sourceTree = "<group>"; };
-		D2B632ED1CFE4520001BE5DC /* Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
-		D2B632F21CFE4520001BE5DC /* Then.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Then.swift; sourceTree = "<group>"; };
-		D2B632F91CFE4520001BE5DC /* Wait.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wait.swift; sourceTree = "<group>"; };
-		D2B632FB1CFE4520001BE5DC /* Chain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chain.swift; sourceTree = "<group>"; };
-		D2B632FF1CFE4520001BE5DC /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
-		D2B633021CFE4520001BE5DC /* LayerBasicAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerBasicAnimation.swift; sourceTree = "<group>"; };
-		D2B633031CFE4520001BE5DC /* LayerCompoundAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerCompoundAnimation.swift; sourceTree = "<group>"; };
-		D2B633041CFE4520001BE5DC /* LayerKeyframeAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerKeyframeAnimation.swift; sourceTree = "<group>"; };
-		D2B633051CFE4520001BE5DC /* LayerSpringAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerSpringAnimation.swift; sourceTree = "<group>"; };
-		D2B633061CFE4520001BE5DC /* LayerTransitionAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerTransitionAction.swift; sourceTree = "<group>"; };
-		D2B633081CFE4520001BE5DC /* LayerAnimationConfigurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerAnimationConfigurable.swift; sourceTree = "<group>"; };
-		D2B633091CFE4520001BE5DC /* LayerBasicConfigurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerBasicConfigurable.swift; sourceTree = "<group>"; };
-		D2B6330A1CFE4520001BE5DC /* LayerConfigurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerConfigurable.swift; sourceTree = "<group>"; };
-		D2B6330B1CFE4520001BE5DC /* LayerKeyframeConfigurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerKeyframeConfigurable.swift; sourceTree = "<group>"; };
-		D2B6330C1CFE4520001BE5DC /* LayerPropertyConfigurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerPropertyConfigurable.swift; sourceTree = "<group>"; };
-		D2B6330D1CFE4520001BE5DC /* LayerSpringConfigurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerSpringConfigurable.swift; sourceTree = "<group>"; };
-		D2B6330E1CFE4520001BE5DC /* Layer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Layer.swift; sourceTree = "<group>"; };
-		D2B633111CFE4520001BE5DC /* ViewBasicAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewBasicAnimation.swift; sourceTree = "<group>"; };
-		D2B633121CFE4520001BE5DC /* ViewKeyframeAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewKeyframeAnimation.swift; sourceTree = "<group>"; };
-		D2B633131CFE4520001BE5DC /* ViewSpringAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewSpringAnimation.swift; sourceTree = "<group>"; };
-		D2B633141CFE4520001BE5DC /* ViewSystemAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewSystemAnimation.swift; sourceTree = "<group>"; };
-		D2B633151CFE4520001BE5DC /* ViewTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewTransitionAnimation.swift; sourceTree = "<group>"; };
-		D2B633171CFE4520001BE5DC /* ViewAnimationConfigurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewAnimationConfigurable.swift; sourceTree = "<group>"; };
-		D2B633181CFE4520001BE5DC /* ViewBasicAnimationConfigurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewBasicAnimationConfigurable.swift; sourceTree = "<group>"; };
-		D2B633191CFE4520001BE5DC /* ViewConfigurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewConfigurable.swift; sourceTree = "<group>"; };
-		D2B6331B1CFE4520001BE5DC /* ViewAnimationInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewAnimationInfo.swift; sourceTree = "<group>"; };
-		D2B6331C1CFE4520001BE5DC /* ViewBasicAnimationInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewBasicAnimationInfo.swift; sourceTree = "<group>"; };
-		D2B6331D1CFE4520001BE5DC /* ViewKeyframeAnimationInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewKeyframeAnimationInfo.swift; sourceTree = "<group>"; };
-		D2B6331E1CFE4520001BE5DC /* ViewSpringAnimationInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewSpringAnimationInfo.swift; sourceTree = "<group>"; };
-		D2B6331F1CFE4520001BE5DC /* ViewSystemAnimationInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewSystemAnimationInfo.swift; sourceTree = "<group>"; };
-		D2B633201CFE4520001BE5DC /* ViewTransitionAnimationInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewTransitionAnimationInfo.swift; sourceTree = "<group>"; };
-		D2B633211CFE4520001BE5DC /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		D255DEBC1F2B439F00B9FCAE /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
 		D500FD111C3AABED00782D78 /* Playground-iOS.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Playground-iOS.playground"; sourceTree = "<group>"; };
-		D500FD121C3AAC8E00782D78 /* Playground-Mac.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Playground-Mac.playground"; sourceTree = "<group>"; };
 		D5B2E89F1C3A780C00C0327D /* Wave.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Wave.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5B2E8A91C3A780C00C0327D /* Wave-iOS-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Wave-iOS-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D5C629401C3A7FAA007F7B7C /* Wave.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Wave.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D5C629491C3A7FAA007F7B7C /* Wave-Mac-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Wave-Mac-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D5C629751C3A878E007F7B7C /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
-		D5C629761C3A878E007F7B7C /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
-		D5C6297A1C3A879F007F7B7C /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/Mac/Nimble.framework; sourceTree = "<group>"; };
 		D5C6298B1C3A8BBD007F7B7C /* Info-iOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-iOS.plist"; sourceTree = "<group>"; };
-		D5C6298C1C3A8BBD007F7B7C /* Info-Mac.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-Mac.plist"; sourceTree = "<group>"; };
 		D5C629901C3A8BDA007F7B7C /* Info-iOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-iOS.plist"; sourceTree = "<group>"; };
-		D5C629911C3A8BDA007F7B7C /* Info-Mac.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-Mac.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,154 +44,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5C629771C3A878E007F7B7C /* Quick.framework in Frameworks */,
-				D5C629781C3A878E007F7B7C /* Nimble.framework in Frameworks */,
 				D5B2E8AA1C3A780C00C0327D /* Wave.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D5C6293C1C3A7FAA007F7B7C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D5C629461C3A7FAA007F7B7C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D5C6297C1C3A879F007F7B7C /* Nimble.framework in Frameworks */,
-				D5C6294A1C3A7FAA007F7B7C /* Wave.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D21793861CF23D5A00BB2467 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				D5C6297A1C3A879F007F7B7C /* Nimble.framework */,
-				D5C629751C3A878E007F7B7C /* Quick.framework */,
-				D5C629761C3A878E007F7B7C /* Nimble.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		D2B632EC1CFE4520001BE5DC /* Action */ = {
-			isa = PBXGroup;
-			children = (
-				D2B632ED1CFE4520001BE5DC /* Action.swift */,
-				D2B632F21CFE4520001BE5DC /* Then.swift */,
-				D2B632F91CFE4520001BE5DC /* Wait.swift */,
-			);
-			path = Action;
-			sourceTree = "<group>";
-		};
-		D2B632FA1CFE4520001BE5DC /* Chain */ = {
-			isa = PBXGroup;
-			children = (
-				D2B632FB1CFE4520001BE5DC /* Chain.swift */,
-			);
-			path = Chain;
-			sourceTree = "<group>";
-		};
-		D2B632FE1CFE4520001BE5DC /* Config */ = {
-			isa = PBXGroup;
-			children = (
-				D2B632FF1CFE4520001BE5DC /* Config.swift */,
-			);
-			path = Config;
-			sourceTree = "<group>";
-		};
-		D2B633001CFE4520001BE5DC /* Layer */ = {
-			isa = PBXGroup;
-			children = (
-				D2B633011CFE4520001BE5DC /* Animation */,
-				D2B633071CFE4520001BE5DC /* Configurable */,
-				D2B6330E1CFE4520001BE5DC /* Layer.swift */,
-			);
-			path = Layer;
-			sourceTree = "<group>";
-		};
-		D2B633011CFE4520001BE5DC /* Animation */ = {
-			isa = PBXGroup;
-			children = (
-				D2B633021CFE4520001BE5DC /* LayerBasicAnimation.swift */,
-				D2B633031CFE4520001BE5DC /* LayerCompoundAnimation.swift */,
-				D2B633041CFE4520001BE5DC /* LayerKeyframeAnimation.swift */,
-				D2B633051CFE4520001BE5DC /* LayerSpringAnimation.swift */,
-				D2B633061CFE4520001BE5DC /* LayerTransitionAction.swift */,
-			);
-			path = Animation;
-			sourceTree = "<group>";
-		};
-		D2B633071CFE4520001BE5DC /* Configurable */ = {
-			isa = PBXGroup;
-			children = (
-				D2B633081CFE4520001BE5DC /* LayerAnimationConfigurable.swift */,
-				D2B633091CFE4520001BE5DC /* LayerBasicConfigurable.swift */,
-				D2B6330A1CFE4520001BE5DC /* LayerConfigurable.swift */,
-				D2B6330B1CFE4520001BE5DC /* LayerKeyframeConfigurable.swift */,
-				D2B6330C1CFE4520001BE5DC /* LayerPropertyConfigurable.swift */,
-				D2B6330D1CFE4520001BE5DC /* LayerSpringConfigurable.swift */,
-			);
-			path = Configurable;
-			sourceTree = "<group>";
-		};
-		D2B6330F1CFE4520001BE5DC /* View */ = {
-			isa = PBXGroup;
-			children = (
-				D2B633101CFE4520001BE5DC /* Animation */,
-				D2B633161CFE4520001BE5DC /* Configurable */,
-				D2B6331A1CFE4520001BE5DC /* Info */,
-				D2B633211CFE4520001BE5DC /* View.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		D2B633101CFE4520001BE5DC /* Animation */ = {
-			isa = PBXGroup;
-			children = (
-				D2B633111CFE4520001BE5DC /* ViewBasicAnimation.swift */,
-				D2B633121CFE4520001BE5DC /* ViewKeyframeAnimation.swift */,
-				D2B633131CFE4520001BE5DC /* ViewSpringAnimation.swift */,
-				D2B633141CFE4520001BE5DC /* ViewSystemAnimation.swift */,
-				D2B633151CFE4520001BE5DC /* ViewTransitionAnimation.swift */,
-			);
-			path = Animation;
-			sourceTree = "<group>";
-		};
-		D2B633161CFE4520001BE5DC /* Configurable */ = {
-			isa = PBXGroup;
-			children = (
-				D2B633171CFE4520001BE5DC /* ViewAnimationConfigurable.swift */,
-				D2B633181CFE4520001BE5DC /* ViewBasicAnimationConfigurable.swift */,
-				D2B633191CFE4520001BE5DC /* ViewConfigurable.swift */,
-			);
-			path = Configurable;
-			sourceTree = "<group>";
-		};
-		D2B6331A1CFE4520001BE5DC /* Info */ = {
-			isa = PBXGroup;
-			children = (
-				D2B6331B1CFE4520001BE5DC /* ViewAnimationInfo.swift */,
-				D2B6331C1CFE4520001BE5DC /* ViewBasicAnimationInfo.swift */,
-				D2B6331D1CFE4520001BE5DC /* ViewKeyframeAnimationInfo.swift */,
-				D2B6331E1CFE4520001BE5DC /* ViewSpringAnimationInfo.swift */,
-				D2B6331F1CFE4520001BE5DC /* ViewSystemAnimationInfo.swift */,
-				D2B633201CFE4520001BE5DC /* ViewTransitionAnimationInfo.swift */,
-			);
-			path = Info;
-			sourceTree = "<group>";
-		};
 		D5B2E8951C3A780C00C0327D = {
 			isa = PBXGroup;
 			children = (
-				D21793861CF23D5A00BB2467 /* Frameworks */,
 				D500FD111C3AABED00782D78 /* Playground-iOS.playground */,
-				D500FD121C3AAC8E00782D78 /* Playground-Mac.playground */,
 				D5C629691C3A809D007F7B7C /* Sources */,
 				D5C6295C1C3A800E007F7B7C /* Wave */,
 				D5C6298F1C3A8BDA007F7B7C /* WaveTests */,
@@ -289,8 +67,6 @@
 			children = (
 				D5B2E89F1C3A780C00C0327D /* Wave.framework */,
 				D5B2E8A91C3A780C00C0327D /* Wave-iOS-Tests.xctest */,
-				D5C629401C3A7FAA007F7B7C /* Wave.framework */,
-				D5C629491C3A7FAA007F7B7C /* Wave-Mac-Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -299,7 +75,6 @@
 			isa = PBXGroup;
 			children = (
 				D5C6298B1C3A8BBD007F7B7C /* Info-iOS.plist */,
-				D5C6298C1C3A8BBD007F7B7C /* Info-Mac.plist */,
 			);
 			path = Wave;
 			sourceTree = "<group>";
@@ -307,13 +82,8 @@
 		D5C629691C3A809D007F7B7C /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				D2B632EC1CFE4520001BE5DC /* Action */,
-				D2B632FA1CFE4520001BE5DC /* Chain */,
-				D2B632FE1CFE4520001BE5DC /* Config */,
-				D2B633001CFE4520001BE5DC /* Layer */,
-				D2B6330F1CFE4520001BE5DC /* View */,
 				D21793871CF23D6700BB2467 /* Wave.swift */,
-				D209D1371CFB26CD000A45E3 /* Ride.swift */,
+				D255DEBC1F2B439F00B9FCAE /* Action.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -321,9 +91,7 @@
 		D5C6298F1C3A8BDA007F7B7C /* WaveTests */ = {
 			isa = PBXGroup;
 			children = (
-				D21793891CF23D9400BB2467 /* Spec.swift */,
 				D5C629901C3A8BDA007F7B7C /* Info-iOS.plist */,
-				D5C629911C3A8BDA007F7B7C /* Info-Mac.plist */,
 			);
 			path = WaveTests;
 			sourceTree = "<group>";
@@ -332,13 +100,6 @@
 
 /* Begin PBXHeadersBuildPhase section */
 		D5B2E89C1C3A780C00C0327D /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D5C6293D1C3A7FAA007F7B7C /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -373,7 +134,6 @@
 				D5B2E8A51C3A780C00C0327D /* Sources */,
 				D5B2E8A61C3A780C00C0327D /* Frameworks */,
 				D5B2E8A71C3A780C00C0327D /* Resources */,
-				D5C629731C3A86E3007F7B7C /* Copy frameworks with Carthage */,
 			);
 			buildRules = (
 			);
@@ -385,43 +145,6 @@
 			productReference = D5B2E8A91C3A780C00C0327D /* Wave-iOS-Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		D5C6293F1C3A7FAA007F7B7C /* Wave-Mac */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D5C629511C3A7FAA007F7B7C /* Build configuration list for PBXNativeTarget "Wave-Mac" */;
-			buildPhases = (
-				D5C6293B1C3A7FAA007F7B7C /* Sources */,
-				D5C6293C1C3A7FAA007F7B7C /* Frameworks */,
-				D5C6293D1C3A7FAA007F7B7C /* Headers */,
-				D5C6293E1C3A7FAA007F7B7C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Wave-Mac";
-			productName = "Wave-Mac";
-			productReference = D5C629401C3A7FAA007F7B7C /* Wave.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		D5C629481C3A7FAA007F7B7C /* Wave-Mac-Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D5C629541C3A7FAA007F7B7C /* Build configuration list for PBXNativeTarget "Wave-Mac-Tests" */;
-			buildPhases = (
-				D5C629451C3A7FAA007F7B7C /* Sources */,
-				D5C629461C3A7FAA007F7B7C /* Frameworks */,
-				D5C629471C3A7FAA007F7B7C /* Resources */,
-				D5C629741C3A8717007F7B7C /* Copy frameworks with Carthage */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D5C6294C1C3A7FAA007F7B7C /* PBXTargetDependency */,
-			);
-			name = "Wave-Mac-Tests";
-			productName = "Wave-MacTests";
-			productReference = D5C629491C3A7FAA007F7B7C /* Wave-Mac-Tests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -429,20 +152,16 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = Fantageek;
 				TargetAttributes = {
 					D5B2E89E1C3A780C00C0327D = {
 						CreatedOnToolsVersion = 7.2;
+						LastSwiftMigration = 0830;
 					};
 					D5B2E8A81C3A780C00C0327D = {
 						CreatedOnToolsVersion = 7.2;
-					};
-					D5C6293F1C3A7FAA007F7B7C = {
-						CreatedOnToolsVersion = 7.2;
-					};
-					D5C629481C3A7FAA007F7B7C = {
-						CreatedOnToolsVersion = 7.2;
+						LastSwiftMigration = 0830;
 					};
 				};
 			};
@@ -459,9 +178,7 @@
 			projectRoot = "";
 			targets = (
 				D5B2E89E1C3A780C00C0327D /* Wave-iOS */,
-				D5C6293F1C3A7FAA007F7B7C /* Wave-Mac */,
 				D5B2E8A81C3A780C00C0327D /* Wave-iOS-Tests */,
-				D5C629481C3A7FAA007F7B7C /* Wave-Mac-Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -481,115 +198,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D5C6293E1C3A7FAA007F7B7C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D5C629471C3A7FAA007F7B7C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		D5C629731C3A86E3007F7B7C /* Copy frameworks with Carthage */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Quick.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Nimble.framework",
-			);
-			name = "Copy frameworks with Carthage";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
-		};
-		D5C629741C3A8717007F7B7C /* Copy frameworks with Carthage */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/Mac/Quick.framework",
-				"$(SRCROOT)/Carthage/Build/Mac/Nimble.framework",
-			);
-			name = "Copy frameworks with Carthage";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D5B2E89A1C3A780C00C0327D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D209D1381CFB26CD000A45E3 /* Ride.swift in Sources */,
-				D2B6332E1CFE4520001BE5DC /* Config.swift in Sources */,
-				D2B633421CFE4520001BE5DC /* ViewConfigurable.swift in Sources */,
-				D2B6332F1CFE4520001BE5DC /* LayerBasicAnimation.swift in Sources */,
-				D2B633441CFE4520001BE5DC /* ViewBasicAnimationInfo.swift in Sources */,
-				D2B6333C1CFE4520001BE5DC /* ViewKeyframeAnimation.swift in Sources */,
-				D2B6333D1CFE4520001BE5DC /* ViewSpringAnimation.swift in Sources */,
-				D2B633221CFE4520001BE5DC /* Action.swift in Sources */,
+				D255DEBD1F2B439F00B9FCAE /* Action.swift in Sources */,
 				D21793881CF23D6700BB2467 /* Wave.swift in Sources */,
-				D2B633411CFE4520001BE5DC /* ViewBasicAnimationConfigurable.swift in Sources */,
-				D2B633471CFE4520001BE5DC /* ViewSystemAnimationInfo.swift in Sources */,
-				D2B633391CFE4520001BE5DC /* LayerSpringConfigurable.swift in Sources */,
-				D2B6333B1CFE4520001BE5DC /* ViewBasicAnimation.swift in Sources */,
-				D2B633301CFE4520001BE5DC /* LayerCompoundAnimation.swift in Sources */,
-				D2B633331CFE4520001BE5DC /* LayerTransitionAction.swift in Sources */,
-				D2B633361CFE4520001BE5DC /* LayerConfigurable.swift in Sources */,
-				D2B633351CFE4520001BE5DC /* LayerBasicConfigurable.swift in Sources */,
-				D2B633321CFE4520001BE5DC /* LayerSpringAnimation.swift in Sources */,
-				D2B6332C1CFE4520001BE5DC /* Wait.swift in Sources */,
-				D2B633481CFE4520001BE5DC /* ViewTransitionAnimationInfo.swift in Sources */,
-				D2B633311CFE4520001BE5DC /* LayerKeyframeAnimation.swift in Sources */,
-				D2B633491CFE4520001BE5DC /* View.swift in Sources */,
-				D2B6332D1CFE4520001BE5DC /* Chain.swift in Sources */,
-				D2B633451CFE4520001BE5DC /* ViewKeyframeAnimationInfo.swift in Sources */,
-				D2B633431CFE4520001BE5DC /* ViewAnimationInfo.swift in Sources */,
-				D2B633341CFE4520001BE5DC /* LayerAnimationConfigurable.swift in Sources */,
-				D2B633371CFE4520001BE5DC /* LayerKeyframeConfigurable.swift in Sources */,
-				D2B633461CFE4520001BE5DC /* ViewSpringAnimationInfo.swift in Sources */,
-				D2B633401CFE4520001BE5DC /* ViewAnimationConfigurable.swift in Sources */,
-				D2B6333A1CFE4520001BE5DC /* Layer.swift in Sources */,
-				D2B633261CFE4520001BE5DC /* Then.swift in Sources */,
-				D2B6333E1CFE4520001BE5DC /* ViewSystemAnimation.swift in Sources */,
-				D2B6333F1CFE4520001BE5DC /* ViewTransitionAnimation.swift in Sources */,
-				D2B633381CFE4520001BE5DC /* LayerPropertyConfigurable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		D5B2E8A51C3A780C00C0327D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D217938A1CF23D9400BB2467 /* Spec.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D5C6293B1C3A7FAA007F7B7C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D5C629451C3A7FAA007F7B7C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -604,11 +225,6 @@
 			target = D5B2E89E1C3A780C00C0327D /* Wave-iOS */;
 			targetProxy = D5B2E8AB1C3A780C00C0327D /* PBXContainerItemProxy */;
 		};
-		D5C6294C1C3A7FAA007F7B7C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D5C6293F1C3A7FAA007F7B7C /* Wave-Mac */;
-			targetProxy = D5C6294B1C3A7FAA007F7B7C /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
@@ -620,13 +236,21 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -654,6 +278,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -668,13 +293,21 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -694,6 +327,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -705,14 +340,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/Wave/Info-iOS.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -721,6 +354,7 @@
 				PRODUCT_NAME = Wave;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -728,14 +362,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/Wave/Info-iOS.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -743,6 +375,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fantageek.Wave.Wave-iOS";
 				PRODUCT_NAME = Wave;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -750,15 +383,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/WaveTests/Info-iOS.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = no.hyper.WaveTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -766,95 +397,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/WaveTests/Info-iOS.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = no.hyper.WaveTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		D5C629521C3A7FAA007F7B7C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "-";
-				COMBINE_HIDPI_IMAGES = YES;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "$(SRCROOT)/Wave/Info-Mac.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.fantageek.Wave.Wave-Mac";
-				PRODUCT_NAME = Wave;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-			};
-			name = Debug;
-		};
-		D5C629531C3A7FAA007F7B7C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "-";
-				COMBINE_HIDPI_IMAGES = YES;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "$(SRCROOT)/Wave/Info-Mac.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.fantageek.Wave.Wave-Mac";
-				PRODUCT_NAME = Wave;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		D5C629551C3A7FAA007F7B7C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/Mac",
-				);
-				INFOPLIST_FILE = "$(SRCROOT)/WaveTests/Info-Mac.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				PRODUCT_BUNDLE_IDENTIFIER = "no.hyper.Wave-MacTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-			};
-			name = Debug;
-		};
-		D5C629561C3A7FAA007F7B7C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/Mac",
-				);
-				INFOPLIST_FILE = "$(SRCROOT)/WaveTests/Info-Mac.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				PRODUCT_BUNDLE_IDENTIFIER = "no.hyper.Wave-MacTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -884,24 +432,6 @@
 			buildConfigurations = (
 				D5B2E8B71C3A780C00C0327D /* Debug */,
 				D5B2E8B81C3A780C00C0327D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D5C629511C3A7FAA007F7B7C /* Build configuration list for PBXNativeTarget "Wave-Mac" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D5C629521C3A7FAA007F7B7C /* Debug */,
-				D5C629531C3A7FAA007F7B7C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D5C629541C3A7FAA007F7B7C /* Build configuration list for PBXNativeTarget "Wave-Mac-Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D5C629551C3A7FAA007F7B7C /* Debug */,
-				D5C629561C3A7FAA007F7B7C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
