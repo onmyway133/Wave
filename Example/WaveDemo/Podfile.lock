@@ -1,5 +1,5 @@
 PODS:
-  - Wave (0.1.0)
+  - Wave (1.0.0)
 
 DEPENDENCIES:
   - Wave (from `../../`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "../../"
 
 SPEC CHECKSUMS:
-  Wave: 0f59e7f697afe0bcded5e73a216ef45cbc3e6e08
+  Wave: 802d81370572edefc1f7ace20c273e8dc2e73542
 
 PODFILE CHECKSUM: 32553e4a7866eb70ecdaa55d6738fd454162c1f4
 
-COCOAPODS: 1.0.0
+COCOAPODS: 1.2.1

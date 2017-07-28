@@ -1,7 +1,7 @@
 {
   "name": "Wave",
-  "summary": "Animation in Swift",
-  "version": "0.1.0",
+  "summary": "Declarative chainable animations in Swift",
+  "version": "1.0.0",
   "homepage": "https://github.com/onmyway133/Wave",
   "license": "MIT",
   "authors": {
@@ -9,7 +9,7 @@
   },
   "source": {
     "git": "https://github.com/onmyway133/Wave.git",
-    "tag": "0.1.0"
+    "tag": "1.0.0"
   },
   "social_media_url": "https://twitter.com/onmyway133",
   "platforms": {
