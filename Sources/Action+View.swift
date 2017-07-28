@@ -11,7 +11,7 @@ public extension Action {
     })
   }
 
-  public static func morph() -> Action {
+  public static func shake() -> Action {
     return Action(animation: { view, completion in
       view.transform = CGAffineTransform(translationX: 20, y: 0)
       UIView.animate(withDuration: 0.4, delay: 0,
@@ -22,6 +22,18 @@ public extension Action {
       }, completion: { _ in
         completion()
       })
+    })
+  }
+
+  public static func fadeOut() -> Action {
+    return Action(animation: { _ in
+
+    })
+  }
+
+  public static func fadeIn() -> Action {
+    return Action(animation: { _ in
+
     })
   }
 }

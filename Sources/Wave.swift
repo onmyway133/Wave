@@ -1,7 +1,7 @@
 import UIKit
 
 public extension UIView {
-  func wave(_ action: Action, completion: @escaping Closure = {}) {
+  func run(_ action: Action, completion: @escaping Closure = {}) {
     action.animation(self, completion)
   }
 }
