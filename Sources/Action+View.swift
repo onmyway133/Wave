@@ -1,6 +1,16 @@
 import UIKit
 
 public extension Action {
+  public static func moveX(_ offset: CGFloat) -> Action {
+    return Action(animation: { view, completion in
+      UIView.animate(withDuration: 0.25, animations: {
+        view.frame.origin.x += offset
+      }, completion: { _ in
+        completion()
+      })
+    })
+  }
+
   public static func shake() -> Action {
     return Action(animation: { view, completion in
       view.transform = CGAffineTransform(translationX: 20, y: 0)

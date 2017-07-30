@@ -60,6 +60,14 @@ class ViewController: UIViewController {
       box1?.run(.swing())
     }))
 
+    items.append(Item(name: "log", action: {
+      box1?.run(.sequence([
+        .moveX(50),
+        .log("View has just been moved 50"),
+        .moveX(-50)
+      ]))
+    }))
+
     items.append(Item(name: "composite", action: {
       box1?.run(.sequence([
         .fadeOut(),
@@ -74,6 +82,11 @@ class ViewController: UIViewController {
     }))
 
     items.append(Item(name: "blink", action: {
+      box1?.run(.fadeOut(), completion: {
+        box2?.run(.fadeOut(), completion: {
+          box3?.run(.fadeOut())
+        })
+      })
 //      Chain<View.Action>()
 //        .add(ViewBasicAnimation().view(box1).fadeOut())
 //        .add(ViewBasicAnimation().view(box2).fadeOut())
@@ -83,60 +96,6 @@ class ViewController: UIViewController {
 //        .add(ViewBasicAnimation().view(box2).fadeIn())
 //        .add(ViewBasicAnimation().view(box3).fadeIn())
 //        .run()
-    }))
-
-    items.append(Item(name: "wait log", action: {
-//      Chain<View.Action>()
-//      .add(ViewBasicAnimation().view(box1).fadeOut())
-//      .thenLog("done fade out")
-//      .thenWait(1)
-//      .then()
-//      .add(ViewBasicAnimation().view(box1).fadeIn())
-//      .thenLog("done fade in")
-//      .run()
-    }))
-
-    items.append(Item(name: "view rotate move move", action: {
-//      Chain<View.Action>()
-//      .add(ViewBasicAnimation()
-//        .view(box3)
-//        .moveY(100)
-//        .delay(2)
-//        .duration(3)
-//        .repeatCount(2)
-//        .options([UIViewAnimationOptions.CurveEaseIn]))
-//      .then()
-//      .add(ViewBasicAnimation().view(box2).moveX(-10))
-//      .then()
-//      .add(ViewSpringAnimation()
-//        .block {
-//          self.counter = (self.counter + 1) % 4
-//          box1.transform = CGAffineTransformMakeRotation(CGFloat(M_PI_4) * CGFloat(self.counter))
-//        }
-//      )
-//      .run()
-    }))
-
-    items.append(Item(name: "layer path", action: {
-//      let path = UIBezierPath(arcCenter: box2.center, radius: 100, startAngle: 10, endAngle: 100, clockwise: true)
-//
-//      Chain<Layer.Action>()
-//      .layer(box2.layer)
-//      .add(LayerKeyframeAnimation()
-//        .keyPath("position")
-//        .calculationMode(Layer.CalculationMode.Paced)
-//        .fillMode(Layer.FillMode.Forwards)
-//        .duration(3)
-//        .path(path)
-//      )
-//      .run()
-
-    }))
-
-    items.append(Item(name: "layer morph and flash", action: {
-//      box1.wave.morph()
-//      .then(box1.wave.flash())
-//      .run()
     }))
 
     tableView.reloadData()
