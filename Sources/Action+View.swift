@@ -1,16 +1,6 @@
 import UIKit
 
 public extension Action {
-  public static func move() -> Action {
-    return Action(animation: { view, completion in
-      UIView.animate(withDuration: 2, animations: {
-        view.frame.origin.x += 2
-      }, completion: { _ in
-        completion()
-      })
-    })
-  }
-
   public static func shake() -> Action {
     return Action(animation: { view, completion in
       view.transform = CGAffineTransform(translationX: 20, y: 0)
@@ -26,14 +16,29 @@ public extension Action {
   }
 
   public static func fadeOut() -> Action {
-    return Action(animation: { _ in
-
+    return Action(animation: { view, completion in
+      UIView.animate(withDuration: 0.25, animations: {
+        view.alpha = 0
+      }, completion: { _ in
+        completion()
+      })
     })
   }
 
   public static func fadeIn() -> Action {
-    return Action(animation: { _ in
-
+    return Action(animation: { view, completion in
+      UIView.animate(withDuration: 0.25, animations: {
+        view.alpha = 1
+      }, completion: { _ in
+        completion()
+      })
     })
+  }
+
+  public static func flash() -> Action {
+    return .sequence([
+      .fadeOut(),
+      .fadeIn()
+    ])
   }
 }

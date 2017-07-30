@@ -19,27 +19,21 @@ class ViewController: UIViewController {
     setup()
   }
 
-  @IBAction func reset(sender: UIButton) {
-    view.setNeedsLayout()
-  }
-
   func setup() {
     let box1 = self.box1
     let box2 = self.box2
     let box3 = self.box3
-
-    // Ride
 
     items.append(Item(name: "flipX", action: {
       box1?.run(.flipX())
     }))
 
     items.append(Item(name: "flipY", action: {
-//      box1.wave.flipY().run()
+      box1?.run(.flipY())
     }))
 
     items.append(Item(name: "flash", action: {
-//      box1.wave.flash().run()
+      box1?.run(.flash())
     }))
 
     items.append(Item(name: "shake", action: {
@@ -47,43 +41,36 @@ class ViewController: UIViewController {
     }))
 
     items.append(Item(name: "pop", action: {
-//      box1.wave.pop().run()
+      box1?.run(.pop())
     }))
 
     items.append(Item(name: "morph", action: {
-//      box1.wave.morph().run()
+      box1?.run(.morph())
     }))
 
     items.append(Item(name: "squeeze", action: {
-//      box1.wave.squeeze().run()
+      box1?.run(.squeeze())
     }))
 
     items.append(Item(name: "wobble", action: {
-//      box1.wave.wobble().run()
+      box1?.run(.wobble())
     }))
 
     items.append(Item(name: "swing", action: {
-//      box1.wave.swing().run()
+      box1?.run(.swing())
     }))
 
-    // View
-
-    items.append(Item(name: "view move change color", action: {
+    items.append(Item(name: "composite", action: {
       box1?.run(.sequence([
-        .fadeIn(),
         .fadeOut(),
+        .fadeIn(),
         .parallel([
-          .shake(),
           .sequence([
+            .shake(),
             .flipX()
           ])
         ])
       ]))
-//      Chain<View.Action>()
-//        .view(box2)
-//        .add(ViewBasicAnimation().fadeOut().moveX(20))
-//        .add(ViewBasicAnimation().changeBackground(UIColor.blueColor()))
-//        .run()
     }))
 
     items.append(Item(name: "blink", action: {
@@ -129,17 +116,6 @@ class ViewController: UIViewController {
 //      )
 //      .run()
     }))
-
-    items.append(Item(name: "layer then view", action: {
-//      box1.wave.swing()
-//      .then(Chain<View.Action>())
-//      .add(ViewBasicAnimation().view(box1).moveX(10))
-//      .then()
-//      .add(ViewBasicAnimation().view(box1).moveY(10))
-//      .run()
-    }))
-
-    // Layer
 
     items.append(Item(name: "layer path", action: {
 //      let path = UIBezierPath(arcCenter: box2.center, radius: 100, startAngle: 10, endAngle: 100, clockwise: true)
