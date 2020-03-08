@@ -1,6 +1,15 @@
 # Wave
 Declarative chainable animations in Swift
 
+❤️ Support my app ❤️ 
+
+- [Push Hero - pure Swift native macOS application to test push notifications](https://www.producthunt.com/posts/push-hero-2)
+- [Quick Access - Organise files in the Mac menu bar](https://www.producthunt.com/posts/quick-access)
+- [Frame recorder - Recorder gif and video with frame](https://www.producthunt.com/posts/frame-recorder)
+- [Other apps](https://onmyway133.github.io/projects/)
+
+❤️❤️😇😍🤘❤️❤️
+
 [![CI Status](http://img.shields.io/travis/onmyway133/Wave.svg?style=flat)](https://travis-ci.org/onmyway133/Wave)
 [![Version](https://img.shields.io/cocoapods/v/Wave.svg?style=flat)](http://cocoadocs.org/docsets/Wave)
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
